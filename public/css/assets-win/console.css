@@ -11,8 +11,8 @@
     color: rgb(255, 255, 255);
     font-family: var(--sub-font);
     font-size: 1.3rem;
-    height: 92%;
     width: 100%;
+    height: -webkit-fill-available;
     padding: 10px;
   text-align: left!important;
   line-height: normal;
@@ -93,3 +93,6 @@
     border-bottom: 2px solid #ffffff00;
     border-top: 1px solid #dee2e600;
   }
+
+
+  .slow  .toggle-group { transition: left 0.7s; -webkit-transition: left 0.7s; }

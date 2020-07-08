@@ -23,7 +23,7 @@
 	<meta name="theme-color" content="#0f0f0f">
 	<!-- Assets - Stylesheets / Scripts -->
 	<link rel="shortcut icon" href="favicon.ico">
-
+	<link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
@@ -37,6 +37,7 @@
 	<link rel="stylesheet" type="text/css" href="css/lib-css/draggableUI.css" />
 	<script src="js/vendor/jquery-1.12.4.js"></script>
 	<script src="js/vendor/jquery-ui.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
 
 	<link rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
 
@@ -342,7 +343,7 @@
 						</div>
 					</div>-->
 					<!-- App -Console-->
-					<div id="draggable-JS-01" class="win-prop box-lg-resize application-non-drag">
+					<div id="draggable-JS-01" class="win-prop box-lg-resize-term application-non-drag">
 						<div class="header">
 							<div class="sub-menu-title">
 								<div class="icon"><img class="icon-img" src="/img/images/vector-img/desktop/fontAwesome/laptop-code.svg" alt="Card image cap"></div>
@@ -354,10 +355,36 @@
 								<div id="close01" type="button" class="btn close"> <i class="material-icons">close</i></div>
 							</div>
 						</div>
-						<div id="terminal">
-							<div class="print"><strong>[CoreCLI]</strong> - Exploring WebCli Possibilities.<br>Type <strong>[help]</strong> for more information.</div>
-							<div id="cli" type="text" inputmode="search"><span class="label"></span><span class="prompt"></span></div>
-						</div>
+					
+							<div class="row">
+								<div class="col-8">
+									<div id="terminal">
+										<div class="print"><strong>[CoreCLI]</strong> - Exploring WebCli Possibilities.<br>Type <strong>[help]</strong> for more information.</div>
+										<div id="cli" type="text" inputmode="search"><span class="label"></span><span class="prompt"></span></div>
+									</div>
+								</div>
+								<div class="col-4 terminal-right">
+									<div class="form-check form-check-inline">
+										<input id="Switch-BG1"  type="checkbox" class="form-check-input" data-onstyle="success" data-offstyle="danger" type="checkbox" data-toggle="toggle" data-style="mr-1 slow" checked>
+										<label for="inlineCheckbox1" class="form-check-label">Background 1</label>
+									  </div>
+									  <div class="form-check form-check-inline">
+										<input id="inlineCheckbox1"  type="checkbox" class="form-check-input" data-onstyle="success" data-offstyle="danger" type="checkbox" data-toggle="toggle" data-style="mr-1 slow" checked>
+										<label for="inlineCheckbox1" class="form-check-label">Enabled</label>
+									  </div>
+									  <div class="form-check form-check-inline">
+										<input id="inlineCheckbox1"  type="checkbox" class="form-check-input" data-onstyle="success" data-offstyle="danger" type="checkbox" data-toggle="toggle" data-style="mr-1 slow" checked>
+										<label for="inlineCheckbox1" class="form-check-label">Enabled</label>
+									  </div>
+									  <div class="form-check form-check-inline">
+										<input id="inlineCheckbox1"  type="checkbox" class="form-check-input" data-onstyle="success" data-offstyle="danger" type="checkbox" data-toggle="toggle" data-style="mr-1 slow" checked>
+										<label for="inlineCheckbox1" class="form-check-label">Enabled</label>
+									  </div>
+
+								</div>
+							  </div>
+						
+					
 					</div>
 					<!-- App -Random-->
 					<div id="draggable-JS-02" class="win-prop box-sm application-non-drag">
@@ -450,7 +477,9 @@
 						$('h1').css('color', '#222222');
 					}, 3100);
 				});
+				
 			</script>
+			
 			<!-- Script -RightClickMenu-->
 		</div>
 </body>

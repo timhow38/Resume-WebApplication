@@ -29,9 +29,36 @@
   border-right: 1px solid rgb(15, 15, 15)!important;
   border-bottom: 1px solid rgb(15, 15, 15)!important;
   font-size: 0.9em;
-  background: rgb(103,103,103);
-background: radial-gradient(circle, rgba(103,103,103,0.5018382352941176) 0%, rgba(255,255,255,0.5018382352941176) 100%);
+  background: radial-gradient(circle, rgba(103,103,103,0.5018382352941176) 0%, rgba(0, 0, 0, 0.5018382352941176) 100%);
 }
+}
+
+.win-prop .row {
+  margin-right: 0px;
+  margin-left: 0px;
+  height: -webkit-fill-available;
+}
+#draggable-JS-01 > div.row > div.col-8, #draggable-JS-01 > div.row > div.col-4 {
+  padding-right: 0px;
+  padding-left: 0px;
+  margin-right: 0px;
+  margin-left: 0px;
+}
+#draggable-JS-01 > div.row > div.col-8{
+  overflow: auto;
+    height: 100%;
+}
+#draggable-JS-01 > div.row > div.col-4 {
+  height: 200%;
+}
+#draggable-JS-01 > div.row {
+  padding-right: 0px;
+  padding-left: 0px;
+  margin-right: 0px;
+  margin-left: 0px;
+  height: 90%;
+}
+
 
 /* Box Size */
 .box-sm {
@@ -56,6 +83,13 @@ background: radial-gradient(circle, rgba(103,103,103,0.5018382352941176) 0%, rgb
   resize: both;
   overflow: auto;
 }
+.box-lg-resize-term {
+  width: 840px;
+  height: 400px;
+  resize: both;
+  overflow: hidden;
+}
+
 /* Media Player */
 .win-prop-circle {
   box-shadow: var(--box-boxshadow);
@@ -328,8 +362,10 @@ color: rgba(0, 0, 0, 0.425);
 color: rgba(0, 0, 0, 0.425);
 }
 
-
-
+/* Application Terminal*/
+.terminal-right {
+  background-color: #1f1f1f;
+}
 
 
 
