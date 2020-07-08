@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="284.667" height="338.001" viewBox="0 0 284.667 338.001">
+  <defs>
+    <radialGradient id="radial-gradient" cx="0.5" cy="0.5" r="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#333"/>
+      <stop offset="1" stop-color="#212121"/>
+    </radialGradient>
+    <filter id="Path_2" x="0" y="0" width="124.667" height="338.001" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-color="red" flood-opacity="0.929"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Path_3" x="160" y="0" width="124.667" height="338.001" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-2"/>
+      <feFlood flood-color="red" flood-opacity="0.929"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="pause" transform="translate(-33.667 9)">
+    <g id="Group_2" data-name="Group 2" transform="translate(42.667)">
+      <g id="Group_1" data-name="Group 1">
+        <g transform="matrix(1, 0, 0, 1, -9, -9)" filter="url(#Path_2)">
+          <path id="Path_2-2" data-name="Path 2" d="M129.333,0H62.667a20.024,20.024,0,0,0-20,20V300a20.024,20.024,0,0,0,20,20h66.667a20.024,20.024,0,0,0,20-20V20A20.025,20.025,0,0,0,129.333,0Z" transform="translate(-33.67 9)" fill="url(#radial-gradient)"/>
+        </g>
+      </g>
+    </g>
+    <g id="Group_4" data-name="Group 4" transform="translate(202.667)">
+      <g id="Group_3" data-name="Group 3">
+        <g transform="matrix(1, 0, 0, 1, -169, -9)" filter="url(#Path_3)">
+          <path id="Path_3-2" data-name="Path 3" d="M385.333,0H318.667a20.024,20.024,0,0,0-20,20V300a20.024,20.024,0,0,0,20,20h66.667a20.024,20.024,0,0,0,20-20V20A20.025,20.025,0,0,0,385.333,0Z" transform="translate(-129.67 9)" fill="url(#radial-gradient)"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

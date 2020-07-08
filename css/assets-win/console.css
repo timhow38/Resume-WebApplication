@@ -1,0 +1,95 @@
+/*
+|*************************************************************************;
+* Copyright 2019, Timothy Howard, All rights reserved.
+* ScriptName    : CoreCLI Console
+* ScriptPath    : /css/assets-win/console.css
+|*************************************************************************;
+*/
+
+#terminal {
+  overflow-x: hidden;
+    color: rgb(255, 255, 255);
+    font-family: var(--sub-font);
+    font-size: 1.3rem;
+    height: 92%;
+    width: 100%;
+    padding: 10px;
+  text-align: left!important;
+  line-height: normal;
+    -webkit-box-shadow: var(--webkit-boxshadow-red);
+    -moz-box-shadow: var(--moz-boxshadow-red);
+    box-shadow: var(--box-boxshadow-red);
+  }
+  
+  #terminal::-webkit-scrollbar {
+    width: 7px;
+  }
+  #terminal::-webkit-scrollbar-thumb {
+    border-radius: 7px;
+    background-color: rgba(255, 255, 255, 0.425);
+  }
+  #terminal::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+  
+  #terminal a {
+    color: rgb(255, 255, 255);
+    text-decoration: underline;
+  }
+  #terminal strong{
+    color: rgb(255, 255, 255);
+    background: rgb(0, 0, 0);
+    display:inline;
+  }
+
+  #terminal .label::before {
+    content: '>';
+    display: inline-block;
+    position: relative;
+    width: 1rem;
+    height: 1em;
+  }
+  #terminal .output {
+    color: rgb(255, 255, 255);
+  }
+  
+  .print {
+    cursor: var(--main-cursor-default);
+  }
+  #cli {
+    position: relative;
+    white-space: pre-wrap;
+    cursor: var(--main-cursor-text);
+  }
+  #cli span.cursor {
+    background-color: rgba(255, 255, 255, 0.425);
+      animation: blinker 1s linear infinite;
+    }
+    
+    @keyframes blinker {
+      0%{     background-color: rgba(255, 255, 255, 0.425);   }
+    49%{    background-color: rgba(255, 255, 255, 0.425); }
+    60%{    background-color: transparent; }
+    99%{    background-color:transparent;  }
+    100%{   background-color: rgba(255, 255, 255, 0.425);    }
+    }
+  /* Shell Tables */
+  th {
+    text-align: left;
+    width: auto;
+  }
+  .table {
+    color: rgb(255, 255, 255);
+  }
+  .table-hover tbody tr:hover {
+    background-color: rgba(0, 0, 0, 0.425);
+    color: #ffffff;
+    font-weight: bold;
+  }
+  .table thead th {
+    border-bottom: 2px solid #ffffff;
+  }
+  .table td, .table th {
+    border-bottom: 2px solid #ffffff00;
+    border-top: 1px solid #dee2e600;
+  }

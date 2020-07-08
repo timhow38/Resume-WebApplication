@@ -1,0 +1,361 @@
+/*
+|*************************************************************************;
+* ScriptName    : Draggable UI
+* ScriptPath    : css/lib-css/draggableUI.css
+|*************************************************************************;
+*/
+#containment-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+/*
+|*************************************************************************;
+* Window Default Properties 
+|*************************************************************************;
+*/
+/* Default Box Size */
+.win-prop {
+  box-shadow: var(--box-boxshadow);
+  -moz-box-shadow: var(--moz-boxshadow);
+  -webkit-box-shadow: var(--webkit-boxshadow);
+  border-radius: var(--border-radius-3);
+  position: absolute;
+  /*StartBoxPos*/
+  left: 20rem;
+  top: 10rem;
+  /*BoxSize*/
+  border-left: 1px solid rgb(15, 15, 15)!important;
+  border-right: 1px solid rgb(15, 15, 15)!important;
+  border-bottom: 1px solid rgb(15, 15, 15)!important;
+  font-size: 0.9em;
+  background: rgb(103,103,103);
+background: radial-gradient(circle, rgba(103,103,103,0.5018382352941176) 0%, rgba(255,255,255,0.5018382352941176) 100%);
+}
+
+/* Box Size */
+.box-sm {
+  width: 420px;
+  height: 400px;
+}
+.box-lg {
+  width: 840px;
+  height: 400px;
+}
+
+/* Box Size */
+.box-sm-resize {
+  width: 420px;
+  height: 400px;
+  resize: both;
+  overflow: auto;
+}
+.box-lg-resize {
+  width: 840px;
+  height: 400px;
+  resize: both;
+  overflow: auto;
+}
+/* Media Player */
+.win-prop-circle {
+  box-shadow: var(--box-boxshadow);
+  -moz-box-shadow: var(--moz-boxshadow);
+  -webkit-box-shadow: var(--webkit-boxshadow);
+  border-radius: var(--border-radius-3);
+  position: absolute;
+  /*StartBoxPos*/
+  left: 20rem;
+  top: 10rem;
+  /*BoxSize*/
+  width: 420px;
+  height: 400px;
+  font-size: 0.9em;
+  border-radius: 100%;
+  background: radial-gradient(circle, rgba(31,31,31,0.7819502801120448) 89%, rgba(31,31,31,0) 100%);
+}
+/* Win -AppHeader */
+.win-prop .header {
+  border-radius: var(--border-radius-3);
+  cursor: var(--main-cursor-grab);
+  font-family: var(--main-font);
+  display: flex;
+  font-size: 1rem;
+  font-weight: 100;
+  color: #ffffff;
+  background: #1F1F1F;
+  -webkit-box-shadow: var(--webkit-boxshadow);
+	-moz-box-shadow: var(--moz-boxshadow);
+	box-shadow: var(--box-boxshadow);
+}
+/* Win -Close Button icon Init color */
+.close {
+  color: #ffffff;
+}
+/* Win -Cursor = Grabbing on Active */
+.win-prop .header:active, .win-prop .header .sub-menu-title .icon:active {
+  cursor: var(--main-cursor-grabbing);
+}
+/* Win -AppHeader SubTitle */
+.win-prop .header .sub-menu-title {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  padding: 0px 10px;
+  display: flex;
+}
+/* Win -AppHeader SubIcon */
+.win-prop .header .sub-menu-title .icon {
+  position: relative;
+  display: inline-block;
+}
+/* Win -AppHeader SubText */
+.win-prop .header .sub-menu-title .text {
+  top: 2px;
+  height: 25px;
+  position: relative;
+  padding: 0px 8px;
+  line-height: 25px;
+  border-left: 1px solid rgba(0, 0, 0, 0.2);
+}
+/* Win -AppHeader BTN */
+.win-prop .header .buttons {
+  display: flex;
+  width: 160px;
+  height: 30px;
+}
+.win-prop .header .buttons .btn {
+  flex: 1;
+  color: #5c5c5c;
+  text-align: center;
+}
+/* Win -AppHeader BTN:Hover */
+.win-prop .header .buttons .btn:hover {
+  cursor: var(--main-cursor-pointer);
+  color: #ffffff;
+}
+#close00:hover,
+#close01:hover,
+#close02:hover {
+  color: #000;
+}
+/* Win -AppHeader BTN:Proper */
+.win-prop .header .buttons .btn:hover.minus {
+  background: rgba(0, 0, 0, 0.25);
+}
+.win-prop .header .buttons .btn:hover.expand {
+  background: rgba(0, 0, 0, 0.25);
+}
+.win-prop .header .buttons .btn:hover.close {
+  background: #c21423;
+}
+/* Win -AppHeader BTN Icon */
+.win-prop .header .buttons .btn i {
+  position: relative;
+  display: inline-block;
+  font-size: 20px;
+}
+
+/*
+|*************************************************************************;
+* Desktop Icons Default Properties 
+|*************************************************************************;
+*/
+/* Default Icon Settings */
+.desk-prop {
+  border-radius: var(--border-radius-3);
+  /* InitPos */
+  
+  position: absolute;
+  width: 6em;
+  height: auto;
+
+  float: right;
+  margin: 0px 0px 0px 0px;
+  font-size: 0.9em;
+  pointer-events: painted;
+}
+.desk-prop .card:active {
+  border: 1px solid rgba(255, 255, 255, 0.58);
+}
+
+/* Default SubFolder Size - Container*/
+.sub-folder { 
+  height: 92%;
+  -webkit-box-shadow: var(--webkit-boxshadow-red);
+    -moz-box-shadow: var(--moz-boxshadow-red);
+    box-shadow: var(--box-boxshadow-red);
+}
+
+/* Default Icon Positions - Desktop */
+.app-chip{left:1.5rem;top:9rem}
+.app-discord {left: 1.5rem;top: 2rem;}
+.app-branches{left: 1.5rem;top: 16rem;}
+.app-lodestar {left: 1.5rem;top: 23rem;}
+.app-centralmind {left: 1.5rem;top: 29rem;}
+
+/* Default Icon Positions - SubFolders*/
+.app-bran-rd {}
+.app-bran-tact {}
+
+/* Icon Image Properties*/
+.card {
+  background-color: transparent;
+  text-align: center;
+  cursor: var(--main-cursor-pointer);
+}
+.card-text {
+ text-shadow: var(--main-text-shadow);
+}
+.icon-img {
+  width: 1.5em;
+}
+/* Icon Card on Grab*/
+.card:active {
+  cursor: var(--main-cursor-grabbing);
+  
+}
+/* Icon Card Inner Properties*/
+.card-body {
+  padding: 0rem;
+}
+.card-img,
+.card-img-top {
+  width: 4em;
+  height: 4em;
+}
+
+
+
+
+
+/* Application Lodestar */
+.lode-card {
+  cursor: var(--main-cursor-default);
+  
+  /* background: linear-gradient(180deg, rgba(22,22,22,1) 0%, rgba(60,119,216,0.6867121848739496) 100%);*/
+  background-image: url("../../img/images/applications/app-lodestar/lodeback.png");
+  background-size: cover;
+  border: solid 1px #0f0f0f;
+  height: 100%;
+}
+#draggable-JS-lodestar > div.form.sub-folder > div {
+  border: 0px solid rgba(255, 255, 255, 0.58);
+}
+.lode-body {
+  padding-top: 2em;
+}
+.lode-title-sub {
+  font-size: 1.5em;
+    color: #3c77d8;
+    margin-top: -19px;
+}
+.lode-card-banner {
+  width: 22em;
+}
+.lode-bflip {
+  transform: rotate(180deg);
+}
+.lode-card-text {
+  padding-left: 1em;
+  padding-right: 1em;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.btn-group-lode {
+  text-shadow: var(--main-text-shadow);
+  top: 2em;
+}
+.btn-lode {
+  color: #fff!important;
+  cursor: var(--main-cursor-pointer);
+  font-size: 1.5em;
+  border-radius: var(--border-radius-3)!important;
+
+}
+.btn-outline-lode {
+  border-color: #3c77d8;
+}
+.btn-outline-lode:hover{
+  background-color: #3c77d8;
+}
+/* Application Diplomacy*/
+.diplo-card {
+  background-image: url("../../img/images/applications/app-branches/bg-dp.png");
+  background-size: cover;
+  border: solid 1px #0f0f0f;
+  height: 25.7em;
+}
+.dipl-quote strong {
+  font-style: normal;
+color: #6464FF;
+}
+
+
+
+
+/* Application Diplomacy*/
+.tact-card {
+  background-image: url("../../img/images/applications/app-branches/bg-tc.png");
+  background-size: cover;
+  border: solid 1px #0f0f0f;
+  height: 25.7em;
+}
+.tact-quote strong {
+  font-style: normal;
+color: #F1C40F;
+}
+/* Application Science*/
+.scie-card {
+  background-image: url("../../img/images/applications/app-branches/bg-rd.png");
+  background-size: cover;
+  border: solid 1px #0f0f0f;
+  height: 25.7em;
+}
+.scie-quote strong {
+  font-style: normal;
+color: rgba(0, 0, 0, 0.425);
+}
+/* Application Logistics*/
+.logi-card {
+  background-image: url("../../img/images/applications/app-branches/bg-lg.png");
+  background-size: cover;
+  border: solid 1px #0f0f0f;
+  height: 25.7em;
+}
+.logi-quote strong {
+  font-style: normal;
+color: rgba(0, 0, 0, 0.425);
+}
+
+
+
+
+
+
+.app-li {
+  list-style-position: inside;
+  list-style: none;
+  margin-left: -44px;
+
+}
+
+.branch-title-sub {
+  font-size: 1.5em;
+  color: rgba(0, 0, 0, 0.425);
+    margin-top: -19px;
+}
+
+.branch-card-text {
+  padding-left: 1em;
+  padding-right: 1em;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.1em;
+}
+.card-quote {
+  font-style: italic;
+  color: #ffffff;
+}
+
+

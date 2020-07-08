@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="658" height="530" viewBox="0 0 658 530">
+  <defs>
+    <filter id="chart-network" x="0" y="0" width="658" height="530" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#chart-network)">
+    <path id="chart-network-2" data-name="chart-network" d="M576,192a64,64,0,1,0-64-64A64.059,64.059,0,0,0,576,192ZM64,240a64,64,0,1,0,64,64A64.059,64.059,0,0,0,64,240Zm449.6-37.2-19.2-25.6-48,36,19.2,25.6ZM576,384a63.84,63.84,0,0,0-38.3,13l-96-57.6a109.91,109.91,0,0,0,6.3-35.5,111.944,111.944,0,0,0-112-112,108.64,108.64,0,0,0-24.4,2.9l-40.8-87.4A63.836,63.836,0,1,0,224,128c1.1,0,2.1-.3,3.2-.3l41,87.8C241.5,235.9,224,267.8,224,304a111.71,111.71,0,0,0,193.2,76.7L513,438.2A63.868,63.868,0,1,0,576,384ZM336,352a48,48,0,1,1,48-48A48.012,48.012,0,0,1,336,352ZM152,320h48V288H152Z" transform="translate(9 9)" fill="#fff"/>
+  </g>
+</svg>
