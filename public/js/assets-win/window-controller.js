@@ -281,7 +281,7 @@ function initAppController() {
 		onOpen: () => {},
 		onClose: () => {},
 		iconPath: "/img/images/vector-img/desktop/fontAwesome/folder.svg",
-		iconName: "COLLECTIVE WEBSITE",
+		iconName: "WEBSITE-DEV",
 		iconParent: "sub-folder-0",
 		iconXDelta: 75,
 		appDesc: "<strong>LOGISTICS</strong> -This branch is the lifeblood of the Collective!",
@@ -293,7 +293,7 @@ function initAppController() {
 		onOpen: () => {},
 		onClose: () => {},
 		iconPath: "/img/images/vector-img/desktop/fontAwesome/folder.svg",
-		iconName: "[DSI] WEBSITE",
+		iconName: "ANDROID-DEV",
 		iconXDelta: 75,
 		iconParent: "sub-folder-0",
 		appDesc: "<strong>SCIENCE</strong> -For every problem there is a solution!",
@@ -305,7 +305,7 @@ function initAppController() {
 		onOpen: () => {},
 		onClose: () => {},
 		iconPath: "/img/images/vector-img/desktop/fontAwesome/folder.svg",
-		iconName: "TACTICAL",
+		iconName: "DATA VISUALIZE",
 		iconParent: "sub-folder-0",
 		iconXDelta: 75,
 		appDesc: "<strong>TACTICAL</strong> -S.W.A.R.M. stands for Space Warfare and Advanced Response Module. ",
@@ -323,6 +323,19 @@ function initAppController() {
 		appDesc:
 			"<strong>DIPLOMACY</strong> -The branch focused on diplomacy, roleplay and recruitment.</p>",
 	});
+		//Branch = Diplomacy
+		appController.add({
+			id: "draggable-JS-sub-cate05",
+			name: "CATEGORY05",
+			onOpen: () => {},
+			onClose: () => {},
+			iconPath: "/img/images/vector-img/desktop/fontAwesome/folder.svg",
+			iconName: "CATEGORY05",
+			iconParent: "sub-folder-0",
+			iconXDelta: 75,
+			appDesc:
+				"<strong>CATEGORY05</strong> -Test Text.</p>",
+		});
 
 
 	//About DEVS

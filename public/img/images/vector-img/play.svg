@@ -1,18 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="306" height="338.001" viewBox="0 0 306 338.001">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="317.996" height="350.004" viewBox="0 0 317.996 350.004">
   <defs>
     <radialGradient id="radial-gradient" cx="0.386" cy="0.5" r="0.5" gradientUnits="objectBoundingBox">
       <stop offset="0" stop-color="#333"/>
       <stop offset="1" stop-color="#212121"/>
     </radialGradient>
-    <filter id="Path_1" x="0" y="0" width="306" height="338.001" filterUnits="userSpaceOnUse">
+    <filter id="Path_1" x="0" y="0" width="317.996" height="350.004" filterUnits="userSpaceOnUse">
       <feOffset input="SourceAlpha"/>
-      <feGaussianBlur stdDeviation="3" result="blur"/>
-      <feFlood flood-color="red" flood-opacity="0.929"/>
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feFlood flood-color="#fff"/>
       <feComposite operator="in" in2="blur"/>
       <feComposite in="SourceGraphic"/>
     </filter>
   </defs>
   <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Path_1)">
-    <path id="Path_1-2" data-name="Path 1" d="M295.84,146.049l-256-144A16,16,0,0,0,16,16V304a16.006,16.006,0,0,0,23.84,13.952l256-144a16.008,16.008,0,0,0,0-27.9Z" transform="translate(-7 9)" fill="url(#radial-gradient)"/>
+    <path id="Path_1-2" data-name="Path 1" d="M295.84,146.049l-256-144A16,16,0,0,0,16,16V304a16.006,16.006,0,0,0,23.84,13.952l256-144a16.008,16.008,0,0,0,0-27.9Z" transform="translate(-1 15)" fill="url(#radial-gradient)"/>
   </g>
 </svg>
