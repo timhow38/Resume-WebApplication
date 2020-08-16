@@ -250,8 +250,8 @@ function initAppController() {
 	});
 	//Loadstar icon
 	appController.add({
-		id: "draggable-JS-lodestar",
-		name: "SOCIALMEDIA",
+		id: "draggable-JS-socialMedia",
+		name: "SOCIAL",
 		onOpen: () => {},
 		onClose: () => {},
 		iconPath: "/img/images/vector-img/desktop/fontAwesome/hashtag.svg",
@@ -276,41 +276,41 @@ function initAppController() {
 	// ******************************************************************* //
 	//Branch = Logistics
 	appController.add({
-		id: "draggable-JS-Logistics",
-		name: "LOGISTICS",
+		id: "draggable-JS-webdev",
+		name: "WERBDEV",
 		onOpen: () => {},
 		onClose: () => {},
 		iconPath: "/img/images/vector-img/desktop/fontAwesome/folder.svg",
 		iconName: "WEBSITE-DEV",
 		iconParent: "sub-folder-0",
 		iconXDelta: 75,
-		appDesc: "<strong>LOGISTICS</strong> -This branch is the lifeblood of the Collective!",
+		appDesc: "<strong>Website Development</strong> -Test Text",
 	});
 	//Branch = Science
 	appController.add({
-		id: "draggable-JS-Science",
-		name: "SCIENCE",
+		id: "draggable-JS-android",
+		name: "ANDROID",
 		onOpen: () => {},
 		onClose: () => {},
 		iconPath: "/img/images/vector-img/desktop/fontAwesome/folder.svg",
 		iconName: "ANDROID-DEV",
 		iconXDelta: 75,
 		iconParent: "sub-folder-0",
-		appDesc: "<strong>SCIENCE</strong> -For every problem there is a solution!",
+		appDesc: "<strong>Android Development</strong> -Test Text",
 	});
 	//Branch = Tactical
 	appController.add({
-		id: "draggable-JS-Tactical",
-		name: "TACTICAL",
+		id: "draggable-JS-folder-datavis",
+		name: "DATAVIS",
 		onOpen: () => {},
 		onClose: () => {},
 		iconPath: "/img/images/vector-img/desktop/fontAwesome/folder.svg",
 		iconName: "DATA VISUALIZE",
 		iconParent: "sub-folder-0",
 		iconXDelta: 75,
-		appDesc: "<strong>TACTICAL</strong> -S.W.A.R.M. stands for Space Warfare and Advanced Response Module. ",
+		appDesc: "<strong>Data Visualization</strong> -Test Text ",
 	});
-	//Branch = Diplomacy
+	/*Branch = Diplomacy
 	appController.add({
 		id: "draggable-JS-Diplomacy",
 		name: "DIPLOMACY",
@@ -323,7 +323,8 @@ function initAppController() {
 		appDesc:
 			"<strong>DIPLOMACY</strong> -The branch focused on diplomacy, roleplay and recruitment.</p>",
 	});
-		//Branch = Diplomacy
+	*/
+		/*Branch = Diplomacy
 		appController.add({
 			id: "draggable-JS-sub-cate05",
 			name: "CATEGORY05",
@@ -336,16 +337,17 @@ function initAppController() {
 			appDesc:
 				"<strong>CATEGORY05</strong> -Test Text.</p>",
 		});
+		*/
 
 
 	//About DEVS
 	appController.add({
-		id: "draggable-JS-Developers",
-		name: "DEVELOPERS",
+		id: "draggable-JS-GITHUB",
+		name: "GITHUB",
 		onOpen: () => {},
 		onClose: () => {},
-		iconPath: "/img/images/vector-img/desktop/fontAwesome/construction.svg",
-		iconName: "DEVELOPERS",
+		iconPath: "/img/images/vector-img/desktop/fontAwesome/github-square.svg",
+		iconName: "GITHUB",
 		iconParent: "containment-wrapper",
 		iconYDelta: 100,
 		appDesc:

@@ -36,4 +36,5 @@ $(".body-sub")
 	})
 	.on("click", function () {
 		$("#context-menu").removeClass("show1").hide();
+		console.log();
 	});

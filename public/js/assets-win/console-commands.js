@@ -145,26 +145,6 @@ commandHandler.add({
 	aliases: ["end"],
 });
 commandHandler.add({
-	name: "purge2",
-	helpMsg: "",
-	extendedHelp: "",
-	run: () => purgeTest,
-});
-commandHandler.add({
-	name: "honk",
-	helpMsg: "",
-	extendedHelp: "",
-	run: () =>
-		'<img style="width:6em;" src="../../img/images/commands/honk.png"></img>',
-});
-commandHandler.add({
-	name: "purge",
-	helpMsg: "",
-	extendedHelp: "",
-	run: () =>
-		'<img style="width:2em;margin-left: -9px;transform: rotate(90deg);" src="../../img/images/commands/purge.png"></img>',
-});
-commandHandler.add({
 	name: "app-desc",
 	helpMsg: "Get the description of an application",
 	extendedHelp:
@@ -191,3 +171,25 @@ commandHandler.add({
 	run: () => Player.play(),
 	aliases: ["start-music"],
 });
+/*
+commandHandler.add({
+	name: "purge2",
+	helpMsg: "",
+	extendedHelp: "",
+	run: () => purgeTest,
+});
+commandHandler.add({
+	name: "honk",
+	helpMsg: "",
+	extendedHelp: "",
+	run: () =>
+		'<img style="width:6em;" src="../../img/images/commands/honk.png"></img>',
+});
+commandHandler.add({
+	name: "purge",
+	helpMsg: "",
+	extendedHelp: "",
+	run: () =>
+		'<img style="width:2em;margin-left: -9px;transform: rotate(90deg);" src="../../img/images/commands/purge.png"></img>',
+});
+*/
