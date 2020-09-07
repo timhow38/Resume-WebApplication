@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="670" height="542" viewBox="0 0 670 542">
+  <defs>
+    <radialGradient id="radial-gradient" cx="0.5" cy="0.5" r="1.546" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="gray"/>
+    </radialGradient>
+    <filter id="laptop-code" x="0" y="0" width="670" height="542" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feFlood/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#laptop-code)">
+    <path id="laptop-code-2" data-name="laptop-code" d="M255.03,261.65a16,16,0,0,0,22.63,0l11.31-11.31a16,16,0,0,0,0-22.63L253.25,192l35.71-35.72a16,16,0,0,0,0-22.63l-11.31-11.31a16,16,0,0,0-22.63,0l-58.34,58.34a16,16,0,0,0,0,22.63Zm96.01-11.3,11.31,11.31a16,16,0,0,0,22.63,0l58.34-58.34a16,16,0,0,0,0-22.63l-58.34-58.34a16,16,0,0,0-22.63,0l-11.31,11.31a16,16,0,0,0,0,22.63L386.75,192l-35.71,35.72a16,16,0,0,0,0,22.63ZM624,416H381.54c-.74,19.81-14.71,32-32.74,32H288c-18.69,0-33.02-17.47-32.77-32H16A16.047,16.047,0,0,0,0,432v16a64.188,64.188,0,0,0,64,64H576a64.188,64.188,0,0,0,64-64V432a16.047,16.047,0,0,0-16-16ZM576,48A48.141,48.141,0,0,0,528,0H112A48.141,48.141,0,0,0,64,48V384H576ZM512,320H128V64H512Z" transform="translate(15 15)" fill="url(#radial-gradient)"/>
+  </g>
+</svg>

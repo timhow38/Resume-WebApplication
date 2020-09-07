@@ -121,6 +121,7 @@ class AppController {
 			id: container.id,
 			name: iconOpts.name,
 		});
+		//onclick can be used
 		container.ondblclick = () => {
 			self.open(app.name);
 		};
@@ -250,12 +251,12 @@ function initAppController() {
 	});
 	//Loadstar icon
 	appController.add({
-		id: "draggable-JS-socialMedia",
+		id: "draggable-JS-resume",
 		name: "SOCIAL",
 		onOpen: () => {},
 		onClose: () => {},
-		iconPath: "/img/images/vector-img/desktop/fontAwesome/hashtag.svg",
-		iconName: "SOCIAL MEDIA",
+		iconPath: "/img/images/vector-img/desktop/fontAwesome/file-alt.svg",
+		iconName: "RESUME",
 		iconParent: "containment-wrapper",
 		iconYDelta: 100,
 		appDesc: "Interstellar Alliance between many factions.",

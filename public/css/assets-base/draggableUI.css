@@ -77,19 +77,19 @@
 .box-sm-resize {
   width: 420px;
   height: 400px;
-  resize: both;
+  /*resize: both;*/
   overflow: auto;
 }
 .box-lg-resize {
   width: 840px;
   height: 400px;
-  resize: both;
+  /*resize: both;*/
   overflow: auto;
 }
 .box-lg-resize-term {
   width: 840px;
   height: 400px;
-  resize: both;
+  /*resize: both;*/
   overflow: hidden;
 }
 
