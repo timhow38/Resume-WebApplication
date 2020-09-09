@@ -72,6 +72,7 @@ let cliView;
 		onKeyUp: function onKeyUp(e) {
 			e.preventDefault();
 		},
+		//Ctrl F5
 		onKeyDown: async function onKeyDown(e) {
 			e.preventDefault();
 			if (e.ctrlKey && e.key == "v") {

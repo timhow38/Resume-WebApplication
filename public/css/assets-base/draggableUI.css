@@ -77,13 +77,13 @@
 .box-sm-resize {
   width: 420px;
   height: 400px;
-  /*resize: both;*/
+  resize: both;
   overflow: auto;
 }
 .box-lg-resize {
   width: 840px;
   height: 400px;
-  /*resize: both;*/
+  resize: both;
   overflow: auto;
 }
 .box-lg-resize-term {
@@ -265,7 +265,7 @@
 .card {
   background-color: transparent;
   text-align: center;
-  cursor: var(--main-cursor-pointer);
+  cursor: var(--main-cursor-default);
 }
 .card-text {
   text-shadow: var(--main-text-shadow);

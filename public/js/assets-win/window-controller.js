@@ -251,12 +251,12 @@ function initAppController() {
 	});
 	//Loadstar icon
 	appController.add({
-		id: "draggable-JS-resume",
-		name: "SOCIAL",
+		id: "draggable-JS-CAREER",
+		name: "CAREER",
 		onOpen: () => {},
 		onClose: () => {},
 		iconPath: "/img/images/vector-img/desktop/fontAwesome/file-alt.svg",
-		iconName: "RESUME",
+		iconName: "CAREER",
 		iconParent: "containment-wrapper",
 		iconYDelta: 100,
 		appDesc: "Interstellar Alliance between many factions.",
@@ -343,12 +343,12 @@ function initAppController() {
 
 	//About DEVS
 	appController.add({
-		id: "draggable-JS-GITHUB",
-		name: "GITHUB",
+		id: "draggable-JS-REPOS",
+		name: "REPOS",
 		onOpen: () => {},
 		onClose: () => {},
 		iconPath: "/img/images/vector-img/desktop/fontAwesome/github-square.svg",
-		iconName: "GITHUB",
+		iconName: "REPOS",
 		iconParent: "containment-wrapper",
 		iconYDelta: 100,
 		appDesc:

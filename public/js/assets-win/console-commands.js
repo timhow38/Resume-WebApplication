@@ -74,7 +74,7 @@ commandHandler.add({
 		cliView.clearTerminal();
 		return "Type 'help' for more information.";
 	},
-	aliases: ["cls"],
+	aliases: ["cls","purge"],
 });
 commandHandler.add({
 	name: "about-devs",
@@ -108,7 +108,7 @@ commandHandler.add({
 	helpMsg: "Refreshes the page",
 	extendedHelp: "Refreshes the page. <br> Usage: refresh",
 	run: () => {
-		window.location = window.location.href + "?eraseCache=true";
+		window.location = window.location.href+'?eraseCache=true';
 		return "Redirecting...";
 	},
 });
@@ -177,7 +177,7 @@ commandHandler.add({
 	helpMsg: "",
 	extendedHelp: "",
 	run: () => purgeTest,
-});
+});*/
 commandHandler.add({
 	name: "honk",
 	helpMsg: "",
@@ -185,6 +185,7 @@ commandHandler.add({
 	run: () =>
 		'<img style="width:6em;" src="../../img/images/commands/honk.png"></img>',
 });
+/*
 commandHandler.add({
 	name: "purge",
 	helpMsg: "",
