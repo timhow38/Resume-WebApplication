@@ -37,7 +37,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Vector Backgrounds */
+/* Vector Backgrounds 
 #layers-outer {
   background-image: var(--svg-background-tri);
   background-attachment: fixed;
@@ -62,7 +62,7 @@ body {
   width: 100%;
   height: 100vh;
   opacity: 0.5;
-}
+}*/
 #layer-stars {
   -webkit-backface-visibility: hidden;
   background-image: var(--svg-background-tv);
@@ -80,7 +80,7 @@ body {
   transform: var(--prop-scale-norm);
 }
 #layer-stars:after {
-  background: linear-gradient(90deg, rgba(26,42,108,0.6) 0%, rgba(178,31,31,0.6) 50%, rgba(242,113,33,0.6) 100%);
+  background: linear-gradient(180deg, rgba(70,130,180,0.8) 0%, rgba(35,65,90,0.8) 100%);
   z-index: -2;
 }
 #layer-stars:before,
@@ -111,12 +111,12 @@ a:hover {
   width: 100%;
   height: 100%;
   z-index: 10000;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: #33333300;
 }
 
 #loader {
   z-index: var(--main-zindex-0);
-  background-color: rgba(0, 0, 0, 0);
+  background-color: #33333300;
   display: block;
   position: relative;
   left: 0%;
@@ -128,14 +128,14 @@ a:hover {
 }
 @keyframes fade-in {
   0% {
-    background-color: rgb(0, 0, 0);
+    background-color: #333333;
   }
   60% {
-    background-color: rgb(0, 0, 0);
+    background-color: #333333;
   }
 
   100% {
-    background-color: rgba(0, 0, 0, 0);
+    background-color: #33333300;
   }
 }
 #loader-wrapper .loader-section {

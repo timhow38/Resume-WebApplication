@@ -73,6 +73,11 @@
   height: 400px;
 }
 
+.box-lg-miro {
+  width: 840px;
+  height: 773px;
+}
+
 /* Box Size */
 .box-sm-resize {
   width: 420px;

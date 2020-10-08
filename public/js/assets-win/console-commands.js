@@ -171,19 +171,20 @@ commandHandler.add({
 	run: () => Player.play(),
 	aliases: ["start-music"],
 });
-/*
-commandHandler.add({
-	name: "purge2",
-	helpMsg: "",
-	extendedHelp: "",
-	run: () => purgeTest,
-});*/
+
 commandHandler.add({
 	name: "honk",
 	helpMsg: "",
 	extendedHelp: "",
 	run: () =>
 		'<img style="width:6em;" src="../../img/images/commands/honk.png"></img>',
+});
+commandHandler.add({
+	name: "lazy-ps1",
+	helpMsg: "Powershell Script",
+	extendedHelp: "Downloads Script <br> Usage: lazy-ps1",
+	run: () =>
+	window.open = '../exp-software/LazyWinAdmin_GUI-master.zip',
 });
 /*
 commandHandler.add({
@@ -194,3 +195,10 @@ commandHandler.add({
 		'<img style="width:2em;margin-left: -9px;transform: rotate(90deg);" src="../../img/images/commands/purge.png"></img>',
 });
 */
+/*
+commandHandler.add({
+	name: "purge2",
+	helpMsg: "",
+	extendedHelp: "",
+	run: () => purgeTest,
+});*/
