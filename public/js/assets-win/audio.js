@@ -573,9 +573,9 @@ var Player = {
 
 	tracks: [
 		{
-			artist: "Nocturnal",
-			song: "The Midnight",
-			src: "../../media/TheMidnightNocturnal.mp3",
+			artist: "Nihilore",
+			song: "Artifice",
+			src: "../../media/Artifice.mp3",
 		},
 	],
 
