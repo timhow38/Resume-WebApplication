@@ -1,4 +1,4 @@
-//Copyright 2019, Timothy Howard, strikeeaglechase#0001 , All rights reserved.
+//Copyright 2019, Timothy Howard, All rights reserved.
 const DEFAULT_X_POS = 20;
 const DEFAULT_Y_POS = 35;
 const DEFAULT_WRAP_PT_X = 1000;
@@ -198,7 +198,6 @@ var appController = new AppController();
 $(document).ready(initAppController);
 
 function initAppController() {
-	//Media Player App
 	appController.add({
 		id: "draggable-JS-MediaApp",
 		name: "MEDIAPLAYER",
@@ -210,18 +209,6 @@ function initAppController() {
 		iconYDelta: 100,
 		appDesc: "Media Player",
 	});
-	/*Discord application
-	appController.add({
-		id: "draggable-JS-00",
-		name: "DISCORD",
-		onOpen: () => {},
-		onClose: () => {},
-		iconPath: "/img/images/vector-img/desktop/icon-discord.svg",
-		iconName: "DISCORD",
-		iconParent: "containment-wrapper",
-		iconYDelta: 100,
-		appDesc: "Collectives Communication.",
-	});*/
 	//Command line app
 	appController.add({
 		id: "draggable-JS-01",
@@ -237,7 +224,6 @@ function initAppController() {
 		iconYDelta: 100,
 		appDesc: "Interactable Command Line Interface.",
 	});
-	//Branch folder
 	appController.add({
 		id: "draggable-JS-02",
 		name: "PROJECTS",
@@ -249,7 +235,6 @@ function initAppController() {
 		iconYDelta: 100,
 		appDesc: "Collectives Operational Arms",
 	});
-	//Loadstar icon
 	appController.add({
 		id: "draggable-JS-CAREER",
 		name: "CAREER",
@@ -261,87 +246,39 @@ function initAppController() {
 		iconYDelta: 100,
 		appDesc: "Interstellar Alliance between many factions.",
 	});
-	//
-	//appController.add({
-	//	id: "draggable-JS-blankApp",
-	//	name: "chip",
-	//	onOpen: () => {},
-	//	onClose: () => {},
-	//	iconPath: "/img/images/vector-img/desktop/chip.gif",
-	//	iconName: "CHIP",
-	//	iconParent: "desktop-icons",
-	//});
-
-	// ******************************************************************* //
-	// Branch Folder Icons
-	// ******************************************************************* //
-	//Branch = Logistics
 	appController.add({
-		id: "draggable-JS-webdev",
-		name: "WERBDEV",
+		id: "draggable-JS-INTERN",
+		name: "INTERN",
 		onOpen: () => {},
 		onClose: () => {},
 		iconPath: "/img/images/vector-img/desktop/fontAwesome/folder.svg",
-		iconName: "WEBSITE-DEV",
+		iconName: "DESIGN FACTORY",
 		iconParent: "sub-folder-0",
 		iconXDelta: 75,
 		appDesc: "<strong>Website Development</strong> -Test Text",
 	});
-	//Branch = Science
 	appController.add({
-		id: "draggable-JS-android",
-		name: "ANDROID",
+		id: "draggable-JS-PIRONGIA",
+		name: "PIRONGIA",
 		onOpen: () => {},
 		onClose: () => {},
 		iconPath: "/img/images/vector-img/desktop/fontAwesome/folder.svg",
-		iconName: "ANDROID-DEV",
+		iconName: "HERITAGE APP",
 		iconXDelta: 75,
 		iconParent: "sub-folder-0",
 		appDesc: "<strong>Android Development</strong> -Test Text",
 	});
-	//Branch = Tactical
 	appController.add({
-		id: "draggable-JS-folder-datavis",
-		name: "DATAVIS",
+		id: "draggable-JS-GIGXD",
+		name: "GIGXD",
 		onOpen: () => {},
 		onClose: () => {},
 		iconPath: "/img/images/vector-img/desktop/fontAwesome/folder.svg",
-		iconName: "DATA VISUALIZE",
-		iconParent: "sub-folder-0",
+		iconName: "GIG ADOBE XD",
 		iconXDelta: 75,
+		iconParent: "sub-folder-0",
 		appDesc: "<strong>Data Visualization</strong> -Test Text ",
 	});
-	/*Branch = Diplomacy
-	appController.add({
-		id: "draggable-JS-Diplomacy",
-		name: "DIPLOMACY",
-		onOpen: () => {},
-		onClose: () => {},
-		iconPath: "/img/images/vector-img/desktop/fontAwesome/folder.svg",
-		iconName: "DIPLOMACY",
-		iconParent: "sub-folder-0",
-		iconXDelta: 75,
-		appDesc:
-			"<strong>DIPLOMACY</strong> -The branch focused on diplomacy, roleplay and recruitment.</p>",
-	});
-	*/
-		/*Branch = Diplomacy
-		appController.add({
-			id: "draggable-JS-sub-cate05",
-			name: "CATEGORY05",
-			onOpen: () => {},
-			onClose: () => {},
-			iconPath: "/img/images/vector-img/desktop/fontAwesome/folder.svg",
-			iconName: "CATEGORY05",
-			iconParent: "sub-folder-0",
-			iconXDelta: 75,
-			appDesc:
-				"<strong>CATEGORY05</strong> -Test Text.</p>",
-		});
-		*/
-
-
-	//About DEVS
 	appController.add({
 		id: "draggable-JS-REPOS",
 		name: "REPOS",
