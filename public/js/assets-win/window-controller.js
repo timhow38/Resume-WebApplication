@@ -207,7 +207,7 @@ function initAppController() {
 		iconName: "MEDIAPLAYER",
 		iconParent: "containment-wrapper",
 		iconYDelta: 100,
-		appDesc: "Media Player",
+		appDesc: "<strong>Description:</strong> Media Player Prototype",
 	});
 	//Command line app
 	appController.add({
@@ -222,7 +222,7 @@ function initAppController() {
 		iconName: "TERMINAL",
 		iconParent: "containment-wrapper",
 		iconYDelta: 100,
-		appDesc: "Interactable Command Line Interface.",
+		appDesc: "<strong>Description:</strong> Interactable Command Line Interface.",
 	});
 	appController.add({
 		id: "draggable-JS-02",
@@ -233,7 +233,7 @@ function initAppController() {
 		iconName: "PROJECTS",
 		iconParent: "containment-wrapper",
 		iconYDelta: 100,
-		appDesc: "Collectives Operational Arms",
+		appDesc: "<strong>Description:</strong> Current Projects",
 	});
 	appController.add({
 		id: "draggable-JS-CAREER",
@@ -244,7 +244,7 @@ function initAppController() {
 		iconName: "CAREER",
 		iconParent: "containment-wrapper",
 		iconYDelta: 100,
-		appDesc: "Interstellar Alliance between many factions.",
+		appDesc: "<strong>Description:</strong> Career Links",
 	});
 	appController.add({
 		id: "draggable-JS-INTERN",
@@ -255,7 +255,7 @@ function initAppController() {
 		iconName: "DESIGN FACTORY",
 		iconParent: "sub-folder-0",
 		iconXDelta: 75,
-		appDesc: "<strong>Website Development</strong> -Test Text",
+		appDesc: "<strong>Description:</strong> Design Factory Internship",
 	});
 	appController.add({
 		id: "draggable-JS-PIRONGIA",
@@ -266,7 +266,7 @@ function initAppController() {
 		iconName: "HERITAGE APP",
 		iconXDelta: 75,
 		iconParent: "sub-folder-0",
-		appDesc: "<strong>Android Development</strong> -Test Text",
+		appDesc: "<strong>Description:</strong> Pirongia Heritage Project",
 	});
 	appController.add({
 		id: "draggable-JS-GIGXD",
@@ -277,7 +277,7 @@ function initAppController() {
 		iconName: "GIG ADOBE XD",
 		iconXDelta: 75,
 		iconParent: "sub-folder-0",
-		appDesc: "<strong>Data Visualization</strong> -Test Text ",
+		appDesc: "<strong>Description:</strong> GIG Internship UI Tutoring",
 	});
 	appController.add({
 		id: "draggable-JS-REPOS",
@@ -288,8 +288,7 @@ function initAppController() {
 		iconName: "REPOS",
 		iconParent: "containment-wrapper",
 		iconYDelta: 100,
-		appDesc:
-			"About Developers",
+		appDesc: "<strong>Description:</strong> Github Repositories",
 	});
 
 	appController.open("corecli");

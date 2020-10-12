@@ -77,11 +77,39 @@ commandHandler.add({
 	aliases: ["cls","purge"],
 });
 commandHandler.add({
-	name: "about-devs",
-	helpMsg: "Gives some info on the devs",
-	extendedHelp: "Gives some info on the devs. <br> Usage: about-devs",
+	name: "open",
+	helpMsg: "Opens an app",
+	extendedHelp: "Opens up an application. <br> Usage: open [app name]",
+	run: (appName) => appController.open(appName),
+	aliases: ["start"],
+});
+commandHandler.add({
+	name: "close",
+	helpMsg: "Closes an app",
+	extendedHelp: "Closes up an application. <br> Usage: close [app name]",
+	run: (appName) => appController.close(appName),
+	aliases: ["end"],
+});
+commandHandler.add({
+	name: "app-list",
+	helpMsg: "Lists all applications",
+	extendedHelp: "Lists all applications. <br> Usage: app-list-all ",
+	run: () => appController.listApps(),
+});
+commandHandler.add({
+	name: "app-desc",
+	helpMsg: "Get the description of an application",
+	extendedHelp:
+		"Gets the description of an application. <br> Usage: app-desc [app name]",
+	run: (appName) => appController.getAppDesc(appName),
+});
+
+commandHandler.add({
+	name: "about-dev",
+	helpMsg: "Gives some info on the dev",
+	extendedHelp: "Gives some info on the dev. <br> Usage: about-dev",
 	run: () =>
-		'Made by Timothy Howard (<a href="https://codepen.io/timhow38" target="_blank">about.me</a>)<br>Copyright (c) 2018 Timothy Howard',
+		'Made by Timothy Howard (<a href="https://github.com/timhow38" target="_blank">about.me</a>)<br>Copyright (c) 2018 Timothy Howard',
 });
 commandHandler.add({
 	name: "calc",
@@ -122,41 +150,8 @@ commandHandler.add({
 	},
 	aliases: ["web"],
 });
-/* TODO: Make app-list dynamic*/
-commandHandler.add({
-	name: "app-list",
-	helpMsg: "Lists all applications",
-	extendedHelp: "Lists all the apps in a table. <br> Usage: app-list",
-	run: () =>
-		'<table id="tablePreview" class="table table-hover table-sm"> <thead> <tr> <th>App Name</th> <th>Description</th> </tr></thead> <tbody> <tr> <td>CoreCli</td><td>Terminal Interface</td></tr><tr> <td>Discord</td><td>Collective Discord</td></tr></tbody> </table><table id="tablePreview" class="table table-hover table-sm"> <thead> <tr> <th>Branch Apps</th> <th>Description</th> </tr></thead> <tbody> <tr> <td>Diplomacy</td><td>HARMONIC -Branch</td></tr><tr> <td>Tactical</td><td>SWARM -Branch</td></tr><tr> <td>Logistics</td><td>LOGISTICS -Branch</td></tr><tr> <td>Science</td><td>R&amp;D -Branch</td></tr></tbody> </table>',
-});
-commandHandler.add({
-	name: "open",
-	helpMsg: "Opens an app",
-	extendedHelp: "Opens up an application. <br> Usage: open [app name]",
-	run: (appName) => appController.open(appName),
-	aliases: ["start"],
-});
-commandHandler.add({
-	name: "close",
-	helpMsg: "Closes an app",
-	extendedHelp: "Closes up an application. <br> Usage: close [app name]",
-	run: (appName) => appController.close(appName),
-	aliases: ["end"],
-});
-commandHandler.add({
-	name: "app-desc",
-	helpMsg: "Get the description of an application",
-	extendedHelp:
-		"Gets the description of an application. <br> Usage: app-desc [app name]",
-	run: (appName) => appController.getAppDesc(appName),
-});
-commandHandler.add({
-	name: "app-list-all",
-	helpMsg: "Lists all applications",
-	extendedHelp: "Lists all applications. <br> Usage: app-list-all ",
-	run: () => appController.listApps(),
-});
+
+
 commandHandler.add({
 	name: "pause",
 	helpMsg: "Pauses the music player",
