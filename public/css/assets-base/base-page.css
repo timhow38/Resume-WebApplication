@@ -316,6 +316,9 @@ body > div.body-sub > nav > a > img {
   display: inline;
 }
 
+.dropdown-item:focus, .dropdown-item:hover {
+  background-color: rgba(0, 0, 0, 0);
+}
 .clock {
   cursor: var(--main-cursor-default);
   position: absolute;
