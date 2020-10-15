@@ -435,3 +435,8 @@ a.float:hover + div.label-container {
   height: 100px;
   width: 100px;
 }
+#chartdiv {
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+}

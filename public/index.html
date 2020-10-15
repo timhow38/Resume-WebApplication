@@ -31,6 +31,11 @@
   <!--Assets- Audio -->
   <script src="js/vendor/prefixfree.min.js"></script>
   <link rel="stylesheet" type="text/css" href="css/root.css" />
+  <!--Assets- DataVis -->
+  <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+  <script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+  <script src="https://cdn.amcharts.com/lib/4/plugins/forceDirected.js"></script>
+  <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
   <!--<script src="js/modernizr-custom.js"></script>-->
   <!--Draggable-->
   <link rel="stylesheet" type="text/css" href="css/lib-css/draggableUI.css" />
@@ -88,7 +93,7 @@
         </button>
         <div class="dropdown-menu dropdown-menu-right" id="dropDownMenu"></div>
       </div>
-    </nav>
+    </nav>      
     <!-- Containment -->
     <div class="pages-stack">
 
@@ -96,7 +101,7 @@
       <!-- Audio Player -->
       <div class="page" id="page-home">
         <div id="containment-wrapper">
-
+          <div id="chartdiv"></div>
           <!-- Desktop Drag -Icons -->
           <div id="desktop-icons"></div>
 
@@ -333,6 +338,7 @@
       </div>
       <!-- /page -->
       <script src="/js/assets-api/gitAPI.js"></script>
+      <script src="/js/assets-datavis/asset-cft.js"></script>
       <script src="/js/assets-win/audio.js"></script>
       <script src="js/assets-win/console.js"></script>
       <script src="js/assets-win/asset-colorPicker.js"></script>

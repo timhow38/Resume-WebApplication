@@ -523,7 +523,7 @@ var Controls = {
 	drawPic: function () {
 		this.context.save();
 		this.context.beginPath();
-		this.context.fillStyle = "rgb(221, 0, 0, 0)";
+		this.context.fillStyle = "rgb(0, 0, 0, 0)";
 		this.context.lineWidth = 1;
 		var x = Tracker.r / Math.sqrt(Math.pow(Math.tan(Tracker.angle), 2) + 1);
 		var y = Math.sqrt(Tracker.r * Tracker.r - x * x);

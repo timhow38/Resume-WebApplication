@@ -113,11 +113,7 @@
   height: 400px;
   font-size: 0.9em;
   border-radius: 100%;
-  background: radial-gradient(
-    circle,
-    rgba(31, 31, 31, 0.7819502801120448) 89%,
-    rgba(31, 31, 31, 0) 100%
-  );
+
 }
 /* Win -AppHeader */
 .win-prop .header {
