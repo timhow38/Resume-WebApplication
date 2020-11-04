@@ -1,5 +1,5 @@
 let colorPicker = document.getElementById("colorPicker");
-let box = document.getElementById("context-menu");
+let box = document.getElementsByClassName("header");
 let output = document.getElementById("output");
 
 box.style.backgroundColor = colorPicker.value;
