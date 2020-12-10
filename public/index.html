@@ -49,343 +49,43 @@
   </script>
 </head>
 
-<body>
-  <div id="layers">
-    <div id="layer-stars"></div>
-    <div id="layers-inner"></div>
-    <div id="layers-outer"></div>
+<body id="wrapper " class="on">
+  <div class="scan-lines light">
+    <div></div>
   </div>
-  <!-- Menu Right Click-->
-  <div class="dropdown-menu dropdown-menu-sm" id="context-menu">
-    <div class="container" style="text-align: center; ">
-      <img class="icon-main-02" src="../img/images/vector-img/desktop/fontAwesome/construction.svg" width="30" height="30" class="" alt="">
-    </div>
+  <div id="screen">
+    <div id="content-holder">
+      <div id="content">
+        <div id="text">Coming Soon</div>
 
-    <div class="collapse" id="collapseExample">
-      <div class="dropDownMenu2" id="dropDownMenu2">
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
 
-      </div>
-    </div>
-
-    <button class="dropdown-item context-sep" style="text-align: center;" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-      <i class="fas fa-grip-horizontal"></i>
-    </button>
-  </div>
-  <!-- Body Wrapper-->
-  <div class="body-sub">
-    <!-- Animation Loader-->
-    <div id="loader-wrapper">
-      <div id="loader">
-        <iframe id="background" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;" scrolling="no" src="img/loader.html"></iframe>
-      </div>
-    </div>
-    <!-- Navbar -->
-    <nav class="navbar">
-      <a class="navbar-brand" href="#">
-        <img class="icon-main" src="../img/images/vector-img/desktop/fontAwesome/construction.svg" width="30" height="30" class="d-inline-block align-top" alt="">
-        Careers Site | Timothy .H
-      </a>
-
-      <div id="MyClockDisplay" class="clock" onload="showTime()"></div>
-      <div class="btn-group app-list">
-        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          APPS
-        </button>
-        <div class="dropdown-menu dropdown-menu-right" id="dropDownMenu"></div>
-      </div>
-    </nav>      
-    <!-- Containment -->
-    <div class="pages-stack">
-
-
-      <!-- Audio Player -->
-      <div class="page" id="page-home">
-        <div id="containment-wrapper">
-          <!--<div id="chartdiv"></div>-->
-          <!-- Desktop Drag -Icons -->
-          <div id="desktop-icons"></div>
-
-          <!-- Windows Applications-->
-          <div id="draggable-JS-INTERN" class="win-prop box-lg-miro application-non-drag">
-            <div class="header">
-              <div class="sub-menu-title">
-                <div class="icon"><img class="icon-img" src="/img/images/vector-img/desktop/fontAwesome/folder.svg" alt="Card image cap"></div>
-                <div class="text">Design Factory -2020</div>
-              </div>
-              <div class="buttons">
-                <div class="btn minus"> <i class="material-icons">remove</i></div>
-
-                <div id="close00" type="button" class="btn close"> <i class="material-icons">close</i></div>
-              </div>
-            </div>
-            <div class="form">
-              <iframe width="768" height="432" src="https://miro.com/app/embed/o9J_koshvM8=/?pres=1&frameId=3074457349338400583" frameBorder="0" scrolling="no" allowFullScreen></iframe>
-            </div>
-          </div>
-          <div id="draggable-JS-PIRONGIA" class="win-prop box-sm-resize application-non-drag">
-            <div class="header">
-              <div class="sub-menu-title">
-                <div class="icon"><img class="icon-img" src="/img/images/vector-img/desktop/fontAwesome/folder.svg" alt="Card image cap"></div>
-                <div class="text">PIRONGIA HERITAGE</div>
-              </div> 
-              <div class="buttons">
-                <div class="btn minus"> <i class="material-icons">remove</i></div>
-
-                <div id="close00" type="button" class="btn close"> <i class="material-icons">close</i></div>
-              </div>
-            </div>
-            <div class="form">
-              <div class="container" style="text-align: center; margin-top: 8em;">
-                <img class="icon-main-02" src="../img/images/vector-img/desktop/fontAwesome/construction.svg" width="30" height="30" class="" alt="">
-              </div> 
-            </div>
-          </div>
-          <div id="draggable-JS-GIGXD" class="win-prop box-sm-resize application-non-drag">
-            <div class="header">
-              <div class="sub-menu-title">
-                <div class="icon"><img class="icon-img" src="/img/images/vector-img/desktop/fontAwesome/folder.svg" alt="Card image cap"></div>
-                <div class="text">GIG ADOBE-XD</div>
-              </div>
-              <div class="buttons">
-                <div class="btn minus"> <i class="material-icons">remove</i></div>
-
-                <div id="close00" type="button" class="btn close"> <i class="material-icons">close</i></div>
-              </div>
-            </div>
-            <div class="form">
-              <div class="container" style="text-align: center; margin-top: 8em;">
-                <img class="icon-main-02" src="../img/images/vector-img/desktop/fontAwesome/construction.svg" width="30" height="30" class="" alt="">
-              </div> 
-            </div>
-          </div>
-          <div id="draggable-JS-CAREER" class="win-prop box-sm-resize application-non-drag">
-            <div class="header">
-              <div class="sub-menu-title">
-                <div class="icon"><img class="icon-img" src="/img/images/vector-img/desktop/fontAwesome/folder.svg" alt="Resume"></div>
-                <div class="text">CAREER</div>
-              </div>
-              <div class="buttons">
-                <div class="btn minus"> <i class="material-icons">remove</i></div>
-
-                <div id="close00" type="button" class="btn close"> <i class="material-icons">close</i></div>
-              </div>
-            </div>
-            <div class="form">
-              <ul class="list-group">
-                <a class="list-group-item d-flex justify-content-between align-items-center list-group-item-success" href="https://github.com/timhow38" target="_blank">
-                  GITHUB PROFILE
-                  <span class="badge badge-primary badge-pill">ACTIVE</span>
-                </a>
-                <a class="list-group-item d-flex justify-content-between align-items-center list-group-item-success" href="https://www.linkedin.com/in/timhow20/" target="_blank">
-                  LINKEDIN PROFILE
-                  <span class="badge badge-primary badge-pill">ACTIVE</span>
-                </a>
-                <a class="list-group-item d-flex justify-content-between align-items-center list-group-item-warning" href="/img/images/applications/CareerImage/Timothy-Howard-CV.pdf" target="_blank">
-                  RESUME -PDF
-                  <span class="badge badge-primary badge-pill">12-10-20</span>
-                </a>
-                <a class="list-group-item d-flex justify-content-between align-items-center list-group-item-danger" href="https://codepen.io/timhow38" target="_blank">
-                  CODEPEN PROFILE
-                  <span class="badge badge-primary badge-pill">INACTIVE</span>
-                </a>
-               
-              </ul>
-            
-            </div>
-          </div>
-          <div id="draggable-JS-01" class="win-prop box-lg-resize-term application-non-drag">
-            <div class="header">
-              <div class="sub-menu-title">
-                <div class="icon"><img class="icon-img" src="/img/images/vector-img/desktop/fontAwesome/laptop-code.svg" alt="Card image cap"></div>
-                <div class="text">TERMINAL</div>
-              </div>
-              <div class="buttons">
-                <div class="btn minus"> <i class="material-icons">remove</i></div>
-
-                <div id="close01" type="button" class="btn close"> <i class="material-icons">close</i></div>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="col-8">
-                <div id="terminal">
-                  <div class="print"><strong>[CoreCLI]</strong> - Exploring WebCli Possibilities.<br>Type <strong>[help]</strong> for more information.</div>
-                  <div id="cli" type="text" inputmode="search"><span class="label"></span><span class="prompt"></span></div>
-                </div>
-              </div>
-              <div class="col-4 terminal-right">
-                <div class="container" style="text-align: center; margin-top: 8em;">
-                  <img class="icon-main-02" src="../img/images/vector-img/desktop/fontAwesome/construction.svg" width="30" height="30" class="" alt="">
-                </div> 
-                
-                <!--
-                <div class="form-check form-check-inline">
-                  <div id="box">
-                    <label for="colorPicker">Border color:</label>
-                    <input type="color" value="#8888ff" id="colorPicker">
-                    <p id="output"></p>
-                  </div>
-                -->
-                </div>
-                <div class="form-check form-check-inline">
-                  <input id="Switch-BG1" type="checkbox" class="form-check-input" data-onstyle="success" data-offstyle="danger" type="checkbox" data-toggle="toggle" data-style="mr-1 slow" checked>
-                  <label for="inlineCheckbox1" class="form-check-label">Background 1</label>
-                </div>
-                <div class="form-check form-check-inline">
-                  <input id="inlineCheckbox1" type="checkbox" class="form-check-input" data-onstyle="success" data-offstyle="danger" type="checkbox" data-toggle="toggle" data-style="mr-1 slow" checked>
-                  <label for="inlineCheckbox1" class="form-check-label">Enabled</label>
-                </div>
-                <div class="form-check form-check-inline">
-                  <input id="inlineCheckbox1" type="checkbox" class="form-check-input" data-onstyle="success" data-offstyle="danger" type="checkbox" data-toggle="toggle" data-style="mr-1 slow" checked>
-                  <label for="inlineCheckbox1" class="form-check-label">Enabled</label>
-                </div>
-                <div class="form-check form-check-inline">
-                  <input id="inlineCheckbox1" type="checkbox" class="form-check-input" data-onstyle="success" data-offstyle="danger" type="checkbox" data-toggle="toggle" data-style="mr-1 slow" checked>
-                  <label for="inlineCheckbox1" class="form-check-label">Enabled</label>
-                </div>
-
-              </div>
-            </div>
-
-          </div>
-          <div id="draggable-JS-02" class="win-prop box-sm application-non-drag">
-            <div class="header">
-              <div class="sub-menu-title">
-                <div class="icon"><img class="icon-img" src="/img/images/vector-img/desktop/fontAwesome/chart-network.svg" alt="Card image cap"></div>
-                <div class="text">PROJECTS</div>
-              </div>
-              <div class="buttons">
-                <div class="btn minus"> <i class="material-icons">remove</i></div>
-
-                <div id="close02" type="button" class="btn close"> <i class="material-icons">close</i></div>
-              </div>
-            </div>
-            <div class="form sub-folder" id="sub-folder-0">
-             
-            </div>
-          </div>
-          <div id="draggable-JS-REPOS" class="win-prop box-lg-resize application-non-drag">
-            <div class="header">
-              <div class="sub-menu-title">
-                <div class="icon"><i class="material-icons">folder</i></div>
-                <div class="text">GITHUB - Public Repositories</div>
-              </div>
-              <div class="buttons">
-                <div class="btn minus"> <i class="material-icons">remove</i></div>
-
-                <div id="close02" type="button" class="btn close"> <i class="material-icons">close</i></div>
-              </div>
-            </div>
-            <div class="form sub-folder" id="sub-folder-0">
-              <div class="table-responsive">
-                <table class="table table-bordered table-fixed">
-                  <thead>
-                    <tr class="table-info">
-                      <th scope="col">ID</th>
-                      <th scope="col">Name</th>
-                      <th scope="col">URL</th>
-                      <th scope="col">Language</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <!-- 
-                      <tr>
-                        <td>...</td>
-                        <td>...</td>
-                        <td>...</td>
-                        <td>...</td>
-                      </tr> 
-                    -->
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-          <div id="draggable-JS-MediaApp" class="win-prop-circle application-non-drag">
-            <div class="header">
-
-              <div class="buttons audio-btn">
-                <div class="btn minus audio-min"> <i class="material-icons">remove</i></div>
-
-                <div id="close02" type="button" class="btn close audio-close"> <i class="material-icons">close</i></div>
-              </div>
-            </div>
-            <div class="form">
-              <div class="player">
-                <canvas></canvas>
-                <div class="song">
-                  <div class="artist">Kavinsky</div>
-                  <div class="name">Odd Look ft. The Weeknd</div>
-                </div>
-                <div class="playarea">
-                  <div class="prevSong"></div>
-                  <div class="play"></div>
-                  <div class="pause"></div>
-                  <div class="nextSong"></div>
-                </div>
-                <input type="range" min="0" max="100" value="25" class="soundControl" id="volumeSelector">
-                <div class="time">00:00</div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-        <a href="https://firebase.google.com/" target="_blank" class="float">
-        </a>
-        <div class="label-container">
-          <div class="label-text"><u>Hosted with Firebase!</u></div>
-          <i class="fa fa-play label-arrow"></i>
-        </div>
-      </div>
-      <!-- /page -->
-      <script src="/js/assets-api/gitAPI.js"></script>
-      <script src="/js/assets-datavis/asset-cft.js"></script>
-      <script src="/js/assets-win/audio.js"></script>
-      <script src="js/assets-win/console.js"></script>
-      <script src="js/assets-win/asset-colorPicker.js"></script>
-      <script src="js/assets-win/window-controller.js"></script>
-      <script src="js/assets-win/console-commands.js"></script>
-      <script src="js/random.js"></script>
-      <script src="js/main.js"></script>
-      <script>
-        window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
-      </script>
-      <!-- Script Loader -->
-      <script>
-        $(document).ready(function() {
-          setTimeout(function() {
-            $('body').addClass('loaded');
-            $('h1').css('color', '#222222');
-          }, 3100);
-        });
-      </script>
-
-      <!-- Script -RightClickMenu-->
-    </div>
-<!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
-
-<!-- TODO: Add SDKs for Firebase products that you want to use
+        <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
-<script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-analytics.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-analytics.js"></script>
 
-<script>
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  var firebaseConfig = {
-    apiKey: "AIzaSyD1wyOZqy0Z57w4uu-ksARn0P71Hlbq9yc",
-    authDomain: "timothy-profile.firebaseapp.com",
-    databaseURL: "https://timothy-profile.firebaseio.com",
-    projectId: "timothy-profile",
-    storageBucket: "timothy-profile.appspot.com",
-    messagingSenderId: "347222714190",
-    appId: "1:347222714190:web:564cc02338b77993a5601f",
-    measurementId: "G-DPHNH6K2EY"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
-</script>
+        <script>
+          // Your web app's Firebase configuration
+          // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+          var firebaseConfig = {
+            apiKey: "AIzaSyD1wyOZqy0Z57w4uu-ksARn0P71Hlbq9yc",
+            authDomain: "timothy-profile.firebaseapp.com",
+            databaseURL: "https://timothy-profile.firebaseio.com",
+            projectId: "timothy-profile",
+            storageBucket: "timothy-profile.appspot.com",
+            messagingSenderId: "347222714190",
+            appId: "1:347222714190:web:564cc02338b77993a5601f",
+            measurementId: "G-DPHNH6K2EY"
+          };
+          // Initialize Firebase
+          firebase.initializeApp(firebaseConfig);
+          firebase.analytics();
+        </script>
+      </div>
+    </div>
+  </div>
+
 </body>
 
 </html>
