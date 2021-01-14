@@ -65,8 +65,8 @@ body {
 }*/
 #layer-stars {
   -webkit-backface-visibility: hidden;
-  background-image: var(--svg-background-tv);
-  background-color: var(--asset-color-5);
+  background-image: var(--svg-ui-background);
+  background-color: var(--svg-ui-color);
   background-repeat: repeat;
   position: fixed;
   top: 0;

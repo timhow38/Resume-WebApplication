@@ -37,8 +37,8 @@
   text-decoration: underline;
 }
 #terminal strong {
-  color: rgb(255, 255, 255);
-  background: rgb(0, 0, 0);
+  color:rgb(0, 0, 0); 
+  background: rgb(255, 255, 255);
   display: inline;
 }
 
@@ -92,8 +92,8 @@ th {
   color: rgb(255, 255, 255);
 }
 .table-hover tbody tr:hover {
-  background-color: rgba(0, 0, 0, 0.425);
-  color: #ffffff;
+  background-color: #fff;
+  color:#000;
   font-weight: bold;
 }
 .table thead th {

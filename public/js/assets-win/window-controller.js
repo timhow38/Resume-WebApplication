@@ -258,17 +258,6 @@ function initAppController() {
 		appDesc: "<strong>Description:</strong> Design Factory Internship",
 	});
 	appController.add({
-		id: "draggable-JS-PIRONGIA",
-		name: "PIRONGIA",
-		onOpen: () => {},
-		onClose: () => {},
-		iconPath: "/img/images/vector-img/desktop/fontAwesome/folder.svg",
-		iconName: "HERITAGE APP",
-		iconXDelta: 75,
-		iconParent: "sub-folder-0",
-		appDesc: "<strong>Description:</strong> Pirongia Heritage Project",
-	});
-	appController.add({
 		id: "draggable-JS-GIGXD",
 		name: "GIGXD",
 		onOpen: () => {},

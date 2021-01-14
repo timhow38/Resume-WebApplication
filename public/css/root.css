@@ -4,7 +4,7 @@
 * ScriptName    : Global Root for CSS 
 * ScriptPath    : /css/root.css
 |*************************************************************************;
-*/
+*/ 
 
 @import url("https://fonts.googleapis.com/css?family=Merriweather:300,700,300italic,700italic|Source+Sans+Pro:900");
 @import url("https://fonts.googleapis.com/css?family=Squada+One&amp;display=swap");
@@ -16,18 +16,19 @@
 |*************************************************************************;
 */
 /* Base Page */
-@import url("assets-base/base-page.css");
-@import url("assets-base/draggableUI.css");
+@import url("./assets-base/base-page.css");
+@import url("./assets-base/draggableUI.css");
 
 /* Applications */
-@import url("assets-win/audio.css");
-@import url("assets-win/chartdiv.css");
-@import url("assets-win/console.css");
-@import url("assets-win/window-hover.css");
+@import url("./assets-win/audio.css");
+@import url("./assets-win/assets-git.css");
+@import url("./assets-win/chartdiv.css");
+@import url("./assets-win/console.css");
+@import url("./assets-win/window-hover.css");
 
 /* Assets Libraries */
-@import url("assets-base/base-page.css");
-@import url("lib-css/fontawesome-all.min.css");
+@import url("./assets-base/base-page.css");
+@import url("./lib-css/fontawesome-all.min.css");
 
 /*
 |*************************************************************************;
@@ -57,6 +58,8 @@
   /* Text Settings */
   --main-text-shadow: 0px 0px 4px rgb(0, 0, 0);
 
+  --panel-color: rgba(0, 0, 0, 0.135);
+
 /*
 |*************************************************************************;
 * SVG Properties
@@ -70,6 +73,9 @@
   --svg-background-tv: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iNTAwIiBoZWlnaHQ9IjUwMCI+CjxmaWx0ZXIgaWQ9Im4iPgo8ZmVUdXJidWxlbmNlIHR5cGU9ImZyYWN0YWxOb2lzZSIgYmFzZUZyZXF1ZW5jeT0iLjciIG51bU9jdGF2ZXM9IjEwIiBzdGl0Y2hUaWxlcz0ic3RpdGNoIj48L2ZlVHVyYnVsZW5jZT4KPC9maWx0ZXI+CjxyZWN0IHdpZHRoPSI1MDAiIGhlaWdodD0iNTAwIiBmaWxsPSIjMDAwIj48L3JlY3Q+CjxyZWN0IHdpZHRoPSI1MDAiIGhlaWdodD0iNTAwIiBmaWx0ZXI9InVybCgjbikiIG9wYWNpdHk9IjAuNCI+PC9yZWN0Pgo8L3N2Zz4=");
   --svg-background-tri: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cpolygon fill='%23cccccc' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%23aaaaaa' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%23c5c5c5' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%23a3a3a3' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%23bebebe' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%239c9c9c' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%23b7b7b7' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%23959595' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%23b1b1b1' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%238f8f8f' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%23aaaaaa' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%23888888' points='943 900 1210 900 971 687'/%3E%3C/svg%3E");
   --png-background-profile: url("../img/images/vector-img/desktop/floatBTNProfile.svg");
+
+  --svg-ui-background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%239C92AC' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+  --svg-ui-color: #000a0f;
 
   /* Default Box Shadow */
   --webkit-boxshadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
@@ -150,4 +156,17 @@ iframe{
   width: 100%;
   height: -webkit-fill-available;
   border: 0.1rem solid #ccc;
+}
+
+
+
+@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+  .win-prop {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.5);  
+  }
+  .warning {
+    display: none;
+  }
 }
