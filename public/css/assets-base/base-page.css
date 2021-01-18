@@ -178,10 +178,10 @@ a:hover {
 .dropdown-menu {
   margin: -0.1rem 0 0;
   border-radius: 0px 0px 10px 10px;
-  background-color: #0f0f0fa1;
+  background-color: #3d3d3d;
   padding: 0rem 0;
-  border-left: 1px solid rgba(0, 0, 0, 0.425);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.425);
+  border-left: 5px ridge rgb(61 61 61);
+  border-bottom: 5px ridge rgb(61 61 61);
 }
 .dropdown-item {
   color: rgb(255, 255, 255);
@@ -196,26 +196,29 @@ a:hover {
   text-shadow: 0 0px 0 rgba(255, 255, 255, 0);
 }
 .btn-secondary:focus {
-  color: #0f0f0f;
-  background-color: #ffffff;
-  box-shadow: 0 0 0 0.2rem rgba(130, 138, 145, 0);
-  border-color: transparent;
+  cursor: var(--main-cursor-pointer);
+  color: #ffffff;
+  background-color: #151515;
+  border-color:#fff;
 }
 .show > .btn-secondary.btn-secondary.dropdown-toggle:focus {
   box-shadow: 0 0 0 0.2rem rgba(6, 83, 151, 0);
 }
 .btn-secondary {
-  color: #0f0f0f;
-  background-color: #ffffff;
-  border-color: #6c757d00;
+  flex: 1;
+  color: #aaaaaa;
+  text-align: center;
+  border: solid #5a5a5a;
+  background-color: #151515;
 }
 .btn-secondary:hover,
 .btn-secondary:not(:disabled):not(.disabled).active,
 .btn-secondary:not(:disabled):not(.disabled):active,
 .show > .btn-secondary.dropdown-toggle {
-  color: #0f0f0f;
-  background-color: #ffffff;
-  border-color: #6c757d00;
+  cursor: var(--main-cursor-pointer);
+  color: #ffffff;
+  background-color: #151515;
+  border-color:#fff;
 }
 body > div.body-sub > nav > a > img {
   margin-top: -4px;
@@ -227,7 +230,7 @@ body > div.body-sub > nav > a > img {
 }
 /* Window Settings */
 .navbar {
-  background: #1f1f1f;
+  background: #3d3d3d;
   -webkit-box-shadow: var(--webkit-boxshadow);
   -moz-box-shadow: var(--moz-boxshadow);
   box-shadow: var(--box-boxshadow);
@@ -240,6 +243,7 @@ body > div.body-sub > nav > a > img {
   box-shadow: 0 0 0 0.2rem rgba(130, 138, 145, 0);
 }
 .navbar-brand {
+  cursor: var(--main-cursor-default);
   font-family: var(--main-font);
   padding-top: 0rem;
   padding-bottom: 0rem;
@@ -328,7 +332,7 @@ body > div.body-sub > nav > a > img {
   color: #ffffff;
   font-size: 1em;
   font-weight: bold;
-  letter-spacing: 7px;
+  letter-spacing: 5px;
 }
 
 .context-sep,
@@ -337,6 +341,7 @@ body > div.body-sub > nav > a > img {
 }
 .app-list {
   height: 100%;
+  top:-7px;
 }
 .txt-center {
   text-align: center;

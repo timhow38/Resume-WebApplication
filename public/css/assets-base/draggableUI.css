@@ -24,9 +24,8 @@
   left: 20rem;
   top: 10rem;
   /*BoxSize*/
-  border-left: 1px solid rgb(15, 15, 15) !important;
-  border-right: 1px solid rgb(15, 15, 15) !important;
-  border-bottom: 1px solid rgb(15, 15, 15) !important;
+  border: 5px rgb(61 61 61) groove;
+  border-radius: 5px;
   font-size: 0.9em;
   /*
   background: radial-gradient(
@@ -138,7 +137,7 @@
   font-size: 1rem;
   font-weight: 100;
   color: #fff;
-  background-color: #1f1f1f;
+  background-color: #3d3d3d;
   -webkit-box-shadow: var(--webkit-boxshadow);
   -moz-box-shadow: var(--moz-boxshadow);
   box-shadow: var(--box-boxshadow);
@@ -177,13 +176,16 @@
 /* Win -AppHeader BTN */
 .win-prop .header .buttons {
   display: flex;
-  width: 160px;
-  height: 30px;
+  width: 130px;
+  height: 31px;
+  padding-left: 30px;
 }
 .win-prop .header .buttons .btn {
   flex: 1;
-  color: #5c5c5c;
+  color: #5a5a5a;
   text-align: center;
+  border: solid;
+  background-color: #151515;
 }
 /* Win -AppHeader BTN:Hover */
 .win-prop .header .buttons .btn:hover {
@@ -426,4 +428,9 @@
 .card-quote {
   font-style: italic;
   color: #ffffff;
+}
+
+
+.isan-prop{
+  height: 100%;
 }

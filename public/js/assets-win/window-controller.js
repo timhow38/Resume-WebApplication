@@ -258,15 +258,15 @@ function initAppController() {
 		appDesc: "<strong>Description:</strong> Design Factory Internship",
 	});
 	appController.add({
-		id: "draggable-JS-GIGXD",
-		name: "GIGXD",
+		id: "draggable-JS-ISAN",
+		name: "ISAN",
 		onOpen: () => {},
 		onClose: () => {},
 		iconPath: "/img/images/vector-img/desktop/fontAwesome/folder.svg",
-		iconName: "GIG ADOBE XD",
+		iconName: "ISAN Starmap",
 		iconXDelta: 75,
 		iconParent: "sub-folder-0",
-		appDesc: "<strong>Description:</strong> GIG Internship UI Tutoring",
+		appDesc: "<strong>Description:</strong> 3JS Starmap for the game Starbase",
 	});
 	appController.add({
 		id: "draggable-JS-REPOS",
