@@ -15,8 +15,6 @@
   <link rel="apple-touch-icon" sizes="180x180" href="img/fav/ccore-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="img/fav/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="img/fav/favicon-16x16.png">
-  <link rel="manifest" href="img/fav/site.html">
-  <link rel="mask-icon" href="img/fav/safari-pinned-tab.svg" color="#5bbad5">
   <!-- Assets - Favicons - Img-->
   <meta name="msapplication-TileColor" content="#2b5797">
   <meta name="msapplication-TileImage" content="img/fav/mstile-144x144.png">
@@ -31,12 +29,6 @@
   <!--Assets- Audio -->
   <script src="js/vendor/prefixfree.min.js"></script>
   <link rel="stylesheet" type="text/css" href="css/root.css" />
-  <!--Assets- DataVis -->
-  <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
-  <script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
-  <script src="https://cdn.amcharts.com/lib/4/plugins/forceDirected.js"></script>
-  <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
-  <!--<script src="js/modernizr-custom.js"></script>-->
   <!--Draggable-->
   <link rel="stylesheet" type="text/css" href="css/lib-css/draggableUI.css" />
   <script src="js/vendor/jquery-1.12.4.js"></script>
@@ -44,6 +36,7 @@
   <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
   <link rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.1/moment.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
   <!-- PreLoader -->
   <script>
     document.documentElement.className = 'js';
@@ -81,7 +74,7 @@
         <iframe id="background" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;" scrolling="no" src="img/loader.html"></iframe>
       </div>
     </div>
-    <!-- Navbar -->
+    <!-- Navbar --> 
     <nav class="navbar">
       <p class="navbar-brand" href="#">
         <img class="icon-main" src="../img/images/vector-img/desktop/fontAwesome/construction-header.svg" width="30" height="30" class="d-inline-block align-top" alt="">
@@ -144,11 +137,10 @@
                   <h3 class="mb-0">Featured post</h3>
                   <div class="mb-1 text-muted">Nov 12</div>
                   <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-                  <a href="#" class="stretched-link">Continue reading</a>
+                  <a rel="noopener" rel="noreferrer" href="https://isan.to" target="blank_" class="stretched-link">Continue reading</a>
                 </div>
                 <div class="col-auto d-none d-lg-block">
-                  <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-        
+                  <img class="bd-placeholder-img" width="200" height="250" src="/img/images/applications/isan-starmap/isan-img2.PNG" alt="...">
                 </div>
               </div>
               
@@ -168,19 +160,19 @@
             </div>
             <div class="form">
               <ul class="list-group">
-                <a class="list-group-item d-flex justify-content-between align-items-center list-group-item-success" href="https://github.com/timhow38" target="_blank">
+                <a rel="noopener" rel="noreferrer" class="list-group-item d-flex justify-content-between align-items-center list-group-item-success" href="https://github.com/timhow38" target="_blank">
                   GITHUB PROFILE
                   <span class="badge badge-primary badge-pill">ACTIVE</span>
                 </a>
-                <a class="list-group-item d-flex justify-content-between align-items-center list-group-item-success" href="https://www.linkedin.com/in/timhow20/" target="_blank">
+                <a rel="noopener" rel="noreferrer"class="list-group-item d-flex justify-content-between align-items-center list-group-item-success" href="https://www.linkedin.com/in/timhow20/" target="_blank">
                   LINKEDIN PROFILE
                   <span class="badge badge-primary badge-pill">ACTIVE</span>
                 </a>
-                <a class="list-group-item d-flex justify-content-between align-items-center list-group-item-warning" href="/img/images/applications/CareerImage/Timothy-Howard-CV.pdf" target="_blank">
+                <a rel="noopener" rel="noreferrer" class="list-group-item d-flex justify-content-between align-items-center list-group-item-warning" href="/img/images/applications/CareerImage/Timothy-Howard-CV.pdf" target="_blank">
                   RESUME -PDF
                   <span class="badge badge-primary badge-pill">12-10-20</span>
                 </a>
-                <a class="list-group-item d-flex justify-content-between align-items-center list-group-item-danger" href="https://codepen.io/timhow38" target="_blank">
+                <a rel="noopener" rel="noreferrer"class="list-group-item d-flex justify-content-between align-items-center list-group-item-danger" href="https://codepen.io/timhow38" target="_blank">
                   CODEPEN PROFILE
                   <span class="badge badge-primary badge-pill">INACTIVE</span>
                 </a>
@@ -203,9 +195,9 @@
             </div>
 
             <div class="row">
-              <div class="col-8">
+              <div class="col-8 term-border">
                 <div id="terminal">
-                  <div class="print"><strong>[CoreCLI]</strong> - Exploring WebCli Possibilities.<br>Type <strong>[help]</strong> for more information.</div>
+                  <div class="print"><strong>[CoreCLI]</strong> - Exploring WebCli Possibilities.<br>Type <strong>"help"</strong> for more information.</div>
                   <div id="cli" type="text" inputmode="search"><span class="label"></span><span class="prompt"></span></div>
                 </div>
               </div>
@@ -280,45 +272,7 @@
             </div>
             </div>
           </div>
-          <!--
-            <div id="draggable-JS-REPOS" class="win-prop box-lg-resize application-non-drag">
-            <div class="header">
-              <div class="sub-menu-title">
-                <div class="icon"><i class="material-icons">folder</i></div>
-                <div class="text">GITHUB - Public Repositories</div>
-              </div>
-              <div class="buttons">
-                <div class="btn minus"> <i class="material-icons">remove</i></div>
-
-                <div id="close02" type="button" class="btn close"> <i class="material-icons">close</i></div>
-              </div>
-            </div>
-            <div class="form sub-folder" id="sub-folder-0">
-              <div class="table-responsive">
-                <table class="table table-bordered table-fixed">
-                  <thead>
-                    <tr class="table-info">
-                      <th scope="col">ID</th>
-                      <th scope="col">Name</th>
-                      <th scope="col">URL</th>
-                      <th scope="col">Language</th>
-                    </tr>
-                  </thead>
-                  <tbody>-->
-                    <!-- 
-                      <tr>
-                        <td>...</td>
-                        <td>...</td>
-                        <td>...</td>
-                        <td>...</td>
-                      </tr> 
-                    --><!-- 
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-          -->
+        
           <div id="draggable-JS-MediaApp" class="win-prop-circle application-non-drag">
             <div class="header">
 
@@ -348,16 +302,16 @@
           </div>
 
         </div>
-        <a href="https://firebase.google.com/" target="_blank" class="float">
+        <a rel="noopener" rel="noreferrer" href="https://firebase.google.com/" target="_blank" class="float">
         </a>
         <div class="label-container">
           <div class="label-text"><u>Hosted with Firebase!</u></div>
           <i class="fa fa-play label-arrow"></i>
         </div>
+
       </div>
       <!-- /page -->
       <script src="/js/assets-api/gitAPI-02.js"></script>
-      <script src="/js/assets-datavis/asset-cft.js"></script>
       <script src="/js/assets-win/audio.js"></script>
       <script src="js/assets-win/console.js"></script>
       <script src="js/assets-win/asset-colorPicker.js"></script>

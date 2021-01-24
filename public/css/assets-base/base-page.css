@@ -4,7 +4,7 @@
 * ScriptName    : BasePage Styles
 * ScriptPath    : /css/assets-base/base-page.css
 |*************************************************************************;
-*/
+*/ 
 
 html.js,
 .js body {
@@ -176,6 +176,8 @@ a:hover {
   padding: 0.2rem 0.75rem;
 }
 .dropdown-menu {
+  background-color: #3d3d3d;
+  background-image: var(--svg-ui-background);
   margin: -0.1rem 0 0;
   border-radius: 0px 0px 10px 10px;
   background-color: #3d3d3d;
@@ -260,9 +262,9 @@ body > div.body-sub > nav > a > img {
   text-align: center;
   text-transform: uppercase;
   font-weight: 700;
-  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: var(--webkit-boxshadow);
+  -moz-box-shadow: var(--moz-boxshadow);
+  box-shadow: var(--box-boxshadow);
 }
 .sub-title {
   font-family: var(--main-font-display);
@@ -275,9 +277,9 @@ body > div.body-sub > nav > a > img {
   border-width: 2px 2px 0 2px;
   text-align: left;
   text-transform: uppercase;
-  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: var(--webkit-boxshadow);
+  -moz-box-shadow: var(--moz-boxshadow);
+  box-shadow: var(--box-boxshadow);
 }
 .sub-title a {
   margin-left: 25px;
@@ -309,6 +311,10 @@ body > div.body-sub > nav > a > img {
   -webkit-box-shadow: var(--webkit-boxshadow);
   -moz-box-shadow: var(--moz-boxshadow);
   box-shadow: var(--box-boxshadow);
+  border-top: 3px rgb(61 61 61) groove;
+  border-left: 3px rgb(61 61 61) groove;
+  border-bottom: 3px rgb(61 61 61) ridge;
+  border-right: 3px rgb(61 61 61) ridge;
 }
 #context-menu .dropdown-item {
   text-align: center;
@@ -316,7 +322,8 @@ body > div.body-sub > nav > a > img {
 }
 #context-menu .dropdown-item:hover {
   color: rgb(0, 0, 0);
-  background: rgb(255, 255, 255);
+  
+  background: rgba(255, 255, 255);
   display: inline;
 }
 
@@ -337,7 +344,13 @@ body > div.body-sub > nav > a > img {
 
 .context-sep,
 .dropDownMenu2 {
-  border-top: 1px solid rgba(255, 255, 255, 0.31);
+  border-top: 2px solid rgb(0 0 0 / 31%);
+}
+.dropDownMenu2 {
+  background-color: #00000087;
+}
+.context-sep:hover {
+  border-radius: 0px 0px 10px 10px;
 }
 .app-list {
   height: 100%;
@@ -419,10 +432,14 @@ a.float:hover + div.label-container {
   padding: 4px 6px;
   font: 16px "Lucida Grande", "Helvetica", "Arial", "sans-serif"
 }
-
-.list-group-item:first-child {
-  border-top-left-radius: 0rem;
-  border-top-right-radius: 0rem;
+.list-group a {
+  margin: 10px;
+  font-weight: bold;
+  border-radius: 5px;
+  text-decoration: none;
+  -webkit-box-shadow: var(--webkit-boxshadow);
+  -moz-box-shadow: var(--moz-boxshadow);
+  box-shadow: var(--box-boxshadow);
 }
 
 .badge {
@@ -431,9 +448,10 @@ a.float:hover + div.label-container {
 .badge-primary {
   color: #000;
   background-color: #ffffff;
-  -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
-  -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
-  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+  -webkit-box-shadow: inset var(--webkit-boxshadow);
+  -moz-box-shadow: inset var(--moz-boxshadow);
+  box-shadow: inset var(--box-boxshadow);
+  border: solid 1px #00000087;
 }
 .icon-main-02 {
   margin-left: 5px;

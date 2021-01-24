@@ -20,12 +20,16 @@
   -moz-box-shadow: var(--moz-boxshadow-red);
   box-shadow: var(--box-boxshadow-red);
 }
-
+ 
+.term-border {
+  border-right: 2px groove rgb(61 61 61);
+  border-top: 3px ridge rgb(61 61 61);
+}
 #terminal::-webkit-scrollbar {
   width: 7px;
 }
 #terminal::-webkit-scrollbar-thumb {
-  border-radius: 7px;
+  border-radius: 10px 0px 0px 10px;
   background-color: rgba(255, 255, 255, 0.425);
 }
 #terminal::-webkit-scrollbar-track {

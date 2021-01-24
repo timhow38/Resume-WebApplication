@@ -3,12 +3,12 @@
 * ScriptName    : Draggable UI
 * ScriptPath    : css/lib-css/draggableUI.css
 |*************************************************************************;
-*/
+*/ 
 #containment-wrapper {
   width: 100%;
   height: 100%;
 }
-
+ 
 /*
 |*************************************************************************;
 * Window Default Properties 
@@ -18,13 +18,16 @@
 .win-prop {
   box-shadow: var(--box-boxshadow);
   -moz-box-shadow: var(--moz-boxshadow);
-  -webkit-box-shadow: var(--webkit-boxshadow);
+  /*-webkit-box-shadow: var(--webkit-boxshadow);*/
   position: absolute;
   /*StartBoxPos*/
   left: 20rem;
   top: 10rem;
   /*BoxSize*/
-  border: 5px rgb(61 61 61) groove;
+  border-top: 3px rgb(61 61 61) groove;
+  border-left: 3px rgb(61 61 61) groove;
+  border-bottom: 3px rgb(61 61 61) ridge;
+  border-right: 3px rgb(61 61 61) ridge;
   border-radius: 5px;
   font-size: 0.9em;
   /*
@@ -49,7 +52,7 @@
   width: 7px;
 }
 .win-prop-scroll::-webkit-scrollbar-thumb {
-  border-radius: 7px;
+  border-radius: 10px 0px 0px 10px;
   background-color: rgba(255, 255, 255, 0.425);
 }
 .win-prop-scroll::-webkit-scrollbar-track {
@@ -74,7 +77,7 @@
   padding-left: 0px;
   margin-right: 0px;
   margin-left: 0px;
-  height: 90%;
+  height: 92%;
 }
 
 /* Box Size */
@@ -141,6 +144,7 @@
   -webkit-box-shadow: var(--webkit-boxshadow);
   -moz-box-shadow: var(--moz-boxshadow);
   box-shadow: var(--box-boxshadow);
+  background-image: var(--svg-ui-background);
 }
 /* Win -Close Button icon Init color */
 .close {
@@ -403,7 +407,8 @@
 
 /* Application Terminal*/
 .terminal-right {
-  background-color: #1f1f1f;
+  background-color: #3d3d3d;
+  background-image: var(--svg-ui-background);
 }
 
 .app-li {

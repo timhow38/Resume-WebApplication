@@ -1,4 +1,4 @@
-/*
+/* 
 |*************************************************************************;
 * Copyright 2019, Timothy Howard, All rights reserved.
 * ScriptName    : Global Root for CSS 
@@ -22,7 +22,6 @@
 /* Applications */
 @import url("./assets-win/audio.css");
 @import url("./assets-win/assets-git.css");
-@import url("./assets-win/chartdiv.css");
 @import url("./assets-win/console.css");
 @import url("./assets-win/window-hover.css");
 
@@ -38,6 +37,7 @@
 :root {
   /* Fonts */
   --svg-font: "arissa_typefaceregular";
+  /*--main-font: "VT323", monospace; */
   --main-font: "VT323", monospace;
   /*font-family: 'Poppins', sans-serif;*/
   --sub-font: "VT323", monospace;
