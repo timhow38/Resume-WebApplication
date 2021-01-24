@@ -105,11 +105,11 @@ commandHandler.add({
 });
 
 commandHandler.add({
-	name: "about-dev",
-	helpMsg: "Gives some info on the dev",
-	extendedHelp: "Gives some info on the dev. <br> Usage: about-dev",
+	name: "about",
+	helpMsg: "Gives some info on the devs",
+	extendedHelp: "Gives some info on the dev. <br> Usage: about",
 	run: () =>
-		'Made by Timothy Howard (<a href="https://github.com/timhow38" target="_blank">about.me</a>)<br>Copyright (c) 2018 Timothy Howard',
+		'Lead Developer: <a href="https://github.com/timhow38" target="_blank">Timothy Howard</a><br>JS Scriptor: <a href="https://github.com/Strikeeaglechase" target="_blank">Strikeeaglechase</a><br><br><strong>Copyright &copy; 2018 Timothy Howard</strong>',
 });
 commandHandler.add({
 	name: "calc",

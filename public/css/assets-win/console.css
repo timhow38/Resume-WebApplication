@@ -24,6 +24,8 @@
 .term-border {
   border-right: 2px groove rgb(61 61 61);
   border-top: 3px ridge rgb(61 61 61);
+  border-bottom: solid 1px #000;
+  border-left: solid 1px #000;
 }
 #terminal::-webkit-scrollbar {
   width: 7px;
