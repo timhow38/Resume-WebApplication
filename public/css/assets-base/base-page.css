@@ -64,6 +64,7 @@ body {
   opacity: 0.5;
 }*/
 #layer-stars {
+  will-change: transform;
   -webkit-backface-visibility: hidden;
   background-image: var(--svg-ui-background);
   background-color: var(--svg-ui-color);
@@ -139,6 +140,7 @@ a:hover {
   }
 }
 #loader-wrapper .loader-section {
+  will-change: translateX;
   z-index: var(--main-zindex-1);
   position: fixed;
   top: 0;
@@ -150,12 +152,14 @@ a:hover {
 }
 
 .loaded #loader-wrapper {
+  will-change: transition;
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
   visibility: hidden;
 }
 
 .loaded #loader {
+  will-change: transition;
   background: radial-gradient(
     circle,
     rgba(0, 0, 0, 0) 0%,
@@ -331,6 +335,7 @@ body > div.body-sub > nav > a > img {
   background-color: rgba(0, 0, 0, 0);
 }
 .clock {
+  will-change: transform;
   cursor: var(--main-cursor-default);
   position: absolute;
   top: 50%;

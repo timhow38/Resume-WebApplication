@@ -342,6 +342,7 @@
   width: 22em;
 }
 .lode-bflip {
+  will-change: transform;
   transform: rotate(180deg);
 }
 .lode-card-text {

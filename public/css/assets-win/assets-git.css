@@ -10,6 +10,7 @@
   overflow-x: scroll;
 }
 .projects-li {
+  will-change: transform;
   box-sizing: border-box;
   height: 11em;
   vertical-align: top;
@@ -32,6 +33,7 @@
 }
 
 .projects-li:hover{
+  will-change: transform;
   box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
   -webkit-transform: translateY(-2px);
   transform: translateY(-2px);
