@@ -10,6 +10,7 @@
 @import url("https://fonts.googleapis.com/css?family=Squada+One&amp;display=swap");
 @import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
 
+
 /*
 |*************************************************************************;
 * Stylesheets Imports
@@ -154,8 +155,7 @@ iframe{
   margin: auto;
   display: block;
   width: 100%;
-  height: -webkit-fill-available;
-  border: 0.1rem solid #ccc;
+  height: 83vh;
 }
 
 
