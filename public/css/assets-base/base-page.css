@@ -11,6 +11,7 @@ html.js,
 .js body {
   overflow: hidden;
   height: 100vh;
+  font-size: 13px!important;
 }
 
 /* Pages stack */
@@ -175,19 +176,12 @@ a:hover {
   display: none;
 }
 /* BootRedo */
-.btn {
-  border-radius: 5px;
 
-  padding: 0.2rem 0.75rem;
-}
 
 .btn-outline-warning {
   -webkit-box-shadow: inset 0px 0px 5px 0px rgba(0,0,0,0.75);
   -moz-box-shadow: inset 0px 0px 5px 0px rgba(0,0,0,0.75);
   box-shadow: inset 0px 0px 5px 0px rgba(0,0,0,0.75);
-}
-.dropup .dropdown-menu {
-  left: 0;
 }
 .navmen {
   padding-left: 0px;
@@ -202,16 +196,19 @@ a:hover {
 .dropdown-menu {
   background-color: #3d3d3d;
   background-image: var(--svg-ui-background);
-  margin: -0.1rem 0 0;
-  border-radius: 0px 10px 0px 0px;
   background-color: #3d3d3d;
   padding: 0rem 0;
-  border-right: 5px ridge rgb(61 61 61);
-  border-top: 5px ridge rgb(61 61 61);
+}
+.btn-group-vertical {
+  width: 100%;
+
+}
+
+.btn-secondary {
+  background-color: #333;
 }
 .dropdown-item {
   color: rgb(255, 255, 255);
-  text-align: right;
 }
 .dropdown-item:hover {
   color: rgb(0, 0, 0);
@@ -221,31 +218,9 @@ a:hover {
 .close {
   text-shadow: 0 0px 0 rgba(255, 255, 255, 0);
 }
-.btn-secondary:focus {
-  cursor: var(--main-cursor-pointer);
-  color: #ffffff;
-  background-color: #151515;
-  border-color:#fff;
-}
-.show > .btn-secondary.btn-secondary.dropdown-toggle:focus {
-  box-shadow: 0 0 0 0.2rem rgba(6, 83, 151, 0);
-}
-.btn-secondary {
-  flex: 1;
-  color: #aaaaaa;
-  text-align: center;
-  border: solid #5a5a5a;
-  background-color: #151515;
-}
-.btn-secondary:hover,
-.btn-secondary:not(:disabled):not(.disabled).active,
-.btn-secondary:not(:disabled):not(.disabled):active,
-.show > .btn-secondary.dropdown-toggle {
-  cursor: var(--main-cursor-pointer);
-  color: #ffffff;
-  background-color: #151515;
-  border-color:#fff;
-}
+
+
+
 body > div.body-sub > nav > a > img {
   margin-top: -4px;
 }
@@ -270,7 +245,6 @@ body > div.body-sub > nav > a > img {
 }
 .btn-warning {
   transition: transform .3s ease-out;
-  border-radius: 5px 5px 0px 0px;
 }
 .btn-warning:hover {
   transform: translate(0, -5px);
@@ -280,9 +254,7 @@ body > div.body-sub > nav > a > img {
   margin-right: 0px;
   margin-left: 0px;
 }
-.show > .btn-secondary.dropdown-toggle:focus {
-  box-shadow: 0 0 0 0.2rem rgba(130, 138, 145, 0);
-}
+
 .navbar-brand {
   cursor: var(--main-cursor-default);
   font-family: var(--main-font);
@@ -309,7 +281,6 @@ body > div.body-sub > nav > a > img {
   font-family: var(--main-font-display);
   background: rgb(15, 15, 15);
   color: rgb(255, 255, 255);
-  border-radius: 0px 0px 20px 0px;
   padding: 5px 10px 5px 5px;
   height: 26px;
   width: 100%;
@@ -346,17 +317,17 @@ body > div.body-sub > nav > a > img {
 
 /* RightClickMenu */
 #context-menu {
+  width: 10em;
   border: 1px solid rgba(255, 255, 255, 0.31);
   -webkit-box-shadow: var(--webkit-boxshadow);
   -moz-box-shadow: var(--moz-boxshadow);
   box-shadow: var(--box-boxshadow);
-  border-top: 3px rgb(61 61 61) groove;
-  border-left: 3px rgb(61 61 61) groove;
-  border-bottom: 3px rgb(61 61 61) ridge;
-  border-right: 3px rgb(61 61 61) ridge;
+  border-top: 2px rgb(61 61 61) groove;
+  border-left: 2px rgb(61 61 61) groove;
+  border-bottom: 2px rgb(61 61 61) ridge;
+  border-right: 2px rgb(61 61 61) ridge;
 }
 #context-menu .dropdown-item {
-  text-align: center;
   color: #ffffff;
 }
 #context-menu .dropdown-item:hover {
@@ -377,7 +348,6 @@ body > div.body-sub > nav > a > img {
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
   color: #ffffff;
-  font-size: 1em;
   font-weight: bold;
   letter-spacing: 5px;
 }
@@ -390,7 +360,6 @@ body > div.body-sub > nav > a > img {
   background-color: #00000087;
 }
 .context-sep:hover {
-  border-radius: 0px 0px 10px 10px;
 }
 .app-list {
 }
@@ -416,7 +385,6 @@ button:focus {
   display: table-cell;
   vertical-align: middle;
   padding: 10px;
-  border-radius: 3px;
 }
 .label-arrow {
   display: table-cell;
@@ -437,7 +405,6 @@ button:focus {
   text-align: center;
 }
 .my-float {
-  font-size: 24px;
   margin-top: 18px;
 }
 a.float + div.label-container {
@@ -473,7 +440,6 @@ a.float:hover + div.label-container {
 .list-group a {
   margin: 10px;
   font-weight: bold;
-  border-radius: 5px;
   text-decoration: none;
   -webkit-box-shadow: var(--webkit-boxshadow);
   -moz-box-shadow: var(--moz-boxshadow);

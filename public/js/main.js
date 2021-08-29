@@ -1,1 +1,17 @@
-!function(e){"use strict";var t=Modernizr.csstransitions,n={WebkitTransition:"webkitTransitionEnd",MozTransition:"transitionend",OTransition:"oTransitionEnd",msTransition:"MSTransitionEnd",transition:"transitionend"}[Modernizr.prefixed("transition")],a=function(e,a){var r=function(e){if(t){if(e.target!=this)return;this.removeEventListener(n,r)}a&&"function"==typeof a&&a.call(this)};t?e.addEventListener(n,r):r()},r=document.querySelector(".pages-stack"),s=[].slice.call(r.children),i=s.length,o=0,c=document.querySelector("button.menu-button"),l=document.querySelector(".pages-nav"),d=[].slice.call(l.querySelectorAll(".link--page")),u=!1;function f(){for(var e=y(),t=0;t<i;++t){var n=s[t],a=e.indexOf(t);o!==t?(classie.add(n,"page--inactive"),-1!==a?(n.style.WebkitTransform="translate3d(0,100%,0)",n.style.transform="translate3d(0,100%,0)"):(n.style.WebkitTransform="translate3d(0,75%,-300px)",n.style.transform="translate3d(0,75%,-300px)")):classie.remove(n,"page--inactive"),n.style.zIndex=t<o?parseInt(o-t):parseInt(i+o-t),n.style.opacity=-1!==a?parseFloat(1-.1*a):0}}function p(){u?v():(!function(){classie.add(c,"menu-button--open"),classie.add(r,"pages-stack--open"),classie.add(l,"pages-nav--open");for(var e=y(),t=0,n=e.length;t<n;++t){var a=s[e[t]];a.style.WebkitTransform="translate3d(0, 75%, "+parseInt(-200-50*t)+"px)",a.style.transform="translate3d(0, 75%, "+parseInt(-200-50*t)+"px)"}}(),u=!0)}function v(){m()}function m(e){var t=e?document.getElementById(e):s[o],n=s.indexOf(t),i=y(n);t.style.WebkitTransform="translate3d(0, 0, 0)",t.style.transform="translate3d(0, 0, 0)",t.style.opacity=1;for(var d=0,p=i.length;d<p;++d){var v=s[i[d]];v.style.WebkitTransform="translate3d(0,100%,0)",v.style.transform="translate3d(0,100%,0)"}e&&(o=n),classie.remove(c,"menu-button--open"),classie.remove(l,"pages-nav--open"),a(t,function(){classie.remove(r,"pages-stack--open"),f(),u=!1})}function y(e){var t=o+1<i?o+1:0,n=o+2<i?o+2:1,a=[];return e!=o&&a.push(o),e!=t&&a.push(t),e!=n&&a.push(n),a}f(),c.addEventListener("click",p),d.forEach(function(e){var t=e.getAttribute("href").slice(1);e.addEventListener("click",function(e){e.preventDefault(),m(t)})}),s.forEach(function(e){var t=e.getAttribute("id");e.addEventListener("click",function(e){u&&(e.preventDefault(),m(t))})}),document.addEventListener("keydown",function(e){if(u){var t=e.keyCode||e.which;27===t&&v()}})}(window);
+function showTime() {
+    let e = moment().format("h:mm:ss a");
+    (document.getElementById("MyClockDisplay").innerHTML = e),
+        setInterval(() => {
+            (e = moment().format("h:mm:ss a")), (document.getElementById("MyClockDisplay").innerHTML = e);
+        }, 1e3);
+}
+setInterval(showTime, 1e3),
+    $(".body-sub")
+        .on("contextmenu", function (e) {
+            var n = e.pageY - 0,
+                o = e.pageX - 0;
+            return $("#context-menu").css({ display: "block", top: n, left: o }).addClass("show1"), !1;
+        })
+        .on("click", function () {
+            $("#context-menu").removeClass("show1").hide(), console.log();
+        });

@@ -23,7 +23,6 @@
   padding: 15px;
   margin: 10px;
   background: white;
-  border-radius: 5px;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.15);
   -webkit-transition: box-shadow 100ms, -webkit-transform 100ms;
   transition: box-shadow 100ms, -webkit-transform 100ms;
@@ -49,7 +48,6 @@
 	display: block;
   text-decoration: none;
   margin: 0;
-  font-size: 1.1em;
 }
 .projects-a:hover {
   border-top: .5em solid #4C4690;
@@ -61,7 +59,6 @@
 
 .projects-lang {
   color: #999;
-  font-size: .8em;
   margin: .2em 0 0 0;
 }
 

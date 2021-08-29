@@ -1,4 +1,4 @@
-const DEFAULT_X_POS = 20,
+const DEFAULT_X_POS = 35,
   DEFAULT_Y_POS = 35,
   DEFAULT_WRAP_PT_X = 1e3,
   DEFAULT_WRAP_PT_Y = 900;
@@ -35,9 +35,6 @@ class AppController {
         scroll: !1
       }),
       (o.elm.getElementsByClassName("btn close")[0].onclick = () => {
-        a.close(o.name);
-      }),
-      (o.elm.getElementsByClassName("btn minus")[0].onclick = () => {
         a.close(o.name);
       });
     var s = document.createElement("button");
@@ -148,17 +145,17 @@ class AppController {
 }
 var appController = new AppController();
 function initAppController() {
-  appController.add({
+ /* appController.add({
     id: "draggable-JS-MediaApp",
     name: "MEDIAPLAYER",
     onOpen: () => {},
     onClose: () => {},
     iconPath: "/img/images/vector-img/desktop/fontAwesome/turntable.svg",
-    iconName: "MEDIAPLAYER",
+    iconName: "Media",
     iconParent: "containment-wrapper",
     iconYDelta: 100,
     appDesc: "<strong>Description:</strong> Media Player Prototype"
-  }),
+  }),*/
     appController.add({
       id: "draggable-JS-01",
       name: "TERMINAL",
@@ -167,7 +164,7 @@ function initAppController() {
         out = "Type 'help' for more information.";
       },
       iconPath: "/img/images/vector-img/desktop/fontAwesome/laptop-code.svg",
-      iconName: "TERMINAL",
+      iconName: "Terminal",
       iconParent: "containment-wrapper",
       iconYDelta: 100,
       appDesc:
@@ -179,7 +176,7 @@ function initAppController() {
       onOpen: () => {},
       onClose: () => {},
       iconPath: "/img/images/vector-img/desktop/fontAwesome/chart-network.svg",
-      iconName: "PROJECTS",
+      iconName: "Projects",
       iconParent: "containment-wrapper",
       iconYDelta: 100,
       appDesc: "<strong>Description:</strong> Current Projects"
@@ -190,7 +187,7 @@ function initAppController() {
       onOpen: () => {},
       onClose: () => {},
       iconPath: "/img/images/vector-img/desktop/fontAwesome/file-alt.svg",
-      iconName: "CAREER",
+      iconName: "Career",
       iconParent: "containment-wrapper",
       iconYDelta: 100,
       appDesc: "<strong>Description:</strong> Career Links"
@@ -201,7 +198,7 @@ function initAppController() {
       onOpen: () => {},
       onClose: () => {},
       iconPath: "/img/images/vector-img/desktop/fontAwesome/folder.svg",
-      iconName: "DESIGN FACTORY",
+      iconName: "Design Factory",
       iconParent: "sub-folder-0",
       iconXDelta: 75,
       appDesc: "<strong>Description:</strong> Design Factory Internship"
@@ -223,7 +220,7 @@ function initAppController() {
       onOpen: () => {},
       onClose: () => {},
       iconPath: "/img/images/vector-img/desktop/fontAwesome/github-square.svg",
-      iconName: "REPOS",
+      iconName: "Repos",
       iconParent: "containment-wrapper",
       iconYDelta: 100,
       appDesc: "<strong>Description:</strong> Github Repositories"

@@ -9,7 +9,6 @@ canvas {
   }
   .player {
 	pointer-events: none;
-	border-radius: 100%;
 	font-family: var(--main-font);
 	width: 740px;
 	height: 740px;
@@ -42,7 +41,6 @@ canvas {
 	vertical-align: middle;
 	margin: 0 26px;
 	border: 3px solid #ffffff;
-	border-radius: 120px;
 	width: 120px;
 	height: 120px;
 	background: url(/img/images/vector-img/play.svg) 40px 32px no-repeat;
@@ -58,7 +56,6 @@ canvas {
 	vertical-align: middle;
 	margin: 0 26px;
 	border: 3px solid #ffffff;
-	border-radius: 120px;
 	width: 120px;
 	height: 120px;
 	background: url(/img/images/vector-img/pause.svg) 40px 32px no-repeat;
@@ -159,7 +156,6 @@ canvas {
 	height: 25px;
 	background: #2b2b2b00;
 	border: solid 1px rgb(255, 255, 255);
-	border-radius: var(--border-radius-3);
 	outline: none;
 	opacity: 0.7;
 	-webkit-transition: 0.2s;
@@ -179,7 +175,6 @@ canvas {
 	box-shadow: var(--box-boxshadow);
 	-moz-box-shadow: var(--moz-boxshadow);
 	-webkit-box-shadow: var(--webkit-boxshadow);
-	border-radius: var(--border-radius-3);
 	cursor: pointer;
   }
   /*
@@ -193,7 +188,6 @@ canvas {
 	box-shadow: var(--box-boxshadow);
 	-moz-box-shadow: var(--moz-boxshadow);
 	-webkit-box-shadow: var(--webkit-boxshadow);
-	border-radius: var(--border-radius-3);
 	cursor: pointer;
   }
   
@@ -212,8 +206,5 @@ canvas {
 	display: block;
 	z-index: 1;
 	left: 7em;
-  }
-  #draggable-JS-MediaApp > div.header > div > div.btn.minus.audio-min {
-	color: #ffffff;
   }
   

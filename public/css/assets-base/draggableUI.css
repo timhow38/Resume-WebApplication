@@ -24,12 +24,10 @@
   left: 20rem;
   top: 10rem;
   /*BoxSize*/
-  border-top: 3px rgb(61 61 61) groove;
-  border-left: 3px rgb(61 61 61) groove;
-  border-bottom: 3px rgb(61 61 61) ridge;
-  border-right: 3px rgb(61 61 61) ridge;
-  border-radius: 5px;
-  font-size: 0.9em;
+  border-top: 2px rgb(61 61 61) groove;
+  border-left: 2px rgb(61 61 61) groove;
+  border-bottom: 2px rgb(61 61 61) ridge;
+  border-right: 2px rgb(61 61 61) ridge;
   -webkit-animation: scale-in-center 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
   animation: scale-in-center 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
   /*
@@ -82,7 +80,6 @@
   width: 7px;
 }
 .win-prop-scroll::-webkit-scrollbar-thumb {
-  border-radius: 10px 0px 0px 10px;
   background-color: rgba(255, 255, 255, 0.425);
 }
 .win-prop-scroll::-webkit-scrollbar-track {
@@ -107,7 +104,7 @@
   padding-left: 0px;
   margin-right: 0px;
   margin-left: 0px;
-  height: 92%;
+  height: 93.7%;
 }
 
 /* Box Size */
@@ -122,7 +119,7 @@
 
 .box-lg-miro {
   width: 840px;
-  height: 773px;
+  height: 800px;
 }
 
 /* Box Size */
@@ -160,7 +157,6 @@
   box-shadow: var(--box-boxshadow);
   -moz-box-shadow: var(--moz-boxshadow);
   -webkit-box-shadow: var(--webkit-boxshadow);
-  border-radius: var(--border-radius-3);
   position: absolute;
   /*StartBoxPos*/
   left: 20rem;
@@ -168,7 +164,6 @@
   /*BoxSize*/
   width: 420px;
   height: 400px;
-  font-size: 0.9em;
   border-radius: 100%;
 
 }
@@ -177,7 +172,6 @@
   cursor: var(--main-cursor-grab);
   font-family: var(--main-font);
   display: flex;
-  font-size: 1rem;
   font-weight: 100;
   color: #fff;
   background-color: #3d3d3d;
@@ -207,11 +201,11 @@
 .win-prop .header .sub-menu-title .icon {
   position: relative;
   display: inline-block;
+  padding-right: 10px;
 }
 /* Win -AppHeader SubText */
 .win-prop .header .sub-menu-title .text {
-  top: 2px;
-  height: 25px;
+
   position: relative;
   padding: 0px 8px;
   line-height: 25px;
@@ -220,31 +214,27 @@
 /* Win -AppHeader BTN */
 .win-prop .header .buttons {
   display: flex;
-  width: 130px;
-  height: 31px;
-  padding-left: 30px;
+
 }
 .win-prop .header .buttons .btn {
   flex: 1;
-  color: #5a5a5a;
+  color: #c21423;
   text-align: center;
   border: solid;
-  background-color: #151515;
+  background-color: #c21423;
+
+  border-radius: var(--border-radius-none);
+
+  padding: 0.2rem 0.75rem;
+  
 }
 /* Win -AppHeader BTN:Hover */
 .win-prop .header .buttons .btn:hover {
   cursor: var(--main-cursor-pointer);
-  color: #ffffff;
-}
-#close00:hover,
-#close01:hover,
-#close02:hover {
-  color: #000;
+  -webkit-box-shadow: inset 0px 0px 8px 2px #000000; 
+  box-shadow: inset 0px 0px 8px 2px #000000;
 }
 /* Win -AppHeader BTN:Proper */
-.win-prop .header .buttons .btn:hover.minus {
-  background: rgba(0, 0, 0, 0.25);
-}
 .win-prop .header .buttons .btn:hover.expand {
   background: rgba(0, 0, 0, 0.25);
 }
@@ -255,7 +245,6 @@
 .win-prop .header .buttons .btn i {
   position: relative;
   display: inline-block;
-  font-size: 20px;
 }
 
 /*
@@ -265,7 +254,6 @@
 */
 /* Default Icon Settings */
 .desk-prop {
-  border-radius: var(--border-radius-3);
   /* InitPos */
 
   position: absolute;
@@ -274,7 +262,6 @@
 
   float: right;
   margin: 0px 0px 0px 0px;
-  font-size: 0.9em;
   pointer-events: painted;
 }
 
@@ -331,6 +318,7 @@
 }
 .card-text {
   text-shadow: var(--main-text-shadow);
+  font-size: 13px;
 }
 .icon-img {
   width: 1.5em;
@@ -366,7 +354,6 @@
   padding-top: 2em;
 }
 .lode-title-sub {
-  font-size: 1.5em;
   color: #3c77d8;
   margin-top: -19px;
 }
@@ -391,8 +378,6 @@
 .btn-lode {
   color: #fff !important;
   cursor: var(--main-cursor-pointer);
-  font-size: 1.5em;
-  border-radius: var(--border-radius-3) !important;
 }
 .btn-outline-lode {
   border-color: #3c77d8;
@@ -459,7 +444,6 @@
 }
 
 .branch-title-sub {
-  font-size: 1.5em;
   color: rgba(0, 0, 0, 0.425);
   margin-top: -19px;
 }
@@ -469,7 +453,6 @@
   padding-right: 1em;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
-  font-size: 1.1em;
 }
 .card-quote {
   font-style: italic;
@@ -477,10 +460,25 @@
 }
 
 
-.isan-prop{
-  height: 100%;
+
+
+.isan-form {
+  height: 92%;
+  background-color: #272727;
+}
+.col-auto {
+  padding: 0px;
 }
 
+.isan-img {
+  position: absolute;
+  bottom: -6em;
+  left: 4em;
+  border-left: #007afd 4px solid;
+  border-right: #007afd 4px solid;
+  border-top: #007afd 4px solid;
+}
 
+.isan-prop {
 
-
+}

@@ -68,6 +68,4 @@ commandHandler.add({
     }),
     commandHandler.add({ name: "refresh", helpMsg: "Refreshes the page", extendedHelp: "Refreshes the page. <br> Usage: refresh", run: () => ((window.location = window.location.href + "?eraseCache=true"), "Redirecting...") }),
     commandHandler.add({ name: "goto", helpMsg: "Go to another webpage", extendedHelp: "Loads a different webpage. <br> Usage: goto [url]", run: (e) => ((window.location.href = encodeURI("" + e)), "Redirecting..."), aliases: ["web"] }),
-    commandHandler.add({ name: "pause", helpMsg: "Pauses the music player", extendedHelp: "Pauses the music player. <br> Usage: pause ", run: () => Player.pause(), aliases: ["stop-music"] }),
-    commandHandler.add({ name: "play", helpMsg: "Plays the music player", extendedHelp: "Plays the music player. <br> Usage: play ", run: () => Player.play(), aliases: ["start-music"] }),
     commandHandler.add({ name: "honk", helpMsg: "", extendedHelp: "", run: () => '<img style="width:6em;" src="../../img/images/commands/honk.png"></img>' });
