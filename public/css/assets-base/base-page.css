@@ -193,6 +193,18 @@ a:hover {
   overflow-x: scroll; */
   top: -17px;
 }
+
+
+#dropRightClose {
+  width:13em;
+}
+#dropRightClose > .divider {
+  color: #3d3d3d;
+  text-align: center;
+  margin-bottom: 4px;
+  background: #fff;
+  font-weight: bold;
+}
 .dropdown-menu {
   background-color: #3d3d3d;
   background-image: var(--svg-ui-background);
@@ -204,6 +216,9 @@ a:hover {
 
 }
 
+.btnSocial {
+  width: 100%;
+}
 .btn-secondary {
   background-color: #333;
 }
@@ -317,7 +332,7 @@ body > div.body-sub > nav > a > img {
 
 /* RightClickMenu */
 #context-menu {
-  width: 10em;
+  width: 12em;
   border: 1px solid rgba(255, 255, 255, 0.31);
   -webkit-box-shadow: var(--webkit-boxshadow);
   -moz-box-shadow: var(--moz-boxshadow);

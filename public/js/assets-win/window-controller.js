@@ -46,6 +46,7 @@ class AppController {
         a.open(o.name);
       }),
       t.append(s);
+
     const i = document.createElement("div");
     (i.id = "app-icon-" + o.name), i.classList.add("desk-prop");
     const p = document.createElement("div");
@@ -91,17 +92,39 @@ class AppController {
         grid: [20, 20]
       }),
       this.apps.push(o);
+
+      //App List Open
     const g = document.createElement("button");
     (g.innerText = o.name),
-      g.classList.add("dropdown-item"),
+      g.classList.add("btn-secondary"),
       (g.onclick = () => {
         a.open(o.name);
       }),
       (g.onmouseup = () => {
         $("#context-menu").removeClass("show1").hide();
       }),
-      document.getElementById("dropDownMenu2").appendChild(g),
+      document.getElementById("openApp").appendChild(g),
       this.close(o.name);
+
+
+
+      const h = document.createElement("button");
+      (h.innerText = o.name),
+        h.classList.add("btn-secondary"),
+        (h.onclick = () => {
+          a.close(o.name);
+        }),
+        (h.onmouseup = () => {
+          $("#context-menu").removeClass("show1").hide();
+        }),
+        document.getElementById("closeApp").appendChild(h),
+        this.close(o.name);
+
+        function btnRefresh() {
+          document.getElementById("btnRefresh");
+          window.location = window.location.href;
+        }
+        document.getElementById("btnRefresh").onclick = function() {btnRefresh()};
   }
   open(e) {
     const n = this.apps.find((n) => n.name == e);

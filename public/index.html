@@ -80,33 +80,55 @@
   <!-- Menu Right Click-->
   <div class="dropdown-menu dropdown-menu-sm" id="context-menu">
 
-      <div class="btn-group-vertical">
+   
 
-        <div class="btn-group dropright">
-          <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Dropright
-          </button>
-          <div class="dropdown-menu" style="">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Separated link</a>
+
+
+      
+        <div id="dropDownButtons" class="btn-group-vertical">
+
+          <div class="btn-group" role="group" aria-label="Basic example">
+            <button type="button" class="zoom-out btn btn-secondary"><i class="bi bi-zoom-out"></i></button>
+            <button type="button" class="zoom-init btn btn-secondary" >View</button>
+            <button type="button" class="zoom btn btn-secondary"><i class="bi bi-zoom-in"></i></button>
           </div>
+          
+          <button id="btnRefresh" type="button" class="btn btn-secondary">Refresh</button>
+
+          <div class="btn-group dropright">
+            <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Application
+            </button>
+            <div id="dropRightClose" class="dropdown-menu" style="">
+              <div class="btn-group-vertical">
+              <button type="button" class="btn btn-secondary"><s>Test 01</s></button>
+              <button type="button" class="btn btn-secondary"><s>Test 02</s></button>
+              <button type="button" class="btn btn-secondary"><s>Test 03</s></button>
+              </div>
+              
+              <p class="divider">Open</p>
+              <div id="openApp"></div>
+              <p class="divider">Close</p>
+              <div id="closeApp"></div>
+            </div>
+          </div>
+          
+          <button type="button" class="btn btn-secondary"><s>Display Settings</s></button>
+          <button type="button" class="btn btn-secondary"><s>Personalise</s></button>
         </div>
 
-        <button type="button" class="btn btn-secondary">Button</button>
-        <button type="button" class="btn btn-secondary">Button</button>
-        <button type="button" class="btn btn-secondary">Button</button>
-        <button type="button" class="btn btn-secondary">Button</button>
-      </div>
+   
 
 
     
     
     <div class="collapse" id="collapseExample">
       <div class="dropDownMenu2" id="dropDownMenu2">
-
+        <div class="btn-group-vertical">
+          <button type="button" class="btn-secondary btnSocial"><s>Social 01</s></button>
+          <button type="button" class="btn-secondary btnSocial"><s>Social 02</s></button>
+          <button type="button" class="btn-secondary btnSocial"><s>Social 03</s></button>
+          </div>
       </div>
     </div>
 
@@ -225,7 +247,6 @@
                 </a>
 
               </ul>
-
             </div>
           </div>
           <div id="draggable-JS-01" class="win-prop box-lg-resize-term application-non-drag">
@@ -335,6 +356,7 @@
 
     <script src="/js/assets-api/gitAPI-02.js"></script>
     <script src="js/assets-win/console.js"></script>
+    <script src="js/assets-win/zoom.js"></script>
     <script src="js/assets-win/window-controller.js"></script>
     <script src="js/assets-win/console-commands.js"></script>
     <script src="js/vendor/lazysizes.min.js" async></script>
