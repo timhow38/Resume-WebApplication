@@ -181,7 +181,7 @@ function initAppController() {
   }),*/
     appController.add({
       id: "draggable-JS-01",
-      name: "TERMINAL",
+      name: "terminal",
       onOpen: () => {},
       onClose: () => {
         out = "Type 'help' for more information.";
@@ -191,62 +191,62 @@ function initAppController() {
       iconParent: "containment-wrapper",
       iconYDelta: 100,
       appDesc:
-        "<strong>Description:</strong> Interactable Command Line Interface."
+        "Description: <strong> Interactable Command Line Interface. </strong>"
     }),
     appController.add({
       id: "draggable-JS-02",
-      name: "PROJECTS",
+      name: "projects",
       onOpen: () => {},
       onClose: () => {},
       iconPath: "/img/images/vector-img/desktop/fontAwesome/chart-network.svg",
       iconName: "Projects",
       iconParent: "containment-wrapper",
       iconYDelta: 100,
-      appDesc: "<strong>Description:</strong> Current Projects"
+      appDesc: "Description: <strong> Current Projects. </strong>"
     }),
     appController.add({
       id: "draggable-JS-CAREER",
-      name: "CAREER",
+      name: "career",
       onOpen: () => {},
       onClose: () => {},
       iconPath: "/img/images/vector-img/desktop/fontAwesome/file-alt.svg",
       iconName: "Career",
       iconParent: "containment-wrapper",
       iconYDelta: 100,
-      appDesc: "<strong>Description:</strong> Career Links"
+      appDesc: "Description: <strong> Career Links. </strong>"
     }),
     appController.add({
       id: "draggable-JS-INTERN",
-      name: "INTERN",
+      name: "intern",
       onOpen: () => {},
       onClose: () => {},
       iconPath: "/img/images/vector-img/desktop/fontAwesome/folder.svg",
       iconName: "Design Factory",
       iconParent: "sub-folder-0",
       iconXDelta: 75,
-      appDesc: "<strong>Description:</strong> Design Factory Internship"
+      appDesc: "Description: <strong> Design Factory Internship. </strong>"
     }),
     appController.add({
       id: "draggable-JS-ISAN",
-      name: "ISAN",
+      name: "isan",
       onOpen: () => {},
       onClose: () => {},
       iconPath: "/img/images/vector-img/desktop/fontAwesome/folder.svg",
       iconName: "ISAN Starmap",
       iconXDelta: 75,
       iconParent: "sub-folder-0",
-      appDesc: "<strong>Description:</strong> 3JS Starmap for the game Starbase"
+      appDesc: "Description: <strong> 3JS Starmap for the game Starbase. </strong>"
     }),
     appController.add({
       id: "draggable-JS-REPOS",
-      name: "REPOS",
+      name: "repos",
       onOpen: () => {},
       onClose: () => {},
       iconPath: "/img/images/vector-img/desktop/fontAwesome/github-square.svg",
       iconName: "Repos",
       iconParent: "containment-wrapper",
       iconYDelta: 100,
-      appDesc: "<strong>Description:</strong> Github Repositories"
+      appDesc: "Description: <strong> Github Repositories. </strong>"
     }),
     appController.open("corecli");
 }

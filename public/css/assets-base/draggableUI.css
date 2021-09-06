@@ -133,6 +133,7 @@
   resize: both;
   overflow: auto;
 }
+
 .box-lg-resize {
   width: 840px;
   height: 400px;

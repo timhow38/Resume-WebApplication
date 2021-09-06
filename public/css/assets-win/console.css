@@ -60,6 +60,7 @@
   cursor: var(--main-cursor-default);
 }
 #cli {
+  text-transform: lowercase;
   position: relative;
   white-space: pre-wrap;
   cursor: var(--main-cursor-text);
@@ -68,6 +69,13 @@
   background-color: rgba(255, 255, 255, 0.425);
   animation: blinker 1s linear infinite;
 }
+/*.label {
+  color: rgb(0, 0, 0);
+    background: rgb(255, 255, 255);
+    display: inline;
+}
+*/
+
 
 @keyframes blinker {
   0% {
