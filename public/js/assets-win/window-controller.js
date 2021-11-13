@@ -106,17 +106,18 @@ class AppController {
       document.getElementById("openApp").appendChild(g),
       this.close(o.name);
 
-
-
       const h = document.createElement("button");
       (h.innerText = o.name),
         h.classList.add("btn-secondary"),
         (h.onclick = () => {
           a.close(o.name);
         }),
+        
         (h.onmouseup = () => {
           $("#context-menu").removeClass("show1").hide();
         }),
+
+
         document.getElementById("closeApp").appendChild(h),
         this.close(o.name);
 

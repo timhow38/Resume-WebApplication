@@ -185,6 +185,8 @@ a:hover {
 
 #dropRightClose {
   width:13em;
+  background-color: transparent;
+  border: none;
 }
 #dropRightClose > .divider {
   color: #3d3d3d;
@@ -218,9 +220,7 @@ a:hover {
   background: rgb(255, 255, 255);
   display: inline;
 }
-.close {
-  text-shadow: 0 0px 0 rgba(255, 255, 255, 0);
-}
+
 
 
 

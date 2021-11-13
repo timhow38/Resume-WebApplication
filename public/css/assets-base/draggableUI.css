@@ -181,10 +181,7 @@
   box-shadow: var(--box-boxshadow);
   background-image: var(--svg-ui-background);
 }
-/* Win -Close Button icon Init color */
-.close {
-  color: #ffffff;
-}
+
 /* Win -Cursor = Grabbing on Active */
 .win-prop .header:active,
 .win-prop .header .sub-menu-title .icon:active {
@@ -219,28 +216,21 @@
 }
 .win-prop .header .buttons .btn {
   flex: 1;
-
   color: #c21423;
-  background-color: #333;
   text-align: center;
-  border: solid;
+  border: solid #0000;
   padding: 1px;
   margin: 5px;
-
-
   border-radius: var(--border-radius-none);
+  text-shadow: none;
   
 }
 /* Win -AppHeader BTN:Hover */
 .win-prop .header .buttons .btn:hover {
   cursor: var(--main-cursor-pointer);
-  color: #333;
-  background-color: #c21423;
+  color: #000;
 }
-/* Win -AppHeader BTN:Proper */
-.win-prop .header .buttons .btn:hover.expand {
-  background: rgba(0, 0, 0, 0.25);
-}
+
 
 /* Win -AppHeader BTN Icon */
 .win-prop .header .buttons .btn i {
