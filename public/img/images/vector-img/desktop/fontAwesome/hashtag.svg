@@ -1,18 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="477.998" height="478" viewBox="0 0 477.998 478">
-  <defs>
-    <radialGradient id="radial-gradient" cx="0.5" cy="0.5" r="1.629" gradientUnits="objectBoundingBox">
-      <stop offset="0" stop-color="#fff"/>
-      <stop offset="1" stop-color="gray"/>
-    </radialGradient>
-    <filter id="hashtag" x="0" y="0" width="477.998" height="478" filterUnits="userSpaceOnUse">
-      <feOffset input="SourceAlpha"/>
-      <feGaussianBlur stdDeviation="5" result="blur"/>
-      <feFlood/>
-      <feComposite operator="in" in2="blur"/>
-      <feComposite in="SourceGraphic"/>
-    </filter>
-  </defs>
-  <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#hashtag)">
-    <path id="hashtag-2" data-name="hashtag" d="M440.667,182.109l7.143-40A12,12,0,0,0,436,128H361.19l14.62-81.891A12,12,0,0,0,364,32H323.365a12,12,0,0,0-11.813,9.891L296.175,128H197.54l14.623-81.891A12,12,0,0,0,200.35,32H159.718a12,12,0,0,0-11.813,9.891L132.528,128h-79.1a12,12,0,0,0-11.813,9.891l-7.143,40A12,12,0,0,0,46.289,192H121.1L98.242,320h-79.1a12,12,0,0,0-11.813,9.891l-7.143,40A12,12,0,0,0,12,384H86.81L72.19,465.891A12,12,0,0,0,84,480h40.632a12,12,0,0,0,11.813-9.891L151.826,384H250.46l-14.623,81.891A12,12,0,0,0,247.65,480h40.632a12,12,0,0,0,11.813-9.891L315.472,384h79.1a12,12,0,0,0,11.813-9.891l7.143-40A12,12,0,0,0,401.711,320H326.9l22.857-128h79.1a12,12,0,0,0,11.813-9.891ZM261.889,320H163.255l22.857-128h98.634Z" transform="translate(15 -17)" fill="url(#radial-gradient)"/>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="479.049" height="479" viewBox="0 0 479.049 479"><defs><radialGradient id="a" cx="0.5" cy="0.5" r="1.629" gradientUnits="objectBoundingBox"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="gray"/></radialGradient><filter id="b" x="0" y="0" width="479.049" height="479" filterUnits="userSpaceOnUse"><feOffset input="SourceAlpha"/><feGaussianBlur stdDeviation="5" result="c"/><feFlood/><feComposite operator="in" in2="c"/><feComposite in="SourceGraphic"/></filter></defs><g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#b)"><path d="M440.667,182.109l7.143-40A12,12,0,0,0,436,128H361.19l14.62-81.891A12,12,0,0,0,364,32H323.365a12,12,0,0,0-11.813,9.891L296.175,128H197.54l14.623-81.891A12,12,0,0,0,200.35,32H159.718a12,12,0,0,0-11.813,9.891L132.528,128h-79.1a12,12,0,0,0-11.813,9.891l-7.143,40A12,12,0,0,0,46.289,192H121.1L98.242,320h-79.1a12,12,0,0,0-11.813,9.891l-7.143,40A12,12,0,0,0,12,384H86.81L72.19,465.891A12,12,0,0,0,84,480h40.632a12,12,0,0,0,11.813-9.891L151.826,384H250.46l-14.623,81.891A12,12,0,0,0,247.65,480h40.632a12,12,0,0,0,11.813-9.891L315.472,384h79.1a12,12,0,0,0,11.813-9.891l7.143-40A12,12,0,0,0,401.711,320H326.9l22.857-128h79.1a12,12,0,0,0,11.813-9.891ZM261.889,320H163.255l22.857-128h98.634Z" transform="translate(15.53 -16.5)" stroke="#000" stroke-width="1" fill="url(#a)"/></g></svg>

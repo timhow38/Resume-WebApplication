@@ -19,11 +19,12 @@
   margin: 1em 0 0 1em;
   overflow: hidden;
   text-overflow: ellipsis;
-  width: 150px;
+  width: 215px;
   padding: 15px;
-  margin: 10px;
-  background: white;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.15);
+  /* margin: 10px; */
+  background: #3d3d3d;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 15%);
   -webkit-transition: box-shadow 100ms, -webkit-transform 100ms;
   transition: box-shadow 100ms, -webkit-transform 100ms;
   transition: box-shadow 100ms, transform 100ms;
@@ -43,18 +44,19 @@
 .projects-a {
   height: 11em;
   border-top: .5em solid #efefef;
-  color: #4C4690;
+  color: #efefef;
+  border-radius: 5px;
   font-weight: bold;
 	display: block;
   text-decoration: none;
   margin: 0;
 }
 .projects-a:hover {
-  border-top: .5em solid #4C4690;
+  border-top: .5em solid #efefef;
 }
 
 .projects-a:hover {
-  color: #4C4690;
+  color: #efefef;
 }
 
 .projects-lang {
@@ -63,7 +65,7 @@
 }
 
 .projects-desc {
-  color: #171717;
+  color: #fff;
   text-overflow: inherit;
 }
 
