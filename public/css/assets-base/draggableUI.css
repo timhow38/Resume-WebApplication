@@ -466,7 +466,7 @@ border-radius: 5px!important;
 
 
 .isan-form {
-  height: 92%;
+  height: 91%;
   background-color: #272727;
 }
 .col-auto {
@@ -474,7 +474,29 @@ border-radius: 5px!important;
 }
 
 .isan-img {
+  transition: 0.2s;
   position: absolute;
+  bottom: 1em;
+  width: 60%;
+  height: 45%;
+  left: 12em;
+  border-radius: 0px;
+  border: #007afd 4px solid;
+
+}
+.isan-img2 {
+  transition: 0.2s;
+  position: absolute;
+  bottom: 3em;
+  width: 30%;
+  height: 30%;
+  left: 1em;
+  border-radius: 20px;
+  -webkit-box-shadow: var(--webkit-boxshadow);
+  -moz-box-shadow: var(--moz-boxshadow);
+}
+
+#draggable-JS-ISAN:hover .isan-img {
   bottom: -2em;
   width: 75%;
   height: 50%;
@@ -486,7 +508,9 @@ border-radius: 5px!important;
   -moz-box-shadow: var(--moz-boxshadow);
   box-shadow: var(--box-boxshadow);
 }
-.isan-img2 {
+
+
+#draggable-JS-ISAN:hover .isan-img2 {
   position: absolute;
   bottom: 2em;
   width: 30%;
@@ -495,10 +519,4 @@ border-radius: 5px!important;
   border-radius: 20px;
   transform: rotate(
 4deg);
-  -webkit-box-shadow: var(--webkit-boxshadow);
-  -moz-box-shadow: var(--moz-boxshadow);
-}
-
-.isan-prop {
-
 }

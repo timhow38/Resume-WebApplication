@@ -112,7 +112,7 @@
           </div>
           
           <button type="button" class="btn btn-secondary"><s>Display Settings</s></button>
-          <button type="button" class="btn btn-secondary"><s>Personalise</s></button>
+          <button type="button" class="btn btn-secondary" onclick = "pickImage()">Handy Tips?</button>
         </div>
 
    
@@ -150,9 +150,46 @@
     <div class="pages-stack">
 
 
+
+     
+
+
+
       <!-- Audio Player -->
       <div class="page" id="page-home">
         <div id="containment-wrapper">
+          <div id="icon-tip">
+
+            <div class="container noti-box">
+              <div class="row noti-head">
+                <div class="col-sm">
+                  <h4 id="noti-title">
+                  Hello World!
+                </h4>
+                </div>
+              </div>
+              <div class="row noti-mid">
+                <div class="col-sm">
+                  <p id="noti-text">
+                    I'm Tim welcome to my portfolio!
+                    Press the next button for <kbd>Tips and Tricks!</kbd>
+                    
+                  </p>
+                </div>
+              </div>
+              <div class="row noti-btn">
+                <div class="col-sm">
+                  <button onclick = "pickImage()"><i class="bi bi-caret-right-square-fill"></i></button>
+                </div>
+              </div>
+            </div>
+
+
+        
+            
+          <img id="image" src="/img/images/noti/noti-01.png"/>
+          
+          </div>
           <!--<div id="chartdiv"></div>-->
           <!-- Desktop Drag -Icons -->
           <div id="desktop-icons"></div>
@@ -358,6 +395,7 @@
     <script src="/js/assets-api/gitAPI-02.js"></script>
     <script src="js/assets-win/console.js"></script>
     <script src="js/assets-win/zoom.js"></script>
+    <script src="js/assets-noti/script-noti.js"></script>
     <script src="js/assets-win/window-controller.js"></script>
     <script src="js/assets-win/console-commands.js"></script>
     <script src="js/vendor/lazysizes.min.js" async></script>

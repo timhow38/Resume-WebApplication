@@ -75,7 +75,7 @@ class AppController {
       (i.style.left = m[n.name].left), (i.style.top = m[n.name].top);
     else {
       this.iconSpawn[e.iconParent] ||
-        (this.iconSpawn[e.iconParent] = { x: 20, y: 35 });
+        (this.iconSpawn[e.iconParent] = { x: 50, y: 35 });
       const n = this.iconSpawn[e.iconParent];
       (i.style.left = n.x + "px"),
         (i.style.top = n.y + "px"),
