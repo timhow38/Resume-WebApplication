@@ -1,5 +1,3 @@
-const purge2 =
-    "-------------------▒▒▌-------------<br>------------------▒░▒▒▌-------------<br>-----------------▒░░▒▒▒▌------------<br>----------------▒░░░▒▒▒▒▌-----------<br>---------------▒░░░░▒▒▒▒▒▌----------<br>--------------▒░░░░▒▒▒▒▒▒▒▌---------<br>-------------▒░░░░░▒▒▒▒▒▒▒▒▌--------<br>------------▒░░░░░░▒▒▒▒▒▒▒▒▒▌-------<br>-----------▒▒░░░░░▒▒▒▒▒▒▒▒▒▒▒▌------<br>----------▒▒░░░░░░▒▒▒▒▒▒▒▒▒▒▒▒▓-----<br>----░▒---▒▒░░░░░░░░░░░░░░░░░░░░▒----<br>-----▒▒▒▒░░░░░░░░▐▁▐█▁░▒▒▐▁▐█▁░▒---<br>------▒▒▒▒░░░░░░░░░░░░▒▙░░░░░░░▒▒--<br>-------▒▒▒▒░░░░░░░░░░░▒▀▀░░░░░░▒▒---<br>--------▒▒▒▒░░░░░◀██████████▶░░░▒--<br>---------▒▒▒░░░░░░░░░░░░░░░░░░▒▒----<br>----------▒▒▒▒▒▒░░░░░░░░░░░▒▒▒▒-----<br>-----------░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒------<br>-----------░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒-------<br>-----------▒░░░░░░░▒▒▒▒▒▒▒▒▒▒▒▌-----<br>---------▒░░░░░░░░▒▒▒▒▒▒▒▒▒▒▒▒▒▌----<br>--------▒░░░░░░░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▌---<br>--------▒█▀▀█-█░░█-█▀▀█-█▀▀▀-█▀▀▒---<br>--------▒█░░█-█░░█-█▄▄▀-█░▀█-█▀▀▒---<br>--------▒█▀▀▀-░▀▀▀-▀░▀▀-▀▀▀▀-▀▀▀▒---";
 class ConsoleHandler {
     constructor(e) {
         (this.commands = []), (this.unknownCommand = e);
@@ -38,6 +36,15 @@ commandHandler.add({
     },
     aliases: ["h", "?"],
 }),
+commandHandler.add({ 
+    name: "hint", 
+    helpMsg: "Need a hint on how to use this site?", 
+    extendedHelp: "Need a hint on how to use this site?", 
+    run: () =>  { 
+        return pickImage(), "";  
+    }, 
+    aliases: ["tip"],
+}),
     commandHandler.add({
         name: "clear",
         helpMsg: "Clear the console",
@@ -47,8 +54,8 @@ commandHandler.add({
         },
         aliases: ["cls", "purge"],
     }),
-    commandHandler.add({ name: "open", helpMsg: "Opens an app", extendedHelp: "Opens up an application. <br> Usage: open [app name]", run: (e) => appController.open(e), aliases: ["start"] }),
-    commandHandler.add({ name: "close", helpMsg: "Closes an app", extendedHelp: "Closes up an application. <br> Usage: close [app name]", run: (e) => appController.close(e), aliases: ["end"] }),
+    commandHandler.add({ name: "open", helpMsg: "Opens an app", extendedHelp: "Opens up an application. <br> Usage: open [app name]", run: (e) => appController.open(e), aliases: ["start","cd"] }),
+    commandHandler.add({ name: "close", helpMsg: "Closes an app", extendedHelp: "Closes up an application. <br> Usage: close [app name]", run: (e) => appController.close(e), aliases: ["end", "cd.."] }),
     commandHandler.add({ name: "app-list", helpMsg: "Lists all applications", extendedHelp: "Lists all applications. <br> Usage: app-list-all ", run: () => appController.listApps() }),
     commandHandler.add({ name: "app-desc", helpMsg: "Get the description of an application", extendedHelp: "Gets the description of an application. <br> Usage: app-desc [app name]", run: (e) => appController.getAppDesc(e) }),
     commandHandler.add({
@@ -59,13 +66,17 @@ commandHandler.add({
             'Lead Developer: <a href="https://github.com/timhow38" target="_blank">Timothy Howard</a><br>JS Scriptor: <a href="https://github.com/Strikeeaglechase" target="_blank">Strikeeaglechase</a><br><br><strong>Copyright &copy; 2018 Timothy Howard</strong>',
     }),
     commandHandler.add({ name: "calc", helpMsg: "Preforms some arithmatic", extendedHelp: "Takes in any valid regular arithmatic and returns the result. <br> Usage: calc [expr]", run: () => eval([...arguments].join("")) }),
-    commandHandler.add({
-        name: "search",
-        helpMsg: "Preform a google search",
-        extendedHelp: "Redirects the page to google search. <br> Usage: search [search term]",
-        run: () => ((window.location.href = encodeURI("https://www.google.com/search?q=" + [...arguments].join(" "))), "Redirecting..."),
-        aliases: ["google"],
-    }),
+
     commandHandler.add({ name: "refresh", helpMsg: "Refreshes the page", extendedHelp: "Refreshes the page. <br> Usage: refresh", run: () => ((window.location = window.location.href + "?eraseCache=true"), "Redirecting...") }),
     commandHandler.add({ name: "goto", helpMsg: "Go to another webpage", extendedHelp: "Loads a different webpage. <br> Usage: goto [url]", run: (e) => ((window.location.href = encodeURI("" + e)), "Redirecting..."), aliases: ["web"] }),
     commandHandler.add({ name: "honk", helpMsg: "", extendedHelp: "", run: () => '<img style="width:6em;" src="../../img/images/commands/honk.png"></img>' });
+
+
+      /*commandHandler.add({
+        name: "search",
+        helpMsg: "Preform a google search",
+        extendedHelp: "Redirects the page to google search. <br> Usage: search [search term]",
+        run: () => (
+            (window.location.href = encodeURI("https://www.google.com/search?q=" + [...arguments].join(" "))), "Redirecting..."),
+        aliases: ["google"],
+    })*/

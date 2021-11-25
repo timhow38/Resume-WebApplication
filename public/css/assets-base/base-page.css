@@ -13,6 +13,7 @@ html.js,
   height: 100vh;
   font-size: 13px!important;
   background: hsl(208deg 100% 23%);
+  content:url(../../img/images/noti/noti-01.png) url(../../img/images/noti/noti-02.png) url(../../img/images/noti/noti-03.png) url(../../img/images/noti/noti-04.png) url(../../img/images/noti/noti-05.png) url(../../img/images/noti/noti-06.png);
 }
 
 /* Pages stack */
