@@ -252,8 +252,10 @@
 */
 /* Default Icon Settings */
 .desk-prop {
+  animation-delay: 5s;
   /* InitPos */
-
+  -webkit-animation: bounce-in-fwd 1.1s both;
+  animation: bounce-in-fwd 1.1s both;
   position: absolute;
   width: 6em;
   height: auto;
@@ -272,6 +274,8 @@
   border: 1px solid rgba(255, 255, 255, 0.58);
 }
 
+
+
 /* Default SubFolder Size - Container*/
 .sub-folder {
   height: 92%;
@@ -280,6 +284,7 @@
   -moz-box-shadow: var(--moz-boxshadow-red);
   box-shadow: var(--box-boxshadow-red);
 }
+
 
 /* Default Icon Positions - Desktop */
 .app-chip {

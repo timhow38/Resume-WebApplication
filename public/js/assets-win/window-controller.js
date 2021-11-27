@@ -75,12 +75,13 @@ class AppController {
       (i.style.left = m[n.name].left), (i.style.top = m[n.name].top);
     else {
       this.iconSpawn[e.iconParent] ||
-        (this.iconSpawn[e.iconParent] = { x: 50, y: 35 });
+        (this.iconSpawn[e.iconParent] = { x: 20, y: 50});
       const n = this.iconSpawn[e.iconParent];
       (i.style.left = n.x + "px"),
         (i.style.top = n.y + "px"),
         (n.x += e.iconXDelta || 0),
         (n.y += e.iconYDelta || 0);
+        
     }
     this.icons.push({ id: i.id, name: n.name }),
       (i.ondblclick = () => {
@@ -124,6 +125,7 @@ class AppController {
         function btnRefresh() {
           document.getElementById("btnRefresh");
           window.location = window.location.href;
+          localStorage.clear();
         }
         document.getElementById("btnRefresh").onclick = function() {btnRefresh()};
   }

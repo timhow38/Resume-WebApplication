@@ -67,7 +67,7 @@ commandHandler.add({
     }),
     commandHandler.add({ name: "calc", helpMsg: "Preforms some arithmatic", extendedHelp: "Takes in any valid regular arithmatic and returns the result. <br> Usage: calc [expr]", run: () => eval([...arguments].join("")) }),
 
-    commandHandler.add({ name: "refresh", helpMsg: "Refreshes the page", extendedHelp: "Refreshes the page. <br> Usage: refresh", run: () => ((window.location = window.location.href + "?eraseCache=true"), "Redirecting...") }),
+    commandHandler.add({ name: "refresh", helpMsg: "Refreshes the page", extendedHelp: "Refreshes the page. <br> Usage: refresh", run: () => ((window.location = window.location.href), localStorage.clear()) }),
     commandHandler.add({ name: "goto", helpMsg: "Go to another webpage", extendedHelp: "Loads a different webpage. <br> Usage: goto [url]", run: (e) => ((window.location.href = encodeURI("" + e)), "Redirecting..."), aliases: ["web"] }),
     commandHandler.add({ name: "honk", helpMsg: "", extendedHelp: "", run: () => '<img style="width:6em;" src="../../img/images/commands/honk.png"></img>' });
 
