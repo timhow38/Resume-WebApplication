@@ -537,8 +537,10 @@ kbd {
 #icon-tip {
   width: 100%;
   position:fixed;
+  
 }
 #icon-tip img {
+
 position:fixed;
 max-width: 25em;
 max-height: 25em;

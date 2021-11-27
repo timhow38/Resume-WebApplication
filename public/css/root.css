@@ -46,6 +46,16 @@
   /* Color */
   --asset-color-5: #2b2b2b;
 
+
+
+  --user-style-01: #3d3d3d;
+	--user-style-02: #000a0f;
+	--user-style-03: #fff;
+	--user-style-04: #fff;
+
+
+
+
   /* Base Properties */
   --main-zindex-0: 0;
   --main-zindex-1: 1;
@@ -197,3 +207,4 @@ iframe{
   -webkit-font-feature-settings: 'liga';
   -webkit-font-smoothing: antialiased;
 }
+
