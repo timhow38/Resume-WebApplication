@@ -29,8 +29,9 @@
   border-bottom: 2px rgb(61 61 61) ridge;
   border-right: 2px rgb(61 61 61) ridge;
 
+  /*
   box-shadow: 0px 3px #3d3d3d, 0px -3px #3d3d3d, 3px 0px #3d3d3d, -3px 0px #3d3d3d, 0px -6px #181818, 0px 6px #181818, 6px 0px #181818, -6px 0px #181818, 9px 0px rgb(0 0 0 / 10%), 0px 9px rgb(0 0 0 / 10%);
-
+*/
 
   -webkit-animation: scale-in-center 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
   animation: scale-in-center 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
@@ -497,8 +498,7 @@ border-radius: 5px!important;
   height: 30%;
   left: 1em;
   border-radius: 20px;
-  -webkit-box-shadow: var(--webkit-boxshadow);
-  -moz-box-shadow: var(--moz-boxshadow);
+
 }
 
 #draggable-JS-ISAN:hover .isan-img {
