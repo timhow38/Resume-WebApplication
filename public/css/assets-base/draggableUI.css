@@ -182,7 +182,7 @@
   display: flex;
   font-weight: 100;
   color: #fff;
-  background-color: #3d3d3d;
+  background-color: #202225;
   -webkit-box-shadow: var(--webkit-boxshadow);
   -moz-box-shadow: var(--moz-boxshadow);
   box-shadow: var(--box-boxshadow);
@@ -442,7 +442,7 @@ border-radius: 5px!important;
 
 /* Application Terminal*/
 .terminal-right {
-  background-color: #3d3d3d;
+  background-color: #202225;
   background-image: var(--svg-ui-background);
 }
 
@@ -472,8 +472,8 @@ border-radius: 5px!important;
 
 
 .isan-form {
-  height: 91%;
-  background-color: #272727;
+  height: 90.5%;
+  background-color: #2F3136;
 }
 .col-auto {
   padding: 0px;

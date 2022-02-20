@@ -12,7 +12,7 @@ html.js,
   overflow: hidden;
   height: 100vh;
   font-size: 13px!important;
-  background: hsl(208deg 100% 23%);
+  background: #36393F;
   content:url(../../img/images/noti/noti-01.png) url(../../img/images/noti/noti-02.png) url(../../img/images/noti/noti-03.png) url(../../img/images/noti/noti-04.png) url(../../img/images/noti/noti-05.png) url(../../img/images/noti/noti-06.png);
 }
 
@@ -39,6 +39,9 @@ body {
   color: #ffffff;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+h4 {
+  padding-top: 0.5rem!important;
 }
 
 /* Vector Backgrounds 
@@ -231,7 +234,7 @@ to {width: 100%;}
 .dropdown-menu {
   background-color: #3d3d3d;
   background-image: var(--svg-ui-background);
-  background-color: #3d3d3d;
+  background-color: #202225;
   padding: 0rem 0;
 }
 .btn-group-vertical {
@@ -243,7 +246,8 @@ to {width: 100%;}
   width: 100%;
 }
 .btn-secondary {
-  background-color: #333;
+  background-color: #202225;
+  border-color: #3d3d3d;
 }
 .dropdown-item {
   color: rgb(255, 255, 255);
@@ -515,7 +519,10 @@ a.float:hover + div.label-container {
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   background-color: rgba(0, 0, 0, 0.5);
-  border: #3d3d3d solid 5px;
+  border-top: 2px rgb(61 61 61) groove;
+  border-left: 2px rgb(61 61 61) groove;
+  border-bottom: 2px rgb(61 61 61) ridge;
+  border-right: 2px rgb(61 61 61) ridge;
 
   border-radius: 5px;
   position: fixed;
@@ -540,7 +547,7 @@ kbd {
 }
 
 .noti-head { 
-  background-color: #3d3d3d;
+  background-color: #202225;
   margin-right: 0px;
   margin-left: 0px;
   padding-left: 10px;
