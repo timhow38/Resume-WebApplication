@@ -46,3 +46,15 @@ document.getElementByClass("zoom-out").onclick = function() {zoomOut()};
 document.getElementByClass("zoom-init").onclick = function() {(zoomset)};
 
 */
+
+$('.win-prop .header').click(function() {
+  $('#draggable-JS-01').css({
+      top: 0,
+      right: 0,
+      bottom: 0,
+      left: 0,
+      width: -webkit-fill-available,
+      height: -webkit-fill-available
+  
+  });
+});
