@@ -3,6 +3,7 @@
   margin-block-end: 0em;
   margin-left: auto;
   margin-right: auto;
+  padding-left: revert;
 }
 
 
@@ -12,11 +13,11 @@
 .projects-li {
   will-change: transform;
   box-sizing: border-box;
-  height: 11em;
+  height: 12em;
   vertical-align: top;
   display: inline-block;
   list-style: none;
-  margin: 1em 0 0 1em;
+  margin: 1em;
   overflow: hidden;
   text-overflow: ellipsis;
   width: 215px;

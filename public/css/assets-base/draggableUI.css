@@ -114,6 +114,20 @@
   height: 93.7%;
 }
 
+.maxOn {
+  left: 0px!important;
+  top: 0px!important;
+  width: 100%!important;
+  height: 100%!important;
+  max-width: 100%!important;
+  max-height: 100%!important;
+  transform: translate(0)!important;
+}
+.maxOff {
+  left: 20rem;
+  top: 10rem;
+}
+
 /* Box Size */
 .box-sm {
   width: 420px;
@@ -150,6 +164,10 @@
   max-height: 800px;
   resize: both;
   overflow: auto;
+}
+
+#draggable-JS-REPOS {
+  overflow: hidden!important;
 }
 .box-lg-resize-term {
   width: 840px;
@@ -254,9 +272,6 @@
 /* Default Icon Settings */
 .desk-prop {
   animation-delay: 5s;
-  /* InitPos */
-  -webkit-animation: bounce-in-fwd 1.1s both;
-  animation: bounce-in-fwd 1.1s both;
   position: absolute;
   width: 6em;
   height: auto;

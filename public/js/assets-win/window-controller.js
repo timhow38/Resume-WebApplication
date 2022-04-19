@@ -8,6 +8,8 @@ class Application {
       (this.name = e.name),
       (this.onOpen = e.onOpen),
       (this.onClose = e.onClose),
+      (this.onMax = e.onMax),
+      (this.onMin = e.onMin),
       (this.appDesc = e.appDesc),
       (this.iconOpts = { name: e.iconName, path: e.iconPath }),
       (this.elm = document.getElementById(this.id));
@@ -36,6 +38,16 @@ class AppController {
       }),
       (o.elm.getElementsByClassName("btn close")[0].onclick = () => {
         a.close(o.name);
+      }),
+      (o.elm.getElementsByClassName("btn maximise")[0].onclick = () => {
+        a.max(o.name);
+        getElementById('btn maximise').style.display = 'none';
+        getElementById('btn minimize').style.display = 'block';
+      }),
+      (o.elm.getElementsByClassName("btn minimize")[0].onclick = () => {
+        a.min(o.name);
+        getElementById('btn minimize').style.display = 'none';
+        getElementById('btn maximise').style.display = 'block';
       });
     var s = document.createElement("button");
     (s.id = "app-button-" + o.name),
@@ -147,11 +159,37 @@ class AppController {
     const n = this.apps.find((n) => n.name == e);
     n
       ? ($("#" + n.id)
-          .removeClass("application")
-          .addClass("application-non-drag"),
+          .removeClass("application maxOn")
+          .addClass("application-non-drag maxOff"),
         $("#" + n.id).hide(),
         n.onClose())
       : console.log("Unknown app %s", e);
+  }
+  max(e) {
+    const n = this.apps.find((n) => n.name == e);
+    n
+      ? (this.apps.forEach((e) => {
+          e.elm.style.zIndex = 1;
+        }),
+        (n.elm.style.zIndex = 2),
+        $("#" + n.id)
+          .removeClass("maxOff")
+          .addClass("maxOn"),
+        n.onMax())
+      : console.log("");
+  }
+  min(e) {
+    const n = this.apps.find((n) => n.name == e);
+    n
+      ? (this.apps.forEach((e) => {
+          e.elm.style.zIndex = 1;
+        }),
+        (n.elm.style.zIndex = 2),
+        $("#" + n.id)
+          .removeClass("maxOn")
+          .addClass("maxOff"),
+        n.onMin())
+      : console.log("");
   }
   saveIcons() {
     var e = {};
@@ -189,6 +227,8 @@ function initAppController() {
       onClose: () => {
         out = "Type 'help' for more information.";
       },
+      onMax: () => {},
+      onMin: () => {},
       iconPath: "/img/images/vector-img/desktop/fontAwesome/laptop-code.svg",
       iconName: "Terminal",
       iconParent: "containment-wrapper",
@@ -201,6 +241,8 @@ function initAppController() {
       name: "projects",
       onOpen: () => {},
       onClose: () => {},
+      onMax: () => {},
+      onMin: () => {},
       iconPath: "/img/images/vector-img/desktop/fontAwesome/chart-network.svg",
       iconName: "Projects",
       iconParent: "containment-wrapper",
@@ -212,6 +254,8 @@ function initAppController() {
       name: "career",
       onOpen: () => {},
       onClose: () => {},
+      onMax: () => {},
+      onMin: () => {},
       iconPath: "/img/images/vector-img/desktop/fontAwesome/file-alt.svg",
       iconName: "Career",
       iconParent: "containment-wrapper",
@@ -223,6 +267,8 @@ function initAppController() {
       name: "intern",
       onOpen: () => {},
       onClose: () => {},
+      onMax: () => {},
+      onMin: () => {},
       iconPath: "/img/images/vector-img/desktop/fontAwesome/folder.svg",
       iconName: "Design Factory",
       iconParent: "sub-folder-0",
@@ -234,6 +280,8 @@ function initAppController() {
       name: "isan",
       onOpen: () => {},
       onClose: () => {},
+      onMax: () => {},
+      onMin: () => {},
       iconPath: "/img/images/vector-img/desktop/fontAwesome/folder.svg",
       iconName: "ISAN Starmap",
       iconXDelta: 75,
@@ -241,10 +289,25 @@ function initAppController() {
       appDesc: "Description: <strong> 3JS Starmap for the game Starbase. </strong>"
     }),
     appController.add({
+      id: "draggable-JS-COLLECTIVE",
+      name: "collective",
+      onOpen: () => {},
+      onClose: () => {},
+      onMax: () => {},
+      onMin: () => {},
+      iconPath: "/img/images/vector-img/desktop/fontAwesome/folder.svg",
+      iconName: "SB -Inactive",
+      iconXDelta: 75,
+      iconParent: "sub-folder-0",
+      appDesc: "Description: <strong> Collective Starbase Community Website. </strong> -Inactive"
+    }),
+    appController.add({
       id: "draggable-JS-REPOS",
       name: "repos",
       onOpen: () => {},
       onClose: () => {},
+      onMax: () => {},
+      onMin: () => {},
       iconPath: "/img/images/vector-img/desktop/fontAwesome/github-square.svg",
       iconName: "Repos",
       iconParent: "containment-wrapper",

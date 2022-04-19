@@ -70,6 +70,7 @@ commandHandler.add({
     commandHandler.add({ name: "refresh", helpMsg: "Refreshes the page", extendedHelp: "Refreshes the page. <br> Usage: refresh", run: () => ((window.location = window.location.href), localStorage.clear()) }),
     commandHandler.add({ name: "goto", helpMsg: "Go to another webpage", extendedHelp: "Loads a different webpage. <br> Usage: goto [url]", run: (e) => ((window.location.href = encodeURI("" + e)), "Redirecting..."), aliases: ["web"] }),
     commandHandler.add({ name: "honk", helpMsg: "", extendedHelp: "", run: () => '<img style="width:6em;" src="../../img/images/commands/honk.png"></img>' });
+    commandHandler.add({ name: "deez", helpMsg: "", extendedHelp: "", run: () => '<img style="width:6em;" src="../../img/images/commands/deez.png"></img>' });
 
 
       /*commandHandler.add({

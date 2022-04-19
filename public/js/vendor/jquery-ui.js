@@ -9815,7 +9815,7 @@ $.widget( "ui.draggable", $.ui.mouse, {
 		scrollSpeed: 20,
 		snap: false,
 		snapMode: "both",
-		snapTolerance: 20,
+		snapTolerance: 10,
 		stack: false,
 		zIndex: false,
 

@@ -485,6 +485,7 @@ iframe{
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  background-color: #3d3d3d;
   color: #aaa;
   font-size: 48px;
   display: none;
