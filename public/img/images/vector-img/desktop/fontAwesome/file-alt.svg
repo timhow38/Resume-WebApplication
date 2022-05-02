@@ -1,1 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="415" height="543" viewBox="0 0 415 543"><defs><radialGradient id="a" cx="0.5" cy="0.5" r="2.015" gradientUnits="objectBoundingBox"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="gray"/></radialGradient><filter id="b" x="0" y="0" width="415" height="543" filterUnits="userSpaceOnUse"><feOffset input="SourceAlpha"/><feGaussianBlur stdDeviation="5" result="c"/><feFlood/><feComposite operator="in" in2="c"/><feComposite in="SourceGraphic"/></filter></defs><g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#b)"><path d="M224,136V0H24A23.942,23.942,0,0,0,0,24V488a23.942,23.942,0,0,0,24,24H360a23.942,23.942,0,0,0,24-24V160H248a24.071,24.071,0,0,1-24-24Zm64,236a12.035,12.035,0,0,1-12,12H108a12.035,12.035,0,0,1-12-12v-8a12.035,12.035,0,0,1,12-12H276a12.035,12.035,0,0,1,12,12Zm0-64a12.035,12.035,0,0,1-12,12H108a12.035,12.035,0,0,1-12-12v-8a12.035,12.035,0,0,1,12-12H276a12.035,12.035,0,0,1,12,12Zm0-72v8a12.035,12.035,0,0,1-12,12H108a12.035,12.035,0,0,1-12-12v-8a12.035,12.035,0,0,1,12-12H276a12.035,12.035,0,0,1,12,12Zm96-114.1V128H256V0h6.1a23.982,23.982,0,0,1,17,7L377,105A23.923,23.923,0,0,1,384,121.9Z" transform="translate(15.5 15.5)" stroke="#000" stroke-width="1" fill="url(#a)"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="415" height="543" viewBox="0 0 415 543">
+  <defs>
+    <filter id="file-alt" x="0" y="0" width="415" height="543" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feFlood/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#file-alt)">
+    <path id="file-alt-2" data-name="file-alt" d="M224,136V0H24A23.942,23.942,0,0,0,0,24V488a23.942,23.942,0,0,0,24,24H360a23.942,23.942,0,0,0,24-24V160H248a24.071,24.071,0,0,1-24-24Zm64,236a12.035,12.035,0,0,1-12,12H108a12.035,12.035,0,0,1-12-12v-8a12.035,12.035,0,0,1,12-12H276a12.035,12.035,0,0,1,12,12Zm0-64a12.035,12.035,0,0,1-12,12H108a12.035,12.035,0,0,1-12-12v-8a12.035,12.035,0,0,1,12-12H276a12.035,12.035,0,0,1,12,12Zm0-72v8a12.035,12.035,0,0,1-12,12H108a12.035,12.035,0,0,1-12-12v-8a12.035,12.035,0,0,1,12-12H276a12.035,12.035,0,0,1,12,12Zm96-114.1V128H256V0h6.1a23.982,23.982,0,0,1,17,7L377,105A23.923,23.923,0,0,1,384,121.9Z" transform="translate(15.5 15.5)" fill="#fff" stroke="#000" stroke-width="1"/>
+  </g>
+</svg>

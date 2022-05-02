@@ -12,7 +12,7 @@
     font-family: var(--sub-font);
     width: 100%;
     height: -webkit-fill-available;
-    padding: 10px;
+    padding: 10px 0px 10px 10px;
     text-align: left !important;
     line-height: normal;
     -webkit-box-shadow: var(--webkit-boxshadow-red);
@@ -21,7 +21,7 @@
 }
 
 .term-border {
-    border-right: 2px groove rgb(61 61 61);
+    border-right: 2px groove rgb(94, 94, 94);
     border-bottom: solid 1px #000;
     border-left: solid 1px #000;
 }
@@ -47,6 +47,8 @@
     color: rgb(247, 107, 28);
     background: rgb(40, 75, 99);
     display: inline;
+    font-weight: bolder;
+    padding: 0.1rem;
     border: rgb(247, 107, 28) 1px solid;
 }
 
@@ -116,10 +118,10 @@ th {
     color: rgb(255, 255, 255);
 }
 
-.table-hover tbody tr:hover {
-    color: rgb(247, 107, 28)!important;
+.table-hover tbody tr:hover>td {
+    color: #fff;
     background: rgb(40, 75, 99);
-    border: rgb(247, 107, 28) 1px solid!important;
+    font-weight: bold;
 }
 
 .table thead th {
