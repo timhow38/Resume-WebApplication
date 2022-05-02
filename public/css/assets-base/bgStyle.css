@@ -1,0 +1,40 @@
+.scene {
+    background: #F9A842;
+}
+
+.scene path:first-child {
+    fill: #FAC756;
+}
+
+.scene path:nth-child(2) {
+    fill: #F9B44A;
+}
+
+.scene path:nth-child(3) {
+    fill: #F8832B;
+}
+
+.scene path:nth-child(4) {
+    fill: #F76B1C;
+}
+
+.scene path:nth-child(5) {
+    fill: #F9A842;
+}
+
+.scene path:nth-child(6) {
+    fill: #F9B44A;
+}
+
+.scene path:nth-child(7) {
+    fill: #F8832B;
+}
+
+.title {
+    color: #fff;
+    font-size: 6vw;
+    font-weight: 400;
+    z-index: 1000;
+    font-family: dystopian, sans-serif;
+    pointer-events: none;
+}
