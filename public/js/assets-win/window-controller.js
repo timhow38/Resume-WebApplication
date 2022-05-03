@@ -86,13 +86,15 @@ class AppController {
         )
             (i.style.left = m[n.name].left), (i.style.top = m[n.name].top);
         else {
-            this.iconSpawn[e.iconParent] ||
-                (this.iconSpawn[e.iconParent] = { x: 20, y: 50 });
+            this.iconSpawn[e.iconParent] || (this.iconSpawn[e.iconParent] = { x: 20, y: 50 });
             const n = this.iconSpawn[e.iconParent];
             (i.style.left = n.x + "px"),
             (i.style.top = n.y + "px"),
             (n.x += e.iconXDelta || 0),
-            (n.y += e.iconYDelta || 0);
+            (n.y += e.iconYDelta || 0),
+            //if icon is out of bounds move it down and to the right
+            n.x > DEFAULT_WRAP_PT_X && (n.x = 20),
+                n.y > DEFAULT_WRAP_PT_Y && (n.y = 50);
 
         }
         this.icons.push({ id: i.id, name: n.name }),
@@ -214,19 +216,8 @@ class AppController {
 var appController = new AppController();
 
 function initAppController() {
-    /* appController.add({
-       id: "draggable-JS-MediaApp",
-       name: "MEDIAPLAYER",
-       onOpen: () => {},
-       onClose: () => {},
-       iconPath: "/img/images/vector-img/desktop/fontAwesome/turntable.svg",
-       iconName: "Media",
-       iconParent: "containment-wrapper",
-       iconYDelta: 100,
-       appDesc: "<strong>Description:</strong> Media Player Prototype"
-     }),*/
     appController.add({
-            id: "draggable-JS-01",
+            id: "draggable-JS-terminal",
             name: "terminal",
             onOpen: () => {},
             onClose: () => {
@@ -241,7 +232,7 @@ function initAppController() {
             appDesc: "Description: <strong> Interactable Command Line Interface. </strong>"
         }),
         appController.add({
-            id: "draggable-JS-02",
+            id: "draggable-JS-projects",
             name: "projects",
             onOpen: () => {},
             onClose: () => {},
@@ -252,6 +243,19 @@ function initAppController() {
             iconParent: "containment-wrapper",
             iconYDelta: 100,
             appDesc: "Description: <strong> Current Projects. </strong>"
+        }),
+        appController.add({
+            id: "draggable-JS-ADOBEXD",
+            name: "Adobe XD Prototypes",
+            onOpen: () => {},
+            onClose: () => {},
+            onMax: () => {},
+            onMin: () => {},
+            iconPath: "/img/icons/desktop/big/Desktop_Folder_2.png",
+            iconName: "Adobe XD",
+            iconParent: "sub-folder-0",
+            iconXDelta: 95,
+            appDesc: "Description: <strong> UI Prototypes </strong>"
         }),
         appController.add({
             id: "draggable-JS-CAREER",

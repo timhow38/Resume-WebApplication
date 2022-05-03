@@ -265,6 +265,25 @@
 
                         </div>
                     </div>
+
+                    <div id="draggable-JS-ADOBEXD" class="win-prop box-sm-resize application-non-drag">
+                        <div class="header">
+                            <div class="sub-menu-title">
+                                <div class="icon"><img class="icon-img" src="/img/icons/desktop/small/Desktop_Folder_2.png" alt="Card image cap"></div>
+                                <div class="text">Adobe XD Prototypes</div>
+                            </div>
+                            <div class="buttons">
+                                <div id="minimize" type="button" class="btn minimize"><i class="bi bi-fullscreen-exit"></i></div>
+                                <div id="maximise" type="button" class="btn maximise"><i class="bi bi-arrows-fullscreen"></i></div>
+
+                                <div id="close" type="button" class="btn close"><i class="bi bi-x-square"></i></div>
+                            </div>
+                        </div>
+                        <div class="form sub-folder" id="sub-folder-1">
+
+                        </div>
+                    </div>
+
                     <div id="draggable-JS-CAREER" class="win-prop box-sm-resize application-non-drag">
                         <div class="header">
                             <div class="sub-menu-title">
@@ -300,7 +319,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div id="draggable-JS-01" class="win-prop box-lg-resize-term application-non-drag">
+                    <div id="draggable-JS-terminal" class="win-prop box-lg-resize-term application-non-drag">
                         <div class="header">
                             <div class="sub-menu-title">
                                 <div class="icon"><img class="icon-img" src="/img/icons/desktop/small/Chip_Green.png" alt="Card image cap"></div>
@@ -358,81 +377,81 @@
                         </div>
                     </div>
 
-                </div>
-                <div id="draggable-JS-02" class="win-prop box-sm-resize application-non-drag">
-                    <div class="header">
-                        <div class="sub-menu-title">
-                            <div class="icon"><img class="icon-img" src="/img/icons/desktop/small/Notes_Purple.png" alt="Card image cap"></div>
-                            <div class="text">Projects</div>
-                        </div>
-                        <div class="buttons">
-                            <div id="minimize" type="button" class="btn minimize"><i class="bi bi-fullscreen-exit"></i></div>
-                            <div id="maximise" type="button" class="btn maximise"><i class="bi bi-arrows-fullscreen"></i></div>
 
-                            <div id="close" type="button" class="btn close"><i class="bi bi-x-square"></i></div>
-                        </div>
-                    </div>
-                    <div class="form sub-folder" id="sub-folder-0">
+                    <div id="draggable-JS-projects" class="win-prop box-sm-resize application-non-drag">
+                        <div class="header">
+                            <div class="sub-menu-title">
+                                <div class="icon"><img class="icon-img" src="/img/icons/desktop/small/Notes_Purple.png" alt="Card image cap"></div>
+                                <div class="text">Projects</div>
+                            </div>
+                            <div class="buttons">
+                                <div id="minimize" type="button" class="btn minimize"><i class="bi bi-fullscreen-exit"></i></div>
+                                <div id="maximise" type="button" class="btn maximise"><i class="bi bi-arrows-fullscreen"></i></div>
 
-                    </div>
-                </div>
-                <div id="draggable-JS-REPOS" class="win-prop box-lg-resize application-non-drag">
-                    <div class="header">
-                        <div class="sub-menu-title">
-                            <div class="icon"><img class="icon-img" src="/img/icons/desktop/small/Hammer_Yellow.png" alt="Card image cap"></div>
-                            <div class="text">Github - Public Repositories</div>
+                                <div id="close" type="button" class="btn close"><i class="bi bi-x-square"></i></div>
+                            </div>
                         </div>
-                        <div class="buttons">
-                            <div id="minimize" type="button" class="btn minimize"><i class="bi bi-fullscreen-exit"></i></div>
-                            <div id="maximise" type="button" class="btn maximise"><i class="bi bi-arrows-fullscreen"></i></div>
+                        <div class="form sub-folder" id="sub-folder-0">
 
-                            <div id="close" type="button" class="btn close"><i class="bi bi-x-square"></i></div>
                         </div>
                     </div>
-                    <div class="form sub-folder" id="sub-folder-0">
-                        <div class="win-prop-scroll col-12">
-                            <ul class="projects-ul" target="_blank">
-                            </ul>
+                    <div id="draggable-JS-REPOS" class="win-prop box-lg-resize application-non-drag">
+                        <div class="header">
+                            <div class="sub-menu-title">
+                                <div class="icon"><img class="icon-img" src="/img/icons/desktop/small/Hammer_Yellow.png" alt="Card image cap"></div>
+                                <div class="text">Github - Public Repositories</div>
+                            </div>
+                            <div class="buttons">
+                                <div id="minimize" type="button" class="btn minimize"><i class="bi bi-fullscreen-exit"></i></div>
+                                <div id="maximise" type="button" class="btn maximise"><i class="bi bi-arrows-fullscreen"></i></div>
+
+                                <div id="close" type="button" class="btn close"><i class="bi bi-x-square"></i></div>
+                            </div>
+                        </div>
+                        <div class="form sub-folder" id="sub-folder-0">
+                            <div class="win-prop-scroll col-12">
+                                <ul class="projects-ul" target="_blank">
+                                </ul>
+                            </div>
                         </div>
                     </div>
+
                 </div>
 
             </div>
 
+
+
+
+
+            <script src="js/anime.min.js"></script>
+            <script src="js/bgScript.js"></script>
+
+
+
+            <script src="js/assets-win/zoom.js"></script>
+            <script src="/js/assets-api/gitAPI-02.js"></script>
+            <script src="js/assets-win/console.js"></script>
+            <script src="js/assets-noti/script-noti.js"></script>
+            <script src="js/assets-win/window-controller.js"></script>
+            <script src="js/assets-win/console-commands.js"></script>
+            <script src="js/vendor/lazysizes.min.js" async></script>
+
+            <script>
+                window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+            </script>
+            <!-- Script Loader -->
+            <script>
+                document.body.classList.add('js-loading');
+                $(document).ready(function() {
+                    setTimeout(function() {
+                        $('body').addClass('loaded');
+                        $('body').removeClass('js-loading');
+                        $('h1').css('color', '#222222');
+                    }, 3100);
+                });
+            </script>
         </div>
-
-
-
-
-
-        <script src="js/anime.min.js"></script>
-        <script src="js/bgScript.js"></script>
-
-
-
-        <script src="js/assets-win/zoom.js"></script>
-        <script src="/js/assets-api/gitAPI-02.js"></script>
-        <script src="js/assets-win/console.js"></script>
-        <script src="js/assets-noti/script-noti.js"></script>
-        <script src="js/assets-win/window-controller.js"></script>
-        <script src="js/assets-win/console-commands.js"></script>
-        <script src="js/vendor/lazysizes.min.js" async></script>
-
-        <script>
-            window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
-        </script>
-        <!-- Script Loader -->
-        <script>
-            document.body.classList.add('js-loading');
-            $(document).ready(function() {
-                setTimeout(function() {
-                    $('body').addClass('loaded');
-                    $('body').removeClass('js-loading');
-                    $('h1').css('color', '#222222');
-                }, 3100);
-            });
-        </script>
-    </div>
 
 </body>
 

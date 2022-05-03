@@ -1,17 +1,17 @@
 var zoom = 1;
-		
-		$('.zoom').on('click', function(){
-			zoom += 0.1;
-			$('.body-sub').css('zoom', zoom);
-		});
-		$('.zoom-init').on('click', function(){
-			zoom = 1;
-			$('.body-sub').css('zoom', zoom);
-		});
-		$('.zoom-out').on('click', function(){
-			zoom -= 0.1;
-			$('.body-sub').css('zoom', zoom);
-		});
+
+$('.zoom').on('click', function() {
+    zoom += 0.1;
+    $('.body-sub').css('zoom', zoom);
+});
+$('.zoom-init').on('click', function() {
+    zoom = 1;
+    $('.body-sub').css('zoom', zoom);
+});
+$('.zoom-out').on('click', function() {
+    zoom -= 0.1;
+    $('.body-sub').css('zoom', zoom);
+});
 
 
 /*
@@ -48,7 +48,7 @@ document.getElementByClass("zoom-init").onclick = function() {(zoomset)};
 
 
 $('.win-prop .header').click(function() {
-  $('#draggable-JS-01').css({
+  $('#draggable-JS-terminal').css({
       top: 0,
       right: 0,
       bottom: 0,
@@ -94,7 +94,7 @@ function exitFullScreen(){
 }
 
 function myFunction() {
-  var x = document.getElementById("draggable-JS-01");
+  var x = document.getElementById("draggable-JS-terminal");
   if (x.style.display === "none") {
     x.style.display = "block";
   } else {
