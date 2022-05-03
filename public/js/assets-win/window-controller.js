@@ -1,3 +1,15 @@
+$(".body-sub")
+    .on("contextmenu", function(e) {
+        var n = e.pageY - 0,
+            o = e.pageX - 0;
+        return $("#context-menu").css({ display: "block", top: n, left: o }).addClass("show1"), !1;
+    })
+    .on("click", function() {
+        //remove button with id of "openApp"
+        $("#openApp").remove();
+        $("#context-menu").removeClass("show1").hide(), console.log();
+    });
+
 const DEFAULT_X_POS = 35,
     DEFAULT_Y_POS = 35,
     DEFAULT_WRAP_PT_X = 1e3,
@@ -136,6 +148,33 @@ class AppController {
             document.getElementById("closeApp").appendChild(h),
             this.close(o.name);
 
+        // get list of app icons
+
+        //if user right clicks on the app icon then log the app name to console
+        i.oncontextmenu = (e) => {
+            e.preventDefault();
+            console.log(n.name);
+            //console.log the app name
+
+            //if icon id equals to "app-icon-" + o.name then add a button with an id of "openApp" to the context menu
+            if (i.id == "app-icon-" + o.name) {
+                const g = document.createElement("button");
+                (g.innerText = "Open App"),
+                (g.id = "openApp"),
+                (g.onclick = () => {
+                    a.open(o.name);
+                }),
+                (g.onmouseup = () => {
+                    //remove button with id of "openApp"
+
+                    $("#context-menu").removeClass("show1").hide();
+                    $("#openApp").remove();
+                }),
+                document.getElementById("context-menu").appendChild(g);
+            }
+        };
+
+
         function btnRefresh() {
             document.getElementById("btnRefresh");
             window.location = window.location.href;
@@ -169,6 +208,7 @@ class AppController {
                 n.onClose()) :
             console.log("Unknown app %s", e);
     }
+
     max(e) {
         const n = this.apps.find((n) => n.name == e);
         n
@@ -199,6 +239,7 @@ class AppController {
     }
 
 
+
     saveIcons() {
         var e = {};
         this.icons.forEach((n) => {
@@ -215,6 +256,8 @@ class AppController {
         return this.apps.map((e) => e.name).join(", ");
     }
 }
+
+
 
 var appController = new AppController();
 

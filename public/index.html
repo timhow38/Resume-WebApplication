@@ -50,6 +50,8 @@
     <script src="js/vendor/jquery-ui.js"></script>
 
     <!-- PreLoader -->
+
+
     <script>
         document.documentElement.className = 'js';
     </script>
@@ -113,7 +115,9 @@
         <!-- Animation Loader-->
         <div id="loader-wrapper">
             <div id="loader">
-                <iframe id="background" scrolling="no" src="img/loader.html"></iframe>
+                <iframe id="background" scrolling="no">
+
+                </iframe>
             </div>
         </div>
 
@@ -475,16 +479,23 @@
             <script>
                 window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
             </script>
-            <!-- Script Loader -->
+            <!-- Script Loader  -->
             <script>
                 document.body.classList.add('js-loading');
-                $(document).ready(function() {
-                    setTimeout(function() {
-                        $('body').addClass('loaded');
-                        $('body').removeClass('js-loading');
-                        $('h1').css('color', '#222222');
-                    }, 3100);
-                });
+                //check how long it takes to load the page
+                window.onload = function() {
+                    var loadTime = (new Date()).getTime() - window.performance.timing.navigationStart;
+                    console.log('Page loaded in ' + loadTime + ' ms.');
+                };
+                //on load add class "loaded" to body
+                window.onload = function() {
+                    document.body.classList.add('loaded');
+                    document.body.classList.remove('js-loading');
+
+                };
+            </script>
+
+            <script>
             </script>
         </div>
 
