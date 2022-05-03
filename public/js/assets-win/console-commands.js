@@ -100,6 +100,7 @@ commandHandler.add({
     commandHandler.add({ name: "honk", helpMsg: "", extendedHelp: "", run: () => '<img style="width:6em;" src="../../img/images/commands/honk.png"></img>' });
 commandHandler.add({ name: "deez", helpMsg: "", extendedHelp: "", run: () => '<img style="width:6em;" src="../../img/images/commands/deez.png"></img>' });
 
+
 // create command to search stackoverflow opening in a new tab
 commandHandler.add({
     name: "stackoverflow",

@@ -58,6 +58,10 @@
     background-color: #0059d2;
 }
 
+.minimize {
+    display: none;
+}
+
 @-webkit-keyframes scale-in-center {
     0% {
         -webkit-transform: scale(0);

@@ -38,16 +38,19 @@ class AppController {
             }),
             (o.elm.getElementsByClassName("btn close")[0].onclick = () => {
                 a.close(o.name);
+
             }),
             (o.elm.getElementsByClassName("btn maximise")[0].onclick = () => {
                 a.max(o.name);
-                getElementById('btn maximise').style.display = 'none';
-                getElementById('btn minimize').style.display = 'block';
+                //add css color red
+                o.elm.getElementsByClassName("btn maximise")[0].style.display = "none";
+                o.elm.getElementsByClassName("btn minimize")[0].style.display = "block";
+
             }),
             (o.elm.getElementsByClassName("btn minimize")[0].onclick = () => {
                 a.min(o.name);
-                getElementById('btn minimize').style.display = 'none';
-                getElementById('btn maximise').style.display = 'block';
+                o.elm.getElementsByClassName("btn minimize")[0].style.display = "none";
+                o.elm.getElementsByClassName("btn maximise")[0].style.display = "block";
             });
         var s = document.createElement("button");
         (s.id = "app-button-" + o.name),
@@ -91,15 +94,12 @@ class AppController {
             (i.style.left = n.x + "px"),
             (i.style.top = n.y + "px"),
             (n.x += e.iconXDelta || 0),
-            (n.y += e.iconYDelta || 0),
-            //if icon is out of bounds move it down and to the right
-            n.x > DEFAULT_WRAP_PT_X && (n.x = 20),
-                n.y > DEFAULT_WRAP_PT_Y && (n.y = 50);
-
+            (n.y += e.iconYDelta || 0);
         }
         this.icons.push({ id: i.id, name: n.name }),
             (i.ondblclick = () => {
                 a.open(o.name);
+                a.min(o.name);
             }),
             $("#app-icon-" + o.name).draggable({
                 containment: "#" + e.iconParent,
@@ -197,6 +197,8 @@ class AppController {
                 n.onMin()) :
             console.log("");
     }
+
+
     saveIcons() {
         var e = {};
         this.icons.forEach((n) => {
@@ -213,6 +215,7 @@ class AppController {
         return this.apps.map((e) => e.name).join(", ");
     }
 }
+
 var appController = new AppController();
 
 function initAppController() {
@@ -308,6 +311,17 @@ function initAppController() {
         appController.add({
             id: "draggable-JS-COLLECTIVE",
             name: "collective",
+            onOpen: () => {},
+            onClose: () => {},
+            iconPath: "/img/icons/desktop/big/Desktop_Folder_2.png",
+            iconName: "C-SB Inactive",
+            iconXDelta: 95,
+            iconParent: "sub-folder-0",
+            appDesc: "Description: <strong> Collective Starbase Community Website. </strong> -Inactive"
+        }),
+        appController.add({
+            id: "draggable-JS-temp",
+            name: "temp",
             onOpen: () => {},
             onClose: () => {},
             iconPath: "/img/icons/desktop/big/Desktop_Folder_2.png",
