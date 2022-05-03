@@ -5,8 +5,6 @@ $(".body-sub")
         return $("#context-menu").css({ display: "block", top: n, left: o }).addClass("show1"), !1;
     })
     .on("click", function() {
-        //remove button with id of "openApp"
-        $("#openApp").remove();
         $("#context-menu").removeClass("show1").hide(), console.log();
     });
 
@@ -64,16 +62,6 @@ class AppController {
                 o.elm.getElementsByClassName("btn minimize")[0].style.display = "none";
                 o.elm.getElementsByClassName("btn maximise")[0].style.display = "block";
             });
-        var s = document.createElement("button");
-        (s.id = "app-button-" + o.name),
-        s.classList.add("dropdown-item"),
-            (s.type = "button"),
-            (s.innerText = o.name.toUpperCase()),
-            (s.onclick = () => {
-                a.open(o.name);
-            }),
-            t.append(s);
-
         const i = document.createElement("div");
         (i.id = "app-icon-" + o.name), i.classList.add("desk-prop");
         const p = document.createElement("div");
@@ -120,7 +108,20 @@ class AppController {
             }),
             this.apps.push(o);
 
-        //App List Open
+
+        //Right Click Check
+        o.elm.oncontextmenu = (e) => {
+            e.preventDefault();
+            console.log(o.id);
+        };
+
+        i.oncontextmenu = (e) => {
+            e.preventDefault();
+            console.log(i.id);
+
+        };
+
+
         const g = document.createElement("button");
         (g.innerText = o.name),
         g.classList.add("btn-secondary"),
@@ -148,31 +149,7 @@ class AppController {
             document.getElementById("closeApp").appendChild(h),
             this.close(o.name);
 
-        // get list of app icons
 
-        //if user right clicks on the app icon then log the app name to console
-        i.oncontextmenu = (e) => {
-            e.preventDefault();
-            console.log(n.name);
-            //console.log the app name
-
-            //if icon id equals to "app-icon-" + o.name then add a button with an id of "openApp" to the context menu
-            if (i.id == "app-icon-" + o.name) {
-                const g = document.createElement("button");
-                (g.innerText = "Open App"),
-                (g.id = "openApp"),
-                (g.onclick = () => {
-                    a.open(o.name);
-                }),
-                (g.onmouseup = () => {
-                    //remove button with id of "openApp"
-
-                    $("#context-menu").removeClass("show1").hide();
-                    $("#openApp").remove();
-                }),
-                document.getElementById("context-menu").appendChild(g);
-            }
-        };
 
 
         function btnRefresh() {
@@ -278,7 +255,7 @@ function initAppController() {
             appDesc: "Description: <strong> Interactable Command Line Interface. </strong>"
         }),
         appController.add({
-            id: "draggable-JS-projects",
+            id: "draggable-js-projects",
             name: "projects",
             onOpen: () => {},
             onClose: () => {},
@@ -291,7 +268,7 @@ function initAppController() {
             appDesc: "Description: <strong> Current Projects. </strong>"
         }),
         appController.add({
-            id: "draggable-JS-ADOBEXD",
+            id: "draggable-js-adobexd",
             name: "Adobe XD Prototypes",
             onOpen: () => {},
             onClose: () => {},
@@ -304,7 +281,7 @@ function initAppController() {
             appDesc: "Description: <strong> UI Prototypes </strong>"
         }),
         appController.add({
-            id: "draggable-JS-CAREER",
+            id: "draggable-js-career",
             name: "career",
             onOpen: () => {},
             onClose: () => {},
@@ -317,7 +294,7 @@ function initAppController() {
             appDesc: "Description: <strong> Career Links. </strong>"
         }),
         appController.add({
-            id: "draggable-JS-REPOS",
+            id: "draggable-js-repos",
             name: "repos",
             onOpen: () => {},
             onClose: () => {},
@@ -330,7 +307,7 @@ function initAppController() {
             appDesc: "Description: <strong> Github Repositories. </strong>"
         }),
         appController.add({
-            id: "draggable-JS-INTERN",
+            id: "draggable-js-intern",
             name: "intern",
             onOpen: () => {},
             onClose: () => {},
@@ -341,7 +318,7 @@ function initAppController() {
             appDesc: "Description: <strong> Design Factory Internship. </strong>"
         }),
         appController.add({
-            id: "draggable-JS-ISAN",
+            id: "draggable-js-isan",
             name: "isan",
             onOpen: () => {},
             onClose: () => {},
@@ -352,7 +329,7 @@ function initAppController() {
             appDesc: "Description: <strong> 3JS Starmap for the game Starbase. </strong>"
         }),
         appController.add({
-            id: "draggable-JS-COLLECTIVE",
+            id: "draggable-js-collective",
             name: "collective",
             onOpen: () => {},
             onClose: () => {},
@@ -363,7 +340,7 @@ function initAppController() {
             appDesc: "Description: <strong> Collective Starbase Community Website. </strong> -Inactive"
         }),
         appController.add({
-            id: "draggable-JS-temp",
+            id: "draggable-js-temp",
             name: "temp",
             onOpen: () => {},
             onClose: () => {},
