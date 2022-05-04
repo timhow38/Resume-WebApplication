@@ -1,12 +1,25 @@
 $(".body-sub")
     .on("contextmenu", function(e) {
+        console.log("right click");
+        removeSettings();
         var n = e.pageY - 0,
             o = e.pageX - 0;
         return $("#context-menu").css({ display: "block", top: n, left: o }).addClass("show1"), !1;
+
     })
     .on("click", function() {
         $("#context-menu").removeClass("show1").hide(), console.log();
     });
+
+//create function called removeSettings
+function removeSettings() {
+    //if id "win-close" exists then remove it
+    if ($("#win-close").length) {
+        $("#win-close").remove();
+    } else {
+        //else do nothing
+    }
+}
 
 const DEFAULT_X_POS = 35,
     DEFAULT_Y_POS = 35,
@@ -109,17 +122,44 @@ class AppController {
             this.apps.push(o);
 
 
+
         //Right Click Check
         o.elm.oncontextmenu = (e) => {
             e.preventDefault();
             console.log(o.id);
+            //appcontroller.open(o.name);
+            const u = document.createElement("button");
+            u.classList.add("btn-primary"),
+                (u.innerText = "Close"),
+                (u.onclick = () => {
+                    this.close(o.name);
+                    document.getElementById("win-close").removeChild(u);
+                }),
+                document.getElementById("win-close").appendChild(u);
         };
 
         i.oncontextmenu = (e) => {
             e.preventDefault();
             console.log(i.id);
+            console.log(o.id);
+            //appcontroller.open(o.name);
+            const u = document.createElement("button");
+            u.classList.add("btn-primary"),
+                (u.innerText = "Open"),
+                (u.onclick = () => {
+                    this.open(o.name);
+                    document.getElementById("win-open").removeChild(u);
+                }),
+                document.getElementById("win-open").appendChild(u);
 
         };
+
+
+
+
+
+
+
 
 
         const g = document.createElement("button");
@@ -148,7 +188,6 @@ class AppController {
 
             document.getElementById("closeApp").appendChild(h),
             this.close(o.name);
-
 
 
 
@@ -185,6 +224,7 @@ class AppController {
                 n.onClose()) :
             console.log("Unknown app %s", e);
     }
+
 
     max(e) {
         const n = this.apps.find((n) => n.name == e);
@@ -357,3 +397,11 @@ function saveIcons() {
     appController.saveIcons();
 }
 $(document).ready(initAppController), setInterval(saveIcons, 1e3);
+
+//on right click alert user
+//$(document).ready(function() {
+//    $(document).on("contextmenu", function(e) {
+//        e.preventDefault();
+//        document.getElementById("win-close").removeChild(u);
+//    });
+//});

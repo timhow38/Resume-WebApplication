@@ -79,9 +79,7 @@
 
             <!-- Default dropend button -->
             <div class="btn-group dropend">
-                <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-          Applications
-        </button>
+                <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Applications</button>
                 <ul class="dropdown-menu">
 
                     <p class="divider">Open</p>
@@ -91,7 +89,16 @@
                 </ul>
             </div>
 
-            <button type="button" class="btn btn-secondary"><s>Coming Soon</s></button>
+            <div class="btn-group dropend">
+                <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Settings</button>
+                <ul class="dropdown-menu">
+                    <div id="win-close"></div>
+                    <div id="win-open"></div>
+                    <button id="goFS" type="button" class="btn btn-secondary">Fullscreen [OFF]</button>
+                </ul>
+            </div>
+
+
             <button type="button" class="btn btn-secondary" onclick="pickImage()">Handy Tips?</button>
         </div>
 
@@ -138,12 +145,49 @@
               <path d="M -85.59,444.4 -85.59,890.6 489,895.6 C 489,895.6 436.8,745.3 382.5,690.8 258.1,565.8 57.98,629.2 -85.59,444.4 Z" pathdata:id="M -85.59,444.4 -85.59,890.6 546.9,895.6 C 546.9,895.6 517.4,695.4 339.9,593.4 187.7,505.9 57.98,629.2 -85.59,444.4 Z"></path>
             </svg>
                     </div>
-                    <nav class="navbar navbar-light bg-dark">
-                        <div class="container">
-                            <a class="navbar-brand" href="#">
-                                <p>Task Bar Under Construction
-                                </p>
-                            </a>
+                    <nav class="navbar navbar-expand navbar-dark bg-dark" aria-label="Second navbar example">
+                        <div class="container-fluid">
+                            <div class="btn-group dropup">
+                                <button type="button" class="taskbtn" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <img src="img/icons/desktop/small/Desktop_Folder_2.png" width="30" height="30" class="d-inline-block align-top" alt="">
+                                </button>
+                                <ul class="dropdown-menu" style="">
+                                    <li>
+                                        <a id="goFS" class="dropdown-item" href="#">Fullscreen [OFF]</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Separated link</a></li>
+                                </ul>
+
+
+                            </div>
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                          </button>
+
+                            <div class="collapse navbar-collapse" id="navbarsExample02">
+                                <ul class="navbar-nav me-auto">
+                                    <!--
+                                    <li class="nav-item">
+                                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Link</a>
+                                    </li>
+                                    -->
+                                </ul>
+                                <!--
+                                    <form>
+                                    <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+                                </form>
+                                -->
+
+                            </div>
                         </div>
                     </nav>
 
@@ -327,7 +371,7 @@
                         <div class="header">
                             <div class="sub-menu-title">
                                 <div class="icon"><img class="icon-img" src="/img/icons/desktop/small/Handbag_LightBlue.png" alt="Card image cap"></div>
-                                <div class="text">Github</div>
+                                <div class="text">Career</div>
                             </div>
                             <div class="buttons">
                                 <div id="minimize" type="button" class="btn minimize"><i class="bi bi-fullscreen-exit"></i></div>
@@ -438,7 +482,7 @@
                         <div class="header">
                             <div class="sub-menu-title">
                                 <div class="icon"><img class="icon-img" src="/img/icons/desktop/small/Hammer_Yellow.png" alt="Card image cap"></div>
-                                <div class="text">Github - Public Repositories</div>
+                                <div class="text">Repos Github - Public</div>
                             </div>
                             <div class="buttons">
                                 <div id="minimize" type="button" class="btn minimize"><i class="bi bi-fullscreen-exit"></i></div>
@@ -493,9 +537,56 @@
                     document.body.classList.remove('js-loading');
 
                 };
+                //fullscreen page
             </script>
 
             <script>
+                var goFS = document.getElementById('goFS');
+                goFS.addEventListener(
+                    'click',
+                    function toggleFullScreen() {
+                        if (!document.fullscreenElement) {
+                            document.documentElement.requestFullscreen();
+                            //replace <a> text with "enter fullscreen"
+
+                            goFS.innerHTML = 'Fullscreen [ON]';
+
+
+                        } else {
+                            if (document.exitFullscreen) {
+                                document.exitFullscreen();
+                                goFS.innerHTML = 'Fullscreen [OFF]';
+                            }
+                        }
+                    }
+                );
+            </script>
+            <script>
+                function toggleFullScreen() {
+                    var doc = window.document;
+                    var docEl = doc.documentElement;
+
+                    var requestFullScreen =
+                        docEl.requestFullscreen ||
+                        docEl.mozRequestFullScreen ||
+                        docEl.webkitRequestFullScreen ||
+                        docEl.msRequestFullscreen;
+                    var cancelFullScreen =
+                        doc.exitFullscreen ||
+                        doc.mozCancelFullScreen ||
+                        doc.webkitExitFullscreen ||
+                        doc.msExitFullscreen;
+
+                    if (!doc.fullscreenElement &&
+                        !doc.mozFullScreenElement &&
+                        !doc.webkitFullscreenElement &&
+                        !doc.msFullscreenElement
+                    ) {
+                        requestFullScreen.call(docEl);
+                    } else {
+                        cancelFullScreen.call(doc);
+                    }
+                }
             </script>
         </div>
 
