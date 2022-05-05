@@ -1,5 +1,6 @@
 $(".body-sub")
     .on("contextmenu", function(e) {
+
         console.log("right click");
         removeSettings();
         var n = e.pageY - 0,
@@ -9,6 +10,7 @@ $(".body-sub")
     })
     .on("click", function() {
         $("#context-menu").removeClass("show1").hide(), console.log();
+
     });
 
 //create function called removeSettings
@@ -20,6 +22,7 @@ function removeSettings() {
         //else do nothing
     }
 }
+
 
 const DEFAULT_X_POS = 35,
     DEFAULT_Y_POS = 35,
@@ -123,21 +126,6 @@ class AppController {
 
 
 
-        //Right Click Check
-        o.elm.oncontextmenu = (e) => {
-            e.preventDefault();
-            console.log(o.id);
-            //appcontroller.open(o.name);
-            const u = document.createElement("button");
-            u.classList.add("btn-primary"),
-                (u.innerText = "Close"),
-                (u.onclick = () => {
-                    this.close(o.name);
-                    document.getElementById("win-close").removeChild(u);
-                }),
-                document.getElementById("win-close").appendChild(u);
-        };
-
         i.oncontextmenu = (e) => {
             e.preventDefault();
             console.log(i.id);
@@ -150,16 +138,28 @@ class AppController {
                     this.open(o.name);
                     document.getElementById("win-open").removeChild(u);
                 }),
-                document.getElementById("win-open").appendChild(u);
+                console.log(document.getElementById("win-open").appendChild(u));
 
         };
+        //if user right clicks on 
 
 
 
-
-
-
-
+        //Right Click Check
+        o.elm.oncontextmenu = (e) => {
+            e.preventDefault();
+            console.log(o.id);
+            console.log(o.name);
+            //appcontroller.open(o.name);
+            const u = document.createElement("button");
+            u.classList.add("btn-primary"),
+                (u.innerText = "Close"),
+                (u.onclick = () => {
+                    this.close(o.name);
+                    document.getElementById("win-close").removeChild(u);
+                }),
+                console.log(document.getElementById("win-close").appendChild(u));
+        };
 
 
         const g = document.createElement("button");
@@ -209,6 +209,7 @@ class AppController {
                 $("#" + n.id)
                 .removeClass("application-non-drag")
                 .addClass("application"),
+                AppStatus(),
                 $("#" + n.id).show(),
                 n.onOpen()) :
             console.log("Unknown app %s", e);
@@ -220,6 +221,7 @@ class AppController {
             ($("#" + n.id)
                 .removeClass("application maxOn")
                 .addClass("application-non-drag maxOff"),
+                AppStatus(),
                 $("#" + n.id).hide(),
                 n.onClose()) :
             console.log("Unknown app %s", e);
@@ -254,6 +256,8 @@ class AppController {
                 n.onMin()) :
             console.log("");
     }
+
+
 
 
 
@@ -405,3 +409,8 @@ $(document).ready(initAppController), setInterval(saveIcons, 1e3);
 //        document.getElementById("win-close").removeChild(u);
 //    });
 //});
+
+
+
+console.log(appController.apps);
+console.log(appController.icons);

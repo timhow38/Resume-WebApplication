@@ -122,9 +122,10 @@
         <!-- Animation Loader-->
         <div id="loader-wrapper">
             <div id="loader">
-                <iframe id="background" scrolling="no">
+                <div id="background">
+                    <!-- create progress bar -->
 
-                </iframe>
+                </div>
             </div>
         </div>
 
@@ -172,14 +173,12 @@
 
                             <div class="collapse navbar-collapse" id="navbarsExample02">
                                 <ul class="navbar-nav me-auto">
-                                    <!--
-                                    <li class="nav-item">
-                                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+
+                                    <li class="nav-item minWindow">
+                                        <input type="checkbox" class="btn-check" id="btn-check-outlined" autocomplete="off">
+                                        <label class="btn btn-outline-primary" for="btn-check-outlined">Single toggle</label><br>
                                     </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">Link</a>
-                                    </li>
-                                    -->
+
                                 </ul>
                                 <!--
                                     <form>
@@ -426,19 +425,13 @@
                                 </div>
                             </div>
                             <div class="col-4 terminal-right">
-                                <div class="container" style="text-align: center; margin-top: 8em;">
+                                <div id="dbgHide" class="container" style="text-align: center; margin-top: 8em;">
                                     <img class="icon-main-02" src="../img/images/vector-img/desktop/fontAwesome/construction.svg" width="30" height="30" class="" alt="">
 
                                 </div>
 
-                                <!--
-                <div class="form-check form-check-inline">
-                  <div id="box">
-                    <label for="colorPicker">Border color:</label>
-                    <input type="color" value="#8888ff" id="colorPicker">
-                    <p id="output"></p>
-                  </div>
-                -->
+                                <div id="debugDiv"></div>
+
                             </div>
                             <div class="form-check form-check-inline">
                                 <input id="Switch-BG1" type="checkbox" class="form-check-input" data-onstyle="success" data-offstyle="danger" type="checkbox" data-toggle="toggle" data-style="mr-1 slow" checked>
@@ -516,9 +509,10 @@
             <script src="/js/assets-api/gitAPI-02.js"></script>
             <script src="js/assets-win/console.js"></script>
             <script src="js/assets-noti/script-noti.js"></script>
-            <script src="js/assets-win/window-controller.js"></script>
+            <script src="js/assets-win/window-controller.js" defer></script>
             <script src="js/assets-win/console-commands.js"></script>
             <script src="js/vendor/lazysizes.min.js" async></script>
+            <script src="js/assets-win/taskbar.js"></script>
 
             <script>
                 window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
@@ -588,6 +582,50 @@
                     }
                 }
             </script>
+
+            <script>
+                // progressbar.js@1.0.0 version is used
+                // Docs: http://progressbarjs.readthedocs.org/en/1.0.0/
+
+                var bar = new ProgressBar.Circle(container, {
+                    color: '#aaa',
+                    // This has to be the same size as the maximum width to
+                    // prevent clipping
+                    strokeWidth: 4,
+                    trailWidth: 1,
+                    easing: 'easeInOut',
+                    duration: 1400,
+                    text: {
+                        autoStyleContainer: false
+                    },
+                    from: {
+                        color: '#aaa',
+                        width: 1
+                    },
+                    to: {
+                        color: '#333',
+                        width: 4
+                    },
+                    // Set default step function for all animate calls
+                    step: function(state, circle) {
+                        circle.path.setAttribute('stroke', state.color);
+                        circle.path.setAttribute('stroke-width', state.width);
+
+                        var value = Math.round(circle.value() * 100);
+                        if (value === 0) {
+                            circle.setText('');
+                        } else {
+                            circle.setText(value);
+                        }
+
+                    }
+                });
+                bar.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
+                bar.text.style.fontSize = '2rem';
+
+                bar.animate(1.0); // Number from 0.0 to 1.0
+            </script>
+            <script></script>
         </div>
 
 </body>

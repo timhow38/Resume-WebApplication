@@ -125,8 +125,11 @@
 }
 
 #draggable-JS-terminal>div.row>div.col-4 {
-    height: 200%;
+    height: 100%;
+    overflow: scroll;
 }
+
+#debugDiv {}
 
 #draggable-JS-terminal>div.row {
     padding-right: 0px;

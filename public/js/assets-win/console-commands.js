@@ -1,5 +1,6 @@
 var myArray = [];
 
+
 class ConsoleHandler {
     constructor(e) {
         (this.commands = []), (this.unknownCommand = e);
@@ -188,20 +189,59 @@ $(function() {
 
 //create a new command that displays a table pulling from an array called myArray
 commandHandler.add({
-    name: "hex-table",
-    helpMsg: "Displays a table",
-    extendedHelp: "Displays a table. <br> Usage: table",
-    run: () => {
-        var table = '<table id="tablePreview" class="table table-hover table-sm"><thead><tr><th>Tag</th><th>Class</th><th>Background</th><th>Color</th><th>Border</th></tr></thead><tbody>';
-        for (var i = 0; i < myArray.length; i++) {
-            table += "<tr>";
-            for (var key in myArray[i]) {
-                table += "<td>" + myArray[i][key] + "</td>";
+        name: "hex-table",
+        helpMsg: "Displays a table",
+        extendedHelp: "Displays a table. <br> Usage: table",
+        run: () => {
+            var table = '<table id="tablePreview" class="table table-hover table-sm"><thead><tr><th>Tag</th><th>Class</th><th>Background</th><th>Color</th><th>Border</th></tr></thead><tbody>';
+            for (var i = 0; i < myArray.length; i++) {
+                table += "<tr>";
+                for (var key in myArray[i]) {
+                    table += "<td>" + myArray[i][key] + "</td>";
+                }
+                table += "</tr>";
             }
-            table += "</tr>";
-        }
-        table += "</table>";
-        return table;
-    },
-    aliases: ["hex", "color"]
-});
+            table += "</table>";
+            return table;
+        },
+        aliases: ["hex", "color"]
+    }),
+
+    commandHandler.add({
+        name: "debug",
+        helpMsg: "Opens the debug console",
+        extendedHelp: "Opens the debug console. <br> Usage: debug",
+        //run: (e) => appController.open(e),
+        run: (e) => {
+            if (e == "true") {
+
+                //set #dbgHide to display:none
+                $("#dbgHide").css("display", "none");
+                //add css property "padding-left: 10px;" to id "debugDiv"
+                $("#debugDiv").css("padding-left", "10px");
+
+                console.log = function(message) {
+                    //if message contains the text "open" or "closed" wrap it in <strong> tags
+                    if (message.includes("open") || message.includes("closed")) {
+                        message = "<strong>" + message + "</strong>";
+                    } else {
+                        message = message;
+                    }
+
+                    $('#debugDiv').append('<p>' + message + '</p>');
+                };
+                console.error = console.debug = console.info = console.log;
+
+
+            } else if (e == "false") {
+                $("#debugDiv").remove();
+                //add css property "padding-left: 10px;" to id "debugDiv"
+                $("#debugDiv").css("padding-left", "0px");
+                $("#dbgHide").css("display", "block");
+
+            } else {
+                return "Please specify <strong>\"true\"</strong> or <strong>\"false\"</strong>";
+            }
+        },
+        aliases: ["dbg"]
+    });
