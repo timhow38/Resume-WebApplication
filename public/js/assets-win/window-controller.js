@@ -71,6 +71,22 @@ class AppController {
             }),
             (o.elm.getElementsByClassName("btn minimize")[0].onclick = () => {
                 a.close(o.name);
+                //console log app name
+                console.log(o.name);
+                //create <li> element and add a <input> element and a <label> element
+                var e = document.createElement("li");
+                e.innerHTML = '<input type="checkbox" id="' + o.name + '" name="' + o.name + '" value="' + o.name + '"><label for="' + o.name + '">' + o.name + "</label>";
+                //append <li> element to <ul> element with id "navbar-nav me-auto"
+                document.getElementById("navbar-nav-me-auto").appendChild(e);
+
+
+
+
+                //add button to context menu
+                //$(".minWindow").append(
+                //    '<div id="win-close" class="context-menu-item">' + o.name + "</div>"
+                //);
+
             }),
             (o.elm.getElementsByClassName("btn maximise")[0].onclick = () => {
                 a.max(o.name);
@@ -142,30 +158,33 @@ class AppController {
                 (u.innerText = "Open"),
                 (u.onclick = () => {
                     this.open(o.name);
-                    document.getElementById("win-open").removeChild(u);
+                    document.getElementById("win-toggle").removeChild(u);
                 }),
-                console.log(document.getElementById("win-open").appendChild(u));
+                //add constuctor to context menu
+                document.getElementById("win-toggle").appendChild(u);
 
         };
         //if user right clicks on 
 
-
-
-        //Right Click Check
+        //right click on app window and log the name of the app
+        //Fuck this code snipit inparticular :/
         o.elm.oncontextmenu = (e) => {
             e.preventDefault();
-            console.log(o.id);
             console.log(o.name);
-            //appcontroller.open(o.name);
+            console.log(o.id);
             const u = document.createElement("button");
             u.classList.add("btn-primary"),
                 (u.innerText = "Close"),
                 (u.onclick = () => {
                     this.close(o.name);
-                    document.getElementById("win-close").removeChild(u);
+                    document.getElementById("win-toggle").removeChild(u);
                 }),
-                console.log(document.getElementById("win-close").appendChild(u));
+                //add constuctor to context menu
+                document.getElementById("win-toggle").appendChild(u);
+
         };
+
+
 
 
         const g = document.createElement("button");
@@ -418,5 +437,5 @@ $(document).ready(initAppController), setInterval(saveIcons, 1e3);
 
 
 
-console.log(appController.apps);
-console.log(appController.icons);
+//console.log(appController.apps);
+//console.log(appController.icons);

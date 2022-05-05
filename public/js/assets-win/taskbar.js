@@ -18,12 +18,12 @@ function AppStatus() {
             //create a new array called "appsArray" and push appController.apps[i].id
 
             appsArray.push(appController.apps[i].id, "open");
-            console.log(appsArray);
+            //console.log(appsArray);
         } else if (appClassSplit.includes('application-non-drag')) {
             //console.log(appController.apps[i].id, "Is Closed");
 
             appsArray.push(appController.apps[i].id, "closed");
-            console.log(appsArray);
+            //console.log(appsArray);
         }
 
     }
