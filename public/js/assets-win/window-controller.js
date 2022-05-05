@@ -35,7 +35,7 @@ class Application {
         (this.onOpen = e.onOpen),
         (this.onClose = e.onClose),
         (this.onMax = e.onMax),
-        (this.onMin = e.onMin),
+        (this.onWind = e.onWind),
         (this.appDesc = e.appDesc),
         (this.iconOpts = { name: e.iconName, path: e.iconPath }),
         (this.elm = document.getElementById(this.id));
@@ -62,20 +62,26 @@ class AppController {
                 containment: ".pages-stack",
                 scroll: !1
             }),
+
+            //o.elm create button
+
             (o.elm.getElementsByClassName("btn close")[0].onclick = () => {
                 a.close(o.name);
 
+            }),
+            (o.elm.getElementsByClassName("btn minimize")[0].onclick = () => {
+                a.close(o.name);
             }),
             (o.elm.getElementsByClassName("btn maximise")[0].onclick = () => {
                 a.max(o.name);
                 //add css color red
                 o.elm.getElementsByClassName("btn maximise")[0].style.display = "none";
-                o.elm.getElementsByClassName("btn minimize")[0].style.display = "block";
+                o.elm.getElementsByClassName("btn windowed")[0].style.display = "block";
 
             }),
-            (o.elm.getElementsByClassName("btn minimize")[0].onclick = () => {
-                a.min(o.name);
-                o.elm.getElementsByClassName("btn minimize")[0].style.display = "none";
+            (o.elm.getElementsByClassName("btn windowed")[0].onclick = () => {
+                a.Wind(o.name);
+                o.elm.getElementsByClassName("btn windowed")[0].style.display = "none";
                 o.elm.getElementsByClassName("btn maximise")[0].style.display = "block";
             });
         const i = document.createElement("div");
@@ -115,7 +121,7 @@ class AppController {
         this.icons.push({ id: i.id, name: n.name }),
             (i.ondblclick = () => {
                 a.open(o.name);
-                a.min(o.name);
+                a.Wind(o.name);
             }),
             $("#app-icon-" + o.name).draggable({
                 containment: "#" + e.iconParent,
@@ -242,7 +248,7 @@ class AppController {
                 n.onMax()) :
             console.log("");
     }
-    min(e) {
+    Wind(e) {
         const n = this.apps.find((n) => n.name == e);
         n
             ?
@@ -253,7 +259,7 @@ class AppController {
                 $("#" + n.id)
                 .removeClass("maxOn")
                 .addClass("maxOff"),
-                n.onMin()) :
+                n.onWind()) :
             console.log("");
     }
 
@@ -291,7 +297,7 @@ function initAppController() {
                 out = "Type 'help' for more information.";
             },
             onMax: () => {},
-            onMin: () => {},
+            onWind: () => {},
             iconPath: "/img/icons/desktop/big/Chip_Green.png",
             iconName: "Terminal",
             iconParent: "containment-wrapper",
@@ -304,7 +310,7 @@ function initAppController() {
             onOpen: () => {},
             onClose: () => {},
             onMax: () => {},
-            onMin: () => {},
+            onWind: () => {},
             iconPath: "/img/icons/desktop/big/Notes_Purple.png",
             iconName: "Projects",
             iconParent: "containment-wrapper",
@@ -317,7 +323,7 @@ function initAppController() {
             onOpen: () => {},
             onClose: () => {},
             onMax: () => {},
-            onMin: () => {},
+            onWind: () => {},
             iconPath: "/img/icons/desktop/big/Desktop_Folder_2.png",
             iconName: "Adobe XD",
             iconParent: "sub-folder-0",
@@ -330,7 +336,7 @@ function initAppController() {
             onOpen: () => {},
             onClose: () => {},
             onMax: () => {},
-            onMin: () => {},
+            onWind: () => {},
             iconPath: "/img/icons/desktop/big/Handbag_LightBlue.png",
             iconName: "Career",
             iconParent: "containment-wrapper",
@@ -343,7 +349,7 @@ function initAppController() {
             onOpen: () => {},
             onClose: () => {},
             onMax: () => {},
-            onMin: () => {},
+            onWind: () => {},
             iconPath: "/img/icons/desktop/big/Hammer_Yellow.png",
             iconName: "Repos",
             iconParent: "containment-wrapper",
