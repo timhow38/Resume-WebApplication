@@ -54,7 +54,6 @@
     <script>
         document.documentElement.className = 'js';
     </script>
-    <script src="js/contextMenu.js" type="module"></script>
 
 </head>
 
@@ -91,7 +90,6 @@
             <div class="btn-group dropend">
                 <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Settings</button>
                 <ul class="dropdown-menu">
-                    <div id="win-close"></div>
                     <div id="win-toggle"></div>
                     <button id="goFS" type="button" class="btn btn-secondary">Fullscreen [OFF]</button>
                 </ul>
@@ -145,7 +143,7 @@
               <path d="M -85.59,444.4 -85.59,890.6 489,895.6 C 489,895.6 436.8,745.3 382.5,690.8 258.1,565.8 57.98,629.2 -85.59,444.4 Z" pathdata:id="M -85.59,444.4 -85.59,890.6 546.9,895.6 C 546.9,895.6 517.4,695.4 339.9,593.4 187.7,505.9 57.98,629.2 -85.59,444.4 Z"></path>
             </svg>
                     </div>
-                    <nav class="navbar navbar-expand navbar-dark bg-dark" aria-label="Second navbar example">
+                    <nav id="taskbar-nav" class="navbar navbar-expand navbar-dark bg-dark" aria-label="Second navbar example">
                         <div class="container-fluid">
                             <div class="btn-group dropup">
                                 <button type="button" class="taskbtn" data-bs-toggle="dropdown" aria-expanded="false">
@@ -171,12 +169,12 @@
                           </button>
 
                             <div class="collapse navbar-collapse" id="navbarsExample02">
-                                <ul class="navbar-nav me-auto">
+                                <ul id="task-windows" class="navbar-nav me-auto">
 
-                                    <!--<li class="nav-item minWindow">
+                                    <li class="nav-item minWindow">
                                         <input type="checkbox" class="btn-check" id="btn-check-outlined" autocomplete="off">
                                         <label class="btn btn-outline-primary" for="btn-check-outlined">Single toggle</label><br>
-                                    </li>-->
+                                    </li>
 
                                 </ul>
                                 <!--
@@ -210,7 +208,10 @@
                             </div>
                             <div class="row noti-btn">
                                 <div class="col-sm">
-                                    <button onclick="pickImage()"><i class="bi bi-caret-right-square-fill"></i></button>
+                                    <button onclick="pickImage()">
+                                    <!-- add image -->
+                                    <img src="img/icons/desktop/small/Play_Green.png" width="30" height="30" class="d-inline-block align-top" alt="">
+                                </button>
                                 </div>
                             </div>
                         </div>
@@ -424,6 +425,8 @@
                         <div class="row">
                             <div class="col-8 term-border">
                                 <div id="terminal">
+
+
                                     <div class="print"><strong>[CoreCLI]</strong> - Exploring WebCli Possibilities.<br>Type "help" for more information.
                                     </div>
                                     <div id="cli" type="text" inputmode="search"><span class="label"></span><span class="prompt"></span>
@@ -439,22 +442,7 @@
                                 <div id="debugDiv"></div>
 
                             </div>
-                            <div class="form-check form-check-inline">
-                                <input id="Switch-BG1" type="checkbox" class="form-check-input" data-onstyle="success" data-offstyle="danger" type="checkbox" data-toggle="toggle" data-style="mr-1 slow" checked>
-                                <label for="inlineCheckbox1" class="form-check-label">Background 1</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input id="inlineCheckbox1" type="checkbox" class="form-check-input" data-onstyle="success" data-offstyle="danger" type="checkbox" data-toggle="toggle" data-style="mr-1 slow" checked>
-                                <label for="inlineCheckbox1" class="form-check-label">Enabled</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input id="inlineCheckbox1" type="checkbox" class="form-check-input" data-onstyle="success" data-offstyle="danger" type="checkbox" data-toggle="toggle" data-style="mr-1 slow" checked>
-                                <label for="inlineCheckbox1" class="form-check-label">Enabled</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input id="inlineCheckbox1" type="checkbox" class="form-check-input" data-onstyle="success" data-offstyle="danger" type="checkbox" data-toggle="toggle" data-style="mr-1 slow" checked>
-                                <label for="inlineCheckbox1" class="form-check-label">Enabled</label>
-                            </div>
+
 
                         </div>
                     </div>

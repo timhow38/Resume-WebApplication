@@ -2,7 +2,7 @@ $(".body-sub")
     .on("contextmenu", function(e) {
 
         console.log("right click");
-        removeSettings();
+        //removeSettings();
         var n = e.pageY - 0,
             o = e.pageX - 0;
         return $("#context-menu").css({ display: "block", top: n, left: o }).addClass("show1"), !1;
@@ -14,14 +14,15 @@ $(".body-sub")
     });
 
 //create function called removeSettings
-function removeSettings() {
-    //if id "win-close" exists then remove it
-    if ($("#win-close").length) {
-        $("#win-close").remove();
-    } else {
-        //else do nothing
-    }
-}
+//Fuck this cause me some strife- remember that is ruins appendChild
+//function removeSettings() {
+//    //if id "win-close" exists then remove it
+//    if ($("#win-close").length) {
+//        $("#win-close").remove();
+//    } else {
+//        //else do nothing
+//    }
+//}
 
 
 const DEFAULT_X_POS = 35,
@@ -71,21 +72,6 @@ class AppController {
             }),
             (o.elm.getElementsByClassName("btn minimize")[0].onclick = () => {
                 a.close(o.name);
-                //console log app name
-                console.log(o.name);
-                //create <li> element and add a <input> element and a <label> element
-                var e = document.createElement("li");
-                e.innerHTML = '<input type="checkbox" id="' + o.name + '" name="' + o.name + '" value="' + o.name + '"><label for="' + o.name + '">' + o.name + "</label>";
-                //append <li> element to <ul> element with id "navbar-nav me-auto"
-                document.getElementById("navbar-nav-me-auto").appendChild(e);
-
-
-
-
-                //add button to context menu
-                //$(".minWindow").append(
-                //    '<div id="win-close" class="context-menu-item">' + o.name + "</div>"
-                //);
 
             }),
             (o.elm.getElementsByClassName("btn maximise")[0].onclick = () => {
@@ -154,30 +140,31 @@ class AppController {
             console.log(o.id);
             //appcontroller.open(o.name);
             const u = document.createElement("button");
-            u.classList.add("btn-primary"),
+            u.classList.add("btn", "btn-secondary"),
                 (u.innerText = "Open"),
                 (u.onclick = () => {
                     this.open(o.name);
                     document.getElementById("win-toggle").removeChild(u);
+                    $("#context-menu").removeClass("show1").hide(), console.log();
                 }),
                 //add constuctor to context menu
                 document.getElementById("win-toggle").appendChild(u);
 
         };
-        //if user right clicks on 
 
         //right click on app window and log the name of the app
-        //Fuck this code snipit inparticular :/
+        //Fuck this code snipit inparticular :/ - Like you dont even know :'(
         o.elm.oncontextmenu = (e) => {
             e.preventDefault();
             console.log(o.name);
             console.log(o.id);
             const u = document.createElement("button");
-            u.classList.add("btn-primary"),
+            u.classList.add("btn", "btn-secondary"),
                 (u.innerText = "Close"),
                 (u.onclick = () => {
                     this.close(o.name);
                     document.getElementById("win-toggle").removeChild(u);
+                    $("#context-menu").removeClass("show1").hide(), console.log();
                 }),
                 //add constuctor to context menu
                 document.getElementById("win-toggle").appendChild(u);

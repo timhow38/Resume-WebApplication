@@ -193,6 +193,10 @@ a:hover {}
     padding: 0rem 0;
 }
 
+.dropdown-menu button {
+    width: 100%;
+}
+
 .divider {
     text-align: center;
 }
@@ -557,11 +561,10 @@ strong {
 }
 
 .noti-box button {
-    font-size: x-large;
     color: white;
     position: absolute;
-    right: -15px;
-    bottom: 1em;
+    right: -22px;
+    bottom: -15px;
     background: transparent;
     border: none;
 }
