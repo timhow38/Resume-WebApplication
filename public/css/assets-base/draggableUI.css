@@ -129,7 +129,12 @@
     overflow: scroll;
 }
 
-#debugDiv {}
+#debugDiv p {
+    background-color: #193040;
+    border-radius: 5px;
+    padding: 0px;
+    border-left: #f76b1c 3px solid;
+}
 
 #draggable-JS-terminal>div.row {
     padding-right: 0px;
@@ -667,4 +672,12 @@
 
 .taskbtn:hover {
     background-color: rgba(255, 255, 255, 0.118);
+}
+
+.minWindow {
+    margin-right: 10px;
+}
+
+.opc {
+    opacity: 0;
 }

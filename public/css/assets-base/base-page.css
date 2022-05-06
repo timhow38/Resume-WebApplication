@@ -169,6 +169,13 @@ a:hover {}
     box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
+.btn-outline-primary {
+    color: #f76b1c;
+    border: solid 1px #f76b1c;
+    background-color: #3d3d3d;
+    text-transform: capitalize;
+}
+
 .navmen {
     padding-left: 0px;
     top: -17px;

@@ -18,6 +18,8 @@ function AppStatus() {
             //create a new array called "appsArray" and push appController.apps[i].id
 
             appsArray.push(appController.apps[i].id, "open");
+            //create button for each app that is open
+
             //console.log(appsArray);
         } else if (appClassSplit.includes('application-non-drag')) {
             //console.log(appController.apps[i].id, "Is Closed");
@@ -27,4 +29,12 @@ function AppStatus() {
         }
 
     }
+}
+
+
+// create an empty function
+function taskbarItem() {
+    console.log("taskbarItem");
+    //check if appController.apps contains 'application' if it is create a new button for each app and append to id "task-windows"
+    $("#task-windows").append('<li class="nav-item minWindow" id="taskbar-item"><input type="checkbox" class="btn-check" id="btn-check-outlined" autocomplete="off"><label class="btn btn-outline-primary" for="btn-check-outlined">' + appController.apps[0].id + '</label></li>');
 }

@@ -182,7 +182,7 @@ $(function() {
         myArray.push(oneArray);
     });
 
-    //console.log(myArray);
+    console.log(myArray);
 });
 
 
@@ -220,13 +220,9 @@ commandHandler.add({
                 //add css property "padding-left: 10px;" to id "debugDiv"
                 $("#debugDiv").css("padding-left", "10px");
 
+
+
                 console.log = function(message) {
-                    //if message contains the text "open" or "closed" wrap it in <strong> tags
-                    if (message.includes("open") || message.includes("closed")) {
-                        message = "<strong>" + message + "</strong>";
-                    } else {
-                        message = message;
-                    }
 
                     $('#debugDiv').append('<p>' + message + '</p>');
                 };
@@ -239,6 +235,8 @@ commandHandler.add({
                 $("#debugDiv").css("padding-left", "0px");
                 $("#dbgHide").css("display", "block");
 
+            } else if (e == "app-status") {
+                //if array "AppStatus" contains "open", set to "false"
             } else {
                 return "Please specify <strong>\"true\"</strong> or <strong>\"false\"</strong>";
             }

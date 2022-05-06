@@ -1,8 +1,6 @@
 $(".body-sub")
     .on("contextmenu", function(e) {
-
         console.log("right click");
-        //removeSettings();
         var n = e.pageY - 0,
             o = e.pageX - 0;
         return $("#context-menu").css({ display: "block", top: n, left: o }).addClass("show1"), !1;
@@ -10,19 +8,7 @@ $(".body-sub")
     })
     .on("click", function() {
         $("#context-menu").removeClass("show1").hide(), console.log();
-
     });
-
-//create function called removeSettings
-//Fuck this cause me some strife- remember that is ruins appendChild
-//function removeSettings() {
-//    //if id "win-close" exists then remove it
-//    if ($("#win-close").length) {
-//        $("#win-close").remove();
-//    } else {
-//        //else do nothing
-//    }
-//}
 
 
 const DEFAULT_X_POS = 35,
@@ -37,6 +23,7 @@ class Application {
         (this.onClose = e.onClose),
         (this.onMax = e.onMax),
         (this.onWind = e.onWind),
+        (this.onMin = e.onMin),
         (this.appDesc = e.appDesc),
         (this.iconOpts = { name: e.iconName, path: e.iconPath }),
         (this.elm = document.getElementById(this.id));
@@ -71,7 +58,7 @@ class AppController {
 
             }),
             (o.elm.getElementsByClassName("btn minimize")[0].onclick = () => {
-                a.close(o.name);
+                a.min(o.name);
 
             }),
             (o.elm.getElementsByClassName("btn maximise")[0].onclick = () => {
@@ -138,17 +125,33 @@ class AppController {
             e.preventDefault();
             console.log(i.id);
             console.log(o.id);
-            //appcontroller.open(o.name);
-            const u = document.createElement("button");
-            u.classList.add("btn", "btn-secondary"),
-                (u.innerText = "Open"),
-                (u.onclick = () => {
-                    this.open(o.name);
-                    document.getElementById("win-toggle").removeChild(u);
-                    $("#context-menu").removeClass("show1").hide(), console.log();
-                }),
-                //add constuctor to context menu
-                document.getElementById("win-toggle").appendChild(u);
+
+            //if app is open
+            if (o.elm.style.display == "block") {
+                const u = document.createElement("button");
+                u.classList.add("btn", "btn-secondary"),
+                    (u.innerText = "Close"),
+                    (u.onclick = () => {
+                        this.close(o.name);
+                        document.getElementById("win-toggle").removeChild(u);
+                        $("#context-menu").removeClass("show1").hide(), console.log();
+                    }),
+                    //add constuctor to context menu
+                    document.getElementById("win-toggle").appendChild(u);
+            } else {
+                const u = document.createElement("button");
+                u.classList.add("btn", "btn-secondary"),
+                    (u.innerText = "Open"),
+                    (u.onclick = () => {
+                        this.open(o.name);
+                        document.getElementById("win-toggle").removeChild(u);
+                        $("#context-menu").removeClass("show1").hide(), console.log();
+                    }),
+                    //add constuctor to context menu
+                    document.getElementById("win-toggle").appendChild(u);
+            }
+
+
 
         };
 
@@ -156,8 +159,6 @@ class AppController {
         //Fuck this code snipit inparticular :/ - Like you dont even know :'(
         o.elm.oncontextmenu = (e) => {
             e.preventDefault();
-            console.log(o.name);
-            console.log(o.id);
             const u = document.createElement("button");
             u.classList.add("btn", "btn-secondary"),
                 (u.innerText = "Close"),
@@ -170,7 +171,27 @@ class AppController {
                 document.getElementById("win-toggle").appendChild(u);
 
         };
+        //left click on app window and icon and log the name of the app
 
+
+        o.elm.onclick = (e) => {
+            console.group(
+                "%conClick Output",
+                "background-color: green ; color: #ffffff ; font-weight: bold ; padding: 4px ;"
+            );
+            console.log("%cApp Name:", "color:yellow", o.name);
+            console.log("%cClass Name:", "color:yellow", o.id);
+            console.groupEnd();
+        }
+        i.onclick = (e) => {
+            console.group(
+                "%conClick Output",
+                "background-color: green ; color: #ffffff ; font-weight: bold ; padding: 4px ;"
+            );
+            console.log("%cApp Name:", "color:yellow", o.name);
+            console.log("%cClass Name:", "color:yellow", i.id);
+            console.groupEnd();
+        }
 
 
 
@@ -219,10 +240,12 @@ class AppController {
                 }),
                 (n.elm.style.zIndex = 2),
                 $("#" + n.id)
-                .removeClass("application-non-drag")
+                .removeClass("application-non-drag opc")
                 .addClass("application"),
                 AppStatus(),
                 $("#" + n.id).show(),
+                $("#task-windows").find(".minWindow-" + n.name).remove(),
+                $("#task-windows").append('<li class="nav-item minWindow-' + n.name + '" id="taskbar-item"><input type="checkbox" class="btn-check" id="btn-check-outlined" autocomplete="off"><label class="btn btn-outline-primary" for="btn-check-outlined">' + n.name + '</label></li>'),
                 n.onOpen()) :
             console.log("Unknown app %s", e);
     }
@@ -235,9 +258,13 @@ class AppController {
                 .addClass("application-non-drag maxOff"),
                 AppStatus(),
                 $("#" + n.id).hide(),
+                //remove "task-windows" button from taskbar if app id equals to the app name closed
+                $("#task-windows").find(".minWindow-" + n.name).remove(),
                 n.onClose()) :
             console.log("Unknown app %s", e);
     }
+
+
 
 
     max(e) {
@@ -269,6 +296,55 @@ class AppController {
             console.log("");
     }
 
+    min(e) {
+        const n = this.apps.find((n) => n.name == e);
+        n
+            ?
+            (this.apps.forEach((e) => {
+                    e.elm.style.zIndex = 1;
+                }),
+                (n.elm.style.zIndex = 2),
+
+                //find <li> with id that matches the app name n.id and then set checkbox to "checked"
+                $("#task-windows").find(".minWindow-" + n.name).find("input").prop("checked", true),
+
+                //
+                //close app
+                $("#" + n.id)
+                .removeClass("application")
+                .addClass("application-non-drag"),
+                $("#" + n.id).hide(),
+                //$("#" + n.id).find("#btn-check-outlined").prop("checked", true),
+                //console.log($("#" + n.id).find("#btn-check-outlined").prop("checked", true)),
+
+                //find <li> with id that matches the app name n.id
+                //$("#task-windows").find("#taskbar-item'" + n.id).remove(),
+
+
+                n.onMin()) :
+            console.log("");
+    }
+
+    minopen(e) {
+        const n = this.apps.find((n) => n.name == e);
+        n
+            ?
+            (this.apps.forEach((e) => {
+                    e.elm.style.zIndex = 1;
+                }),
+                (n.elm.style.zIndex = 2),
+                $("#task-windows").find(".minWindow-" + n.name).find("input").prop("checked", false),
+                $("#" + n.id)
+                .removeClass("application-non-drag")
+                .addClass("application"),
+                AppStatus(),
+                $("#" + n.id).show(),
+                n.onOpen()) :
+            console.log("Unknown app %s", e);
+    }
+
+
+    //if <li> with id that matches the app name n.id input is checked set to false
 
 
 
@@ -303,6 +379,7 @@ function initAppController() {
                 out = "Type 'help' for more information.";
             },
             onMax: () => {},
+            onMin: () => {},
             onWind: () => {},
             iconPath: "/img/icons/desktop/big/Chip_Green.png",
             iconName: "Terminal",
@@ -316,6 +393,7 @@ function initAppController() {
             onOpen: () => {},
             onClose: () => {},
             onMax: () => {},
+            onMin: () => {},
             onWind: () => {},
             iconPath: "/img/icons/desktop/big/Notes_Purple.png",
             iconName: "Projects",
@@ -329,6 +407,7 @@ function initAppController() {
             onOpen: () => {},
             onClose: () => {},
             onMax: () => {},
+            onMin: () => {},
             onWind: () => {},
             iconPath: "/img/icons/desktop/big/Desktop_Folder_2.png",
             iconName: "Adobe XD",
@@ -342,6 +421,7 @@ function initAppController() {
             onOpen: () => {},
             onClose: () => {},
             onMax: () => {},
+            onMin: () => {},
             onWind: () => {},
             iconPath: "/img/icons/desktop/big/Handbag_LightBlue.png",
             iconName: "Career",
@@ -367,6 +447,7 @@ function initAppController() {
             name: "intern",
             onOpen: () => {},
             onClose: () => {},
+            onMin: () => {},
             iconPath: "/img/icons/desktop/big/Desktop_Folder_2.png",
             iconName: "Design Factory",
             iconParent: "sub-folder-0",
@@ -378,6 +459,7 @@ function initAppController() {
             name: "isan",
             onOpen: () => {},
             onClose: () => {},
+            onMin: () => {},
             iconPath: "/img/icons/desktop/big/Desktop_Folder_2.png",
             iconName: "ISAN Starmap",
             iconXDelta: 95,
@@ -389,6 +471,7 @@ function initAppController() {
             name: "collective",
             onOpen: () => {},
             onClose: () => {},
+            onMin: () => {},
             iconPath: "/img/icons/desktop/big/Desktop_Folder_2.png",
             iconName: "C-SB Inactive",
             iconXDelta: 95,
@@ -400,6 +483,7 @@ function initAppController() {
             name: "temp",
             onOpen: () => {},
             onClose: () => {},
+            onMin: () => {},
             iconPath: "/img/icons/desktop/big/Desktop_Folder_2.png",
             iconName: "C-SB Inactive",
             iconXDelta: 95,
@@ -424,5 +508,5 @@ $(document).ready(initAppController), setInterval(saveIcons, 1e3);
 
 
 
-//console.log(appController.apps);
-//console.log(appController.icons);
+console.log(appController.apps);
+console.log(appController.icons);
