@@ -51,6 +51,8 @@ class AppController {
                 scroll: !1
             }),
 
+
+
             //o.elm create button
 
             (o.elm.getElementsByClassName("btn close")[0].onclick = () => {
@@ -73,6 +75,18 @@ class AppController {
                 o.elm.getElementsByClassName("btn windowed")[0].style.display = "none";
                 o.elm.getElementsByClassName("btn maximise")[0].style.display = "block";
             });
+
+        //$("#task-windows").find(".minWindow." + n.name).remove(),
+        // if task-windows button is pressed open the app
+
+        //$("#task-windows").find(".minWindow." + n.name).click(() => {
+        //    a.minOpen(o.name);
+        //});
+
+
+
+
+
         const i = document.createElement("div");
         (i.id = "app-icon-" + o.name), i.classList.add("desk-prop");
         const p = document.createElement("div");
@@ -120,7 +134,7 @@ class AppController {
             this.apps.push(o);
 
 
-
+        //If app has class tempOpen
         i.oncontextmenu = (e) => {
             e.preventDefault();
             console.log(i.id);
@@ -138,6 +152,17 @@ class AppController {
                     }),
                     //add constuctor to context menu
                     document.getElementById("win-toggle").appendChild(u);
+            } else if (o.elm.classList.contains("tempOpen")) {
+                const u = document.createElement("button");
+                u.classList.add("btn", "btn-secondary"),
+                    (u.innerText = "Open - Minimized"),
+                    (u.onclick = () => {
+                        this.open(o.name);
+                        document.getElementById("win-toggle").removeChild(u);
+                        $("#context-menu").removeClass("show1").hide(), console.log();
+                    }),
+                    //add constuctor to context menu
+                    document.getElementById("win-toggle").appendChild(u);
             } else {
                 const u = document.createElement("button");
                 u.classList.add("btn", "btn-secondary"),
@@ -150,9 +175,6 @@ class AppController {
                     //add constuctor to context menu
                     document.getElementById("win-toggle").appendChild(u);
             }
-
-
-
         };
 
         //right click on app window and log the name of the app
@@ -244,8 +266,15 @@ class AppController {
                 .addClass("application"),
                 AppStatus(),
                 $("#" + n.id).show(),
-                $("#task-windows").find(".minWindow-" + n.name).remove(),
-                $("#task-windows").append('<li class="nav-item minWindow-' + n.name + '" id="taskbar-item"><input type="checkbox" class="btn-check" id="btn-check-outlined" autocomplete="off"><label class="btn btn-outline-primary" for="btn-check-outlined">' + n.name + '</label></li>'),
+                $("#" + n.id).removeClass("tempOpen"),
+                $("#task-windows").find(".minWindow." + n.name).remove(),
+                $("#task-windows").append('<li class="nav-item minWindow ' + n.name + '" id="taskbar-item"><input type="checkbox" class="btn-check" id="btn-check-outlined" autocomplete="off"><label class="btn btn-outline-primary" for="btn-check-outlined">' + n.name + '</label></li>'),
+                //if a button is found with the class .minWindow + n.name 
+
+
+
+
+
                 n.onOpen()) :
             console.log("Unknown app %s", e);
     }
@@ -254,12 +283,13 @@ class AppController {
         n
             ?
             ($("#" + n.id)
-                .removeClass("application maxOn")
+                .removeClass("application maxOn tempOpen")
                 .addClass("application-non-drag maxOff"),
                 AppStatus(),
                 $("#" + n.id).hide(),
                 //remove "task-windows" button from taskbar if app id equals to the app name closed
-                $("#task-windows").find(".minWindow-" + n.name).remove(),
+                //Bullcrap "." in the middle of the line - Why tho?
+                $("#task-windows").find(".minWindow." + n.name).remove(),
                 n.onClose()) :
             console.log("Unknown app %s", e);
     }
@@ -306,13 +336,13 @@ class AppController {
                 (n.elm.style.zIndex = 2),
 
                 //find <li> with id that matches the app name n.id and then set checkbox to "checked"
-                $("#task-windows").find(".minWindow-" + n.name).find("input").prop("checked", true),
+                $("#task-windows").find(".minWindow." + n.name).find("input").prop("checked", true),
 
                 //
                 //close app
                 $("#" + n.id)
                 .removeClass("application")
-                .addClass("application-non-drag"),
+                .addClass("application-non-drag tempOpen"),
                 $("#" + n.id).hide(),
                 //$("#" + n.id).find("#btn-check-outlined").prop("checked", true),
                 //console.log($("#" + n.id).find("#btn-check-outlined").prop("checked", true)),
@@ -333,9 +363,9 @@ class AppController {
                     e.elm.style.zIndex = 1;
                 }),
                 (n.elm.style.zIndex = 2),
-                $("#task-windows").find(".minWindow-" + n.name).find("input").prop("checked", false),
+                $("#task-windows").find(".minWindow." + n.name).find("input").prop("checked", false),
                 $("#" + n.id)
-                .removeClass("application-non-drag")
+                .removeClass("application-non-drag tempOpen")
                 .addClass("application"),
                 AppStatus(),
                 $("#" + n.id).show(),

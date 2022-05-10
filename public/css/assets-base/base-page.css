@@ -175,12 +175,13 @@ a:hover {}
     border-top: 0px;
     border-left: 0px;
     border-right: 0px;
-    background-color: #1d3a4e;
+    background-color: transparent;
     text-transform: capitalize;
 }
 
 .btn-check:checked+.btn-outline-primary {
     color: #f76b1c;
+    border-bottom: solid 2px #f76b1c;
     border-top: 0px;
     border-left: 0px;
     border-right: 0px;
