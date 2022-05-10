@@ -74,7 +74,14 @@ class AppController {
                 a.Wind(o.name);
                 o.elm.getElementsByClassName("btn windowed")[0].style.display = "none";
                 o.elm.getElementsByClassName("btn maximise")[0].style.display = "block";
-            });
+            })
+            //if button taskwindow is clicked open app
+        $("#task-windows").find(".minWindow." + n.name).click(() => {
+            a.open(o.name);
+        });
+
+
+
 
         //$("#task-windows").find(".minWindow." + n.name).remove(),
         // if task-windows button is pressed open the app
@@ -253,79 +260,6 @@ class AppController {
         }
         document.getElementById("btnRefresh").onclick = function() { btnRefresh() };
     }
-    open(e) {
-        const n = this.apps.find((n) => n.name == e);
-        n
-            ?
-            (this.apps.forEach((e) => {
-                    e.elm.style.zIndex = 1;
-                }),
-                (n.elm.style.zIndex = 2),
-                $("#" + n.id)
-                .removeClass("application-non-drag opc")
-                .addClass("application"),
-                AppStatus(),
-                $("#" + n.id).show(),
-                $("#" + n.id).removeClass("tempOpen"),
-                $("#task-windows").find(".minWindow." + n.name).remove(),
-                $("#task-windows").append('<li class="nav-item minWindow ' + n.name + '" id="taskbar-item"><input type="checkbox" class="btn-check" id="btn-check-outlined" autocomplete="off"><label class="btn btn-outline-primary" for="btn-check-outlined">' + n.name + '</label></li>'),
-                //if a button is found with the class .minWindow + n.name 
-
-
-
-
-
-                n.onOpen()) :
-            console.log("Unknown app %s", e);
-    }
-    close(e) {
-        const n = this.apps.find((n) => n.name == e);
-        n
-            ?
-            ($("#" + n.id)
-                .removeClass("application maxOn tempOpen")
-                .addClass("application-non-drag maxOff"),
-                AppStatus(),
-                $("#" + n.id).hide(),
-                //remove "task-windows" button from taskbar if app id equals to the app name closed
-                //Bullcrap "." in the middle of the line - Why tho?
-                $("#task-windows").find(".minWindow." + n.name).remove(),
-                n.onClose()) :
-            console.log("Unknown app %s", e);
-    }
-
-
-
-
-    max(e) {
-        const n = this.apps.find((n) => n.name == e);
-        n
-            ?
-            (this.apps.forEach((e) => {
-                    e.elm.style.zIndex = 1;
-                }),
-                (n.elm.style.zIndex = 2),
-                $("#" + n.id)
-                .removeClass("maxOff")
-                .addClass("maxOn"),
-                n.onMax()) :
-            console.log("");
-    }
-    Wind(e) {
-        const n = this.apps.find((n) => n.name == e);
-        n
-            ?
-            (this.apps.forEach((e) => {
-                    e.elm.style.zIndex = 1;
-                }),
-                (n.elm.style.zIndex = 2),
-                $("#" + n.id)
-                .removeClass("maxOn")
-                .addClass("maxOff"),
-                n.onWind()) :
-            console.log("");
-    }
-
     min(e) {
         const n = this.apps.find((n) => n.name == e);
         n
@@ -354,7 +288,69 @@ class AppController {
                 n.onMin()) :
             console.log("");
     }
-
+    open(e) {
+        const n = this.apps.find((n) => n.name == e);
+        n
+            ?
+            (this.apps.forEach((e) => {
+                    e.elm.style.zIndex = 1;
+                }),
+                (n.elm.style.zIndex = 2),
+                $("#" + n.id)
+                .removeClass("application-non-drag opc")
+                .addClass("application"),
+                AppStatus(),
+                $("#" + n.id).show(),
+                $("#" + n.id).removeClass("tempOpen"),
+                $("#task-windows").find(".minWindow." + n.name).remove(),
+                $("#task-windows").append('<li class="nav-item minWindow ' + n.name + '" id="taskbar-item"><input type="checkbox" class="btn-check" id="btn-check-outlined" autocomplete="off"><label class="btn btn-outline-primary" for="btn-check-outlined">' + n.name + '</label></li>'),
+                //if a button is found with the class .minWindow + n.name 
+                n.onOpen()) :
+            console.log("Unknown app %s", e);
+    }
+    close(e) {
+        const n = this.apps.find((n) => n.name == e);
+        n
+            ?
+            ($("#" + n.id)
+                .removeClass("application maxOn tempOpen")
+                .addClass("application-non-drag maxOff"),
+                AppStatus(),
+                $("#" + n.id).hide(),
+                //remove "task-windows" button from taskbar if app id equals to the app name closed
+                //Bullcrap "." in the middle of the line - Why tho?
+                $("#task-windows").find(".minWindow." + n.name).remove(),
+                n.onClose()) :
+            console.log("Unknown app %s", e);
+    }
+    max(e) {
+        const n = this.apps.find((n) => n.name == e);
+        n
+            ?
+            (this.apps.forEach((e) => {
+                    e.elm.style.zIndex = 1;
+                }),
+                (n.elm.style.zIndex = 2),
+                $("#" + n.id)
+                .removeClass("maxOff")
+                .addClass("maxOn"),
+                n.onMax()) :
+            console.log("");
+    }
+    Wind(e) {
+        const n = this.apps.find((n) => n.name == e);
+        n
+            ?
+            (this.apps.forEach((e) => {
+                    e.elm.style.zIndex = 1;
+                }),
+                (n.elm.style.zIndex = 2),
+                $("#" + n.id)
+                .removeClass("maxOn")
+                .addClass("maxOff"),
+                n.onWind()) :
+            console.log("");
+    }
     minopen(e) {
         const n = this.apps.find((n) => n.name == e);
         n
@@ -372,13 +368,6 @@ class AppController {
                 n.onOpen()) :
             console.log("Unknown app %s", e);
     }
-
-
-    //if <li> with id that matches the app name n.id input is checked set to false
-
-
-
-
     saveIcons() {
         var e = {};
         this.icons.forEach((n) => {
