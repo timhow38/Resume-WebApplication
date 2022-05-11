@@ -74,12 +74,14 @@ class AppController {
                 a.Wind(o.name);
                 o.elm.getElementsByClassName("btn windowed")[0].style.display = "none";
                 o.elm.getElementsByClassName("btn maximise")[0].style.display = "block";
-            })
-            //if button taskwindow is clicked open app
-        $("#task-windows").find(".minWindow." + n.name).click(() => {
-            a.open(o.name);
-        });
+            });
+        //Check for open buttons
+        // $("#task-windows").find(".minWindow");
 
+
+        //$("#task-windows").find(".minWindow." + o.name).click(function() {
+        //console.log("clicked on " + o.name);
+        //});
 
 
 

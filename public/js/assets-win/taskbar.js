@@ -39,4 +39,11 @@ function taskbarItem() {
     $("#task-windows").append('<li class="nav-item minWindow" id="taskbar-item"><input type="checkbox" class="btn-check" id="btn-check-outlined" autocomplete="off"><label class="btn btn-outline-primary" for="btn-check-outlined">' + appController.apps[0].id + '</label></li>');
 }
 
-//onclick check if
+
+//if class minWindow is clicked, open the app
+$("#task-windows").find(".minWindow" + o.name).click(function() {
+    //consolelog all o.name
+    console.log(o.name);
+    console.log("clicked on " + $(this).text());
+    appController.close($(this).text());
+});
