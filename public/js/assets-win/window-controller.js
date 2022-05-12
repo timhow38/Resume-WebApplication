@@ -271,14 +271,19 @@ class AppController {
                 }),
                 (n.elm.style.zIndex = 2),
 
-                //find <li> with id that matches the app name n.id and then set checkbox to "checked"
-                $("#task-windows").find(".minWindow." + n.name).find("input").prop("checked", true),
+
 
                 //
                 //close app
                 $("#" + n.id)
                 .removeClass("application")
                 .addClass("application-non-drag tempOpen"),
+                //change .minWindow-" + n.name css to display:block
+                $("#task-windows").find(".minWindow-" + n.name).css("background-color", "transparent"),
+                $("#task-windows").find(".minWindow-" + n.name).css("color", "#f76b1c"),
+
+
+
                 $("#" + n.id).hide(),
                 //$("#" + n.id).find("#btn-check-outlined").prop("checked", true),
                 //console.log($("#" + n.id).find("#btn-check-outlined").prop("checked", true)),
@@ -305,11 +310,25 @@ class AppController {
                 $("#" + n.id).show(),
                 $("#" + n.id).removeClass("tempOpen"),
                 $("#task-windows").find(".minWindow." + n.name).remove(),
+                //If button exists dont replace and if not replace
+                $("#task-windows").append('<li class="nav-item minWindow ' + n.name + '" id="taskbar-item"><button type="button" class="btn btn-outline-primary minWindow-' + n.name + '">' + n.name + '</button></li>'),
+                //if class minWindow is clicked, open the app
 
-                $("#task-windows").append('<li class="nav-item minWindow ' + n.name + '" id="taskbar-item"><input type="checkbox" class="btn-check" id="btn-check-outlined ' + n.name + '" autocomplete="off"><label class="btn btn-outline-primary" for="btn-check-outlined">' + n.name + '</label></li>'),
-                //auto increment a class
+                $("#task-windows").find(".minWindow-" + n.name).click(function() {
+                    // if app has class tempOpen apply css
+                    if ($("#" + n.id).hasClass("tempOpen")) {
+                        console.log("Opened");
+                        $(this).css("background-color", "#00ff00");
+                        appController.open($(this).text());
+                    } else {
+                        console.log("Minimized");
+                        $(this).css("background-color", "transparent");
+                        $(this).css("color", "#f76b1c");
+                        appController.min($(this).text());
+                    }
+                    //change css of .minWindow-" + n.name to background-color: #00ff00;
 
-                //$("#task-windows").append('<li class="nav-item minWindow ' + n.name + '" id="taskbar-item"><input type="checkbox" class="btn-check" id="btn-check-outlined' + Math.random() + '" autocomplete="off"><label class="btn btn-outline-primary" for="btn-check-outlined' + Math.random() + '">' + n.name + '</label></li>'), 
+                }),
                 n.onOpen()) :
             console.log("Unknown app %s", e);
     }
@@ -356,23 +375,7 @@ class AppController {
                 n.onWind()) :
             console.log("");
     }
-    minopen(e) {
-        const n = this.apps.find((n) => n.name == e);
-        n
-            ?
-            (this.apps.forEach((e) => {
-                    e.elm.style.zIndex = 1;
-                }),
-                (n.elm.style.zIndex = 2),
-                $("#task-windows").find(".minWindow." + n.name).find("input").prop("checked", false),
-                $("#" + n.id)
-                .removeClass("application-non-drag tempOpen")
-                .addClass("application"),
-                AppStatus(),
-                $("#" + n.id).show(),
-                n.onOpen()) :
-            console.log("Unknown app %s", e);
-    }
+
     saveIcons() {
         var e = {};
         this.icons.forEach((n) => {

@@ -170,23 +170,21 @@ a:hover {}
 }
 
 .btn-outline-primary {
-    color: #f76b1c;
-    border-bottom: solid 2px #f76b1c;
-    border-top: 0px;
-    border-left: 0px;
-    border-right: 0px;
-    background-color: transparent;
+    color: #000000;
+    border: solid 2px #f76b1c;
+    background-color: #f76b1c;
     text-transform: capitalize;
 }
 
-.btn-check:checked+.btn-outline-primary {
-    color: #f76b1c;
-    border-bottom: solid 2px #f76b1c;
-    border-top: 0px;
-    border-left: 0px;
-    border-right: 0px;
-    background-color: #1d3a4e;
-    text-transform: capitalize;
+.btn-outline-primary:hover {
+    border: solid 2px #f76b1c;
+    background-color: #f76b1c;
+    color: #000000;
+}
+
+.btn:focus {
+    outline: none;
+    box-shadow: none;
 }
 
 .nav-item {
