@@ -305,8 +305,11 @@ class AppController {
                 $("#" + n.id).show(),
                 $("#" + n.id).removeClass("tempOpen"),
                 $("#task-windows").find(".minWindow." + n.name).remove(),
-                $("#task-windows").append('<li class="nav-item minWindow ' + n.name + '" id="taskbar-item"><input type="checkbox" class="btn-check" id="btn-check-outlined" autocomplete="off"><label class="btn btn-outline-primary" for="btn-check-outlined">' + n.name + '</label></li>'),
-                //if a button is found with the class .minWindow + n.name 
+
+                $("#task-windows").append('<li class="nav-item minWindow ' + n.name + '" id="taskbar-item"><input type="checkbox" class="btn-check" id="btn-check-outlined ' + n.name + '" autocomplete="off"><label class="btn btn-outline-primary" for="btn-check-outlined">' + n.name + '</label></li>'),
+                //auto increment a class
+
+                //$("#task-windows").append('<li class="nav-item minWindow ' + n.name + '" id="taskbar-item"><input type="checkbox" class="btn-check" id="btn-check-outlined' + Math.random() + '" autocomplete="off"><label class="btn btn-outline-primary" for="btn-check-outlined' + Math.random() + '">' + n.name + '</label></li>'), 
                 n.onOpen()) :
             console.log("Unknown app %s", e);
     }
