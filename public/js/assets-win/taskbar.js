@@ -41,9 +41,16 @@ function taskbarItem() {
 
 
 //if class minWindow is clicked, open the app
-$("#task-windows").find(".minWindow" + o.name).click(function() {
+$("#task-windows").find(".minWindow-" + o.name).click(function() {
     //consolelog all o.name
     console.log(o.name);
     console.log("clicked on " + $(this).text());
     appController.close($(this).text());
 });
+
+//if class minWindow is clicked, open the app
+$("#task-windows").find(".minWindow-terminal").click(function() {
+    //consolelog all o.name
+    console.log("test");
+});
+//$("#task-windows").append('<li class="nav-item minWindow ' + n.name + '" id="taskbar-item"><input type="checkbox" class="btn-check" name="btn-' + n.name + '" id="btn-check-outlined" autocomplete="off"><label class="btn btn-outline-primary" for="btn-check-outlined">' + n.name + '</label></li>'),
