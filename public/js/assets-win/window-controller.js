@@ -25,7 +25,7 @@ class Application {
         (this.onWind = e.onWind),
         (this.onMin = e.onMin),
         (this.appDesc = e.appDesc),
-        (this.iconOpts = { name: e.iconName, path: e.iconPath }),
+        (this.iconOpts = { name: e.iconName, pathBG: e.iconPathBG, pathSM: e.iconPathSM }),
         (this.elm = document.getElementById(this.id));
     }
 }
@@ -34,7 +34,7 @@ class AppController {
         (this.apps = []), (this.icons = []), (this.iconSpawn = {});
     }
     add(e) {
-        const n = { name: e.iconName, path: e.iconPath },
+        const n = { name: e.iconName, path: e.iconPathBG },
             o = new Application(e),
             t = $("#dropDownMenu"),
             a = this;
@@ -280,7 +280,7 @@ class AppController {
                 .addClass("application-non-drag tempOpen"),
                 //change .minWindow-" + n.name css to display:block
                 $("#task-windows").find(".minWindow-" + n.name).css("background-color", "transparent"),
-                $("#task-windows").find(".minWindow-" + n.name).css("color", "#f76b1c"),
+                $("#task-windows").find(".minWindow-" + n.name).css("color", "#fff"),
 
 
 
@@ -313,8 +313,8 @@ class AppController {
                 //If button exists dont replace and if not replace
                 //$("#task-windows").append('<li class="nav-item minWindow ' + n.name + '" id="taskbar-item"><button type="button" class="btn btn-outline-primary minWindow-' + n.name + '"><img src="/img/icons/desktop/big/Chip_Green.png"/>' + n.name + '</button></li>');
                 //append the apps icon image to a button
-
-                console.log($("#task-windows").append('<li class="nav-item minWindow ' + n.name + '" id="taskbar-item"><button type="button" class="btn btn-outline-primary minWindow-' + n.name + '"><img src="' + n.iconPath + '"/>' + n.name + '</button></li>')),
+                console.log(n),
+                console.log($("#task-windows").append('<li class="nav-item minWindow ' + n.name + '" id="taskbar-item"><button type="button" class="btn btn-outline-primary minWindow-' + n.name + '"><img src="' + n.iconOpts.pathSM + '"/>' + n.name + '</button></li>')),
                 //if class minWindow is clicked, open the app
 
                 $("#task-windows").find(".minWindow-" + n.name).click(function() {
@@ -411,7 +411,8 @@ function initAppController() {
             onMax: () => {},
             onMin: () => {},
             onWind: () => {},
-            iconPath: "/img/icons/desktop/big/Chip_Green.png",
+            iconPathBG: "/img/icons/desktop/bg/Chip_Green.png",
+            iconPathSM: "img/icons/desktop/sm/Chip_Green.png",
             iconName: "Terminal",
             iconParent: "containment-wrapper",
             iconYDelta: 100,
@@ -425,7 +426,8 @@ function initAppController() {
             onMax: () => {},
             onMin: () => {},
             onWind: () => {},
-            iconPath: "/img/icons/desktop/big/Notes_Purple.png",
+            iconPathBG: "/img/icons/desktop/bg/Notes_Purple.png",
+            iconPathSM: "/img/icons/desktop/sm/Notes_Purple.png",
             iconName: "Projects",
             iconParent: "containment-wrapper",
             iconYDelta: 100,
@@ -439,7 +441,8 @@ function initAppController() {
             onMax: () => {},
             onMin: () => {},
             onWind: () => {},
-            iconPath: "/img/icons/desktop/big/Desktop_Folder_2.png",
+            iconPathBG: "/img/icons/desktop/bg/Desktop_Folder_2.png",
+            iconPathSM: "/img/icons/desktop/sm/Desktop_Folder_2.png",
             iconName: "Adobe XD",
             iconParent: "sub-folder-0",
             iconXDelta: 95,
@@ -453,7 +456,8 @@ function initAppController() {
             onMax: () => {},
             onMin: () => {},
             onWind: () => {},
-            iconPath: "/img/icons/desktop/big/Handbag_LightBlue.png",
+            iconPathBG: "/img/icons/desktop/bg/Handbag_LightBlue.png",
+            iconPathSM: "/img/icons/desktop/sm/Handbag_LightBlue.png",
             iconName: "Career",
             iconParent: "containment-wrapper",
             iconYDelta: 100,
@@ -466,7 +470,8 @@ function initAppController() {
             onClose: () => {},
             onMax: () => {},
             onWind: () => {},
-            iconPath: "/img/icons/desktop/big/Hammer_Yellow.png",
+            iconPathBG: "/img/icons/desktop/bg/Hammer_Yellow.png",
+            iconPathSM: "/img/icons/desktop/sm/Hammer_Yellow.png",
             iconName: "Repos",
             iconParent: "containment-wrapper",
             iconYDelta: 100,
@@ -478,7 +483,8 @@ function initAppController() {
             onOpen: () => {},
             onClose: () => {},
             onMin: () => {},
-            iconPath: "/img/icons/desktop/big/Desktop_Folder_2.png",
+            iconPathBG: "/img/icons/desktop/bg/Desktop_Folder_2.png",
+            iconPathSM: "/img/icons/desktop/sm/Desktop_Folder_2.png",
             iconName: "Design Factory",
             iconParent: "sub-folder-0",
             iconXDelta: 95,
@@ -490,7 +496,8 @@ function initAppController() {
             onOpen: () => {},
             onClose: () => {},
             onMin: () => {},
-            iconPath: "/img/icons/desktop/big/Desktop_Folder_2.png",
+            iconPathBG: "/img/icons/desktop/bg/Desktop_Folder_2.png",
+            iconPathSM: "/img/icons/desktop/sm/Desktop_Folder_2.png",
             iconName: "ISAN Starmap",
             iconXDelta: 95,
             iconParent: "sub-folder-0",
@@ -502,7 +509,8 @@ function initAppController() {
             onOpen: () => {},
             onClose: () => {},
             onMin: () => {},
-            iconPath: "/img/icons/desktop/big/Desktop_Folder_2.png",
+            iconPathBG: "/img/icons/desktop/bg/Desktop_Folder_2.png",
+            iconPathSM: "/img/icons/desktop/sm/Desktop_Folder_2.png",
             iconName: "C-SB Inactive",
             iconXDelta: 95,
             iconParent: "sub-folder-0",
@@ -514,7 +522,8 @@ function initAppController() {
             onOpen: () => {},
             onClose: () => {},
             onMin: () => {},
-            iconPath: "/img/icons/desktop/big/Desktop_Folder_2.png",
+            iconPathBG: "/img/icons/desktop/bg/Desktop_Folder_2.png",
+            iconPathSM: "/img/icons/desktop/sm/Desktop_Folder_2.png",
             iconName: "C-SB Inactive",
             iconXDelta: 95,
             iconParent: "sub-folder-0",
