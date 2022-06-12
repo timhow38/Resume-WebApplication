@@ -279,7 +279,7 @@ class AppController {
                 .removeClass("application")
                 .addClass("application-non-drag tempOpen"),
                 //change .minWindow-" + n.name css to display:block
-                $("#task-windows").find(".minWindow-" + n.name).css("background-color", "transparent"),
+                $("#task-windows").find(".minWindow-" + n.name).css("background-color", "#34698c"),
                 $("#task-windows").find(".minWindow-" + n.name).css("color", "#fff"),
 
 
@@ -344,6 +344,9 @@ class AppController {
                 .addClass("application-non-drag maxOff"),
                 AppStatus(),
                 $("#" + n.id).hide(),
+                $("#" + n.id).unload(console.log("Unloaded")),
+                //unload element
+
                 //remove "task-windows" button from taskbar if app id equals to the app name closed
                 //Bullcrap "." in the middle of the line - Why tho?
                 $("#task-windows").find(".minWindow." + n.name).remove(),
@@ -506,19 +509,6 @@ function initAppController() {
         appController.add({
             id: "draggable-js-collective",
             name: "collective",
-            onOpen: () => {},
-            onClose: () => {},
-            onMin: () => {},
-            iconPathBG: "/img/icons/desktop/bg/Desktop_Folder_2.png",
-            iconPathSM: "/img/icons/desktop/sm/Desktop_Folder_2.png",
-            iconName: "C-SB Inactive",
-            iconXDelta: 95,
-            iconParent: "sub-folder-0",
-            appDesc: "Description: <strong> Collective Starbase Community Website. </strong> -Inactive"
-        }),
-        appController.add({
-            id: "draggable-js-temp",
-            name: "temp",
             onOpen: () => {},
             onClose: () => {},
             onMin: () => {},

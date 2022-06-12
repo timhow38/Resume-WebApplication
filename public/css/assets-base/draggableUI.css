@@ -399,7 +399,6 @@
 /* Icon Image Properties*/
 
 .card {
-    border: 1px solid rgb(0 0 0 / 30%);
     background-color: transparent;
     text-align: center;
     cursor: var(--main-cursor-default);
@@ -668,10 +667,17 @@
 .taskbtn {
     background-color: transparent;
     border: none;
+    padding: 2px;
 }
 
 .taskbtn:hover {
     background-color: rgba(255, 255, 255, 0.118);
+    border-radius: 5px;
+}
+
+#taskbar-nav .container-fluid .btn-group {
+    padding-right: 5px;
+    padding-left: 5px;
 }
 
 .minWindow {
