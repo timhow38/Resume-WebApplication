@@ -527,15 +527,10 @@ function saveIcons() {
 }
 $(document).ready(initAppController), setInterval(saveIcons, 1e3);
 
-//on right click alert user
-//$(document).ready(function() {
-//    $(document).on("contextmenu", function(e) {
-//        e.preventDefault();
-//        document.getElementById("win-close").removeChild(u);
-//    });
-//});
-
-
-
 console.log(appController.apps);
 console.log(appController.icons);
+//on page load open the terminal
+$(document).ready(function() {
+    appController.open("terminal");
+}   
+);

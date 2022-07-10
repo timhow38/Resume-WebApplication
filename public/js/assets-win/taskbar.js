@@ -54,3 +54,13 @@ $("#task-windows").find(".minWindow-terminal").click(function() {
     console.log("test");
 });
 //$("#task-windows").append('<li class="nav-item minWindow ' + n.name + '" id="taskbar-item"><input type="checkbox" class="btn-check" name="btn-' + n.name + '" id="btn-check-outlined" autocomplete="off"><label class="btn btn-outline-primary" for="btn-check-outlined">' + n.name + '</label></li>'),
+
+//redirect the website to google if the website is opened from a mobile device
+function redirect() {
+    if (navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/webOS/i) || navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/iPod/i) || navigator.userAgent.match(/BlackBerry/i) || navigator.userAgent.match(/Windows Phone/i)) {
+        //disable all page elements
+        $("body").css("display", "none");
+        //display a message to the user
+        $("body").append('<div class="alert alert-danger" role="alert">Please use a desktop computer to view this website.</div>');
+    }
+}
