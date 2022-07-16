@@ -75,22 +75,6 @@ class AppController {
                 o.elm.getElementsByClassName("btn windowed")[0].style.display = "none";
                 o.elm.getElementsByClassName("btn maximise")[0].style.display = "block";
             });
-        //Check for open buttons
-        // $("#task-windows").find(".minWindow");
-
-
-        //$("#task-windows").find(".minWindow." + o.name).click(function() {
-        //console.log("clicked on " + o.name);
-        //});
-
-
-
-        //$("#task-windows").find(".minWindow." + n.name).remove(),
-        // if task-windows button is pressed open the app
-
-        //$("#task-windows").find(".minWindow." + n.name).click(() => {
-        //    a.minOpen(o.name);
-        //});
 
 
 
@@ -285,13 +269,6 @@ class AppController {
 
 
                 $("#" + n.id).hide(),
-                //$("#" + n.id).find("#btn-check-outlined").prop("checked", true),
-                //console.log($("#" + n.id).find("#btn-check-outlined").prop("checked", true)),
-
-                //find <li> with id that matches the app name n.id
-                //$("#task-windows").find("#taskbar-item'" + n.id).remove(),
-
-
                 n.onMin()) :
             console.log("");
     }
@@ -502,19 +479,6 @@ function initAppController() {
             iconXDelta: 95,
             iconParent: "sub-folder-0",
             appDesc: "Description: <strong> 3JS Starmap for the game Starbase. </strong>"
-        }),
-        appController.add({
-            id: "draggable-js-collective",
-            name: "collective",
-            onOpen: () => {},
-            onClose: () => {},
-            onMin: () => {},
-            iconPathBG: "/img/icons/desktop/bg/Desktop_Folder_2.png",
-            iconPathSM: "/img/icons/desktop/sm/Desktop_Folder_2.png",
-            iconName: "C-SB Inactive",
-            iconXDelta: 95,
-            iconParent: "sub-folder-0",
-            appDesc: "Description: <strong> Collective Starbase Community Website. </strong> -Inactive"
         }),
         appController.add({
             id: "draggable-js-temp",
