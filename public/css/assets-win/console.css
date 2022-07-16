@@ -7,137 +7,126 @@
 */
 
 #terminal {
-  overflow-x: hidden;
-  color: rgb(255, 255, 255);
-  font-family: var(--sub-font);
-  width: 100%;
-  height: -webkit-fill-available;
-  padding: 10px;
-  text-align: left !important;
-  line-height: normal;
-  -webkit-box-shadow: var(--webkit-boxshadow-red);
-  -moz-box-shadow: var(--moz-boxshadow-red);
-  box-shadow: var(--box-boxshadow-red);
+    overflow-x: hidden;
+    color: rgb(255, 255, 255);
+    font-family: var(--sub-font);
+    width: 100%;
+    height: -webkit-fill-available;
+    padding: 10px 0px 10px 10px;
+    text-align: left !important;
+    line-height: normal;
+    -webkit-box-shadow: var(--webkit-boxshadow-red);
+    -moz-box-shadow: var(--moz-boxshadow-red);
+    box-shadow: var(--box-boxshadow-red);
 }
- 
+
 .term-border {
-  border-right: 2px groove rgb(61 61 61);
-  border-bottom: solid 1px #000;
-  border-left: solid 1px #000;
+    border-right: 2px groove rgb(94, 94, 94);
+    border-bottom: solid 1px #000;
+    border-left: solid 1px #000;
 }
+
 #terminal::-webkit-scrollbar {
-  width: 7px;
+    width: 7px;
 }
+
 #terminal::-webkit-scrollbar-thumb {
-  background-color: rgba(255, 255, 255, 0.425);
+    background-color: rgba(255, 255, 255, 0.425);
 }
+
 #terminal::-webkit-scrollbar-track {
-  background-color: transparent;
+    background-color: transparent;
 }
 
 #terminal a {
-  color: rgb(255, 255, 255);
-  text-decoration: underline;
+    color: rgb(255, 255, 255);
+    text-decoration: underline;
 }
+
 #terminal strong {
-  color:rgb(0, 0, 0); 
-  background: rgb(255, 255, 255);
-  display: inline;
+    color: rgb(255, 255, 255);
+    background: rgb(40, 75, 99);
+    display: inline;
+    font-weight: bolder;
+    padding: 0.1rem;
+    border: rgb(255, 255, 255) 1px solid;
 }
 
 #terminal .label::before {
-  content: ">";
-  display: inline-block;
-  position: relative;
-  width: 1rem;
-  height: 1em;
+    content: ">";
+    display: inline-block;
+    position: relative;
+    width: 1rem;
+    height: 1em;
 }
+
 #terminal .output {
-  color: rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
 }
 
 .print {
-  cursor: var(--main-cursor-default);
+    cursor: var(--main-cursor-default);
 }
-#cli {
-  text-transform: lowercase;
-  position: relative;
-  white-space: pre-wrap;
-  cursor: var(--main-cursor-text);
-}
-#cli span.cursor {
-  background-color: rgba(255, 255, 255, 0.425);
-  animation: blinker 1s linear infinite;
-}
-/*.label {
-  color: rgb(0, 0, 0);
-    background: rgb(255, 255, 255);
-    display: inline;
-}
-*/
 
+#cli {
+    text-transform: lowercase;
+    position: relative;
+    white-space: pre-wrap;
+    cursor: var(--main-cursor-text);
+}
+
+#cli span.cursor {
+    background-color: rgba(255, 255, 255, 0.425);
+    animation: blinker 1s linear infinite;
+}
 
 @keyframes blinker {
-  0% {
-    background-color: rgba(255, 255, 255, 0.425);
-  }
-  49% {
-    background-color: rgba(255, 255, 255, 0.425);
-  }
-  60% {
-    background-color: transparent;
-  }
-  99% {
-    background-color: transparent;
-  }
-  100% {
-    background-color: rgba(255, 255, 255, 0.425);
-  }
+    0% {
+        background-color: rgba(255, 255, 255, 0.425);
+    }
+    49% {
+        background-color: rgba(255, 255, 255, 0.425);
+    }
+    60% {
+        background-color: transparent;
+    }
+    99% {
+        background-color: transparent;
+    }
+    100% {
+        background-color: rgba(255, 255, 255, 0.425);
+    }
 }
+
+
 /* Shell Tables */
+
 th {
-  text-align: left;
-  width: auto;
+    text-align: left;
+    width: auto;
 }
+
 .table {
-  color: rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
 }
-.table-hover tbody tr:hover {
-  background-color: #fff;
-  color:#000;
-  font-weight: bold;
+
+.table-hover tbody tr:hover>td {
+    color: #fff;
+    background: rgb(40, 75, 99);
+    font-weight: bold;
 }
+
 .table thead th {
-  border-bottom: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
 }
+
 .table td,
 .table th {
-  border-bottom: 2px solid #ffffff00;
-  border-top: 1px solid #dee2e600;
+    border-bottom: 2px solid #ffffff00;
+    border-top: 1px solid #dee2e600;
 }
 
 .slow .toggle-group {
-  transition: left 0.7s;
-  -webkit-transition: left 0.7s;
-}
-
-.alert {
-  position: relative;
-  padding: 0.22rem 1rem;
-  margin-bottom: 0rem;
-  border: 1px solid transparent;
-  /* FONT-FAMILY: poppins; */
-  font-weight: bold;
-}
-.alert-warning {
-  top: -5px;
-  color: #000000;
-  background: linear-gradient(270deg, rgba(26,42,108,0.6) 0%, rgba(178,31,31,0.6) 50%, rgba(242,113,33,0.6) 100%);
-  border-color: #1f1f1f;
-  border: #1f1f1f solid 2px;
-  text-align: center;
-  width: 11em;
-  /* align-content: center; */
-  /* align-items: center; */
-  margin: auto;
+    transition: left 0.7s;
+    -webkit-transition: left 0.7s;
 }

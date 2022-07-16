@@ -1,485 +1,182 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
+<html lang="en">
 
 <head>
-  <!-- Copyright 2019, Timothy Howard, All rights reserved. -->
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Timothy. H</title>
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org/",
-      "@type": "Resume",
-      "name": "Core Operating System",
-      "author": "Timothy Howard, Strikeeaglechase",
-      "image": "https://i.ibb.co/kXgSHB0/Capture.png",
-      "description": "Career Portfolio",
-      "contactPoint": [{
-        "@type": "ContactPoint",
-        "email": "tim@gds.net.nz",
-        "contactType": "Work Email"
-      }]
-    }
-  </script>
-  <meta name="description" content="Website Portfolio" />
-  <meta name="keywords" content="resume, cv, profile, portfolio, timothy, howard" />
-  <meta name="author" content="Timothy. H" />
-  <!-- Assets - Favicons - Img-->
-  <link rel="shortcut icon" href="img/fav/favicon.ico">
-  <link rel="apple-touch-icon" sizes="180x180" href="img/fav/ccore-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="img/fav/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="img/fav/favicon-16x16.png">
-  <!-- Assets - Favicons - Img-->
-  <meta name="msapplication-TileColor" content="#2b5797">
-  <meta name="msapplication-TileImage" content="img/fav/mstile-144x144.png">
-  <meta name="theme-color" content="#0f0f0f">
-  <!-- Assets - Stylesheets / Scripts -->
-  <link rel="shortcut icon" href="favicon.ico">
-
-  <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css"
-    rel="stylesheet">
-
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
 
-
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-  <script src="js/vendor/prefixfree.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="css/root.css" />
-  <!--Draggable-->
-  <link rel="stylesheet" type="text/css" href="css/lib-css/draggableUI.css" />
-  <script src="js/vendor/jquery-1.12.4.js"></script>
-  <script src="js/vendor/jquery-ui.js"></script>
 
-  <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/root.css" />
+    <link rel="stylesheet" type="text/css" href="css/assets-base/base-page.css" />
+    <link rel="stylesheet" type="text/css" href="css/assets-win/console.css" />
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.1/moment.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-
-  <script src="js/assets-win/disable-iframe.js" async></script>
-  <!-- PreLoader -->
-  <script>
-    document.documentElement.className = 'js';
-  </script>
-   <script src="js/main.js" type="module"></script>
 
 </head>
 
 <body>
 
 
+    <!-- Menu Right Click-->
+    <div class="dropdown-menu dropdown-menu-sm " id="context-menu">
+        <button id="btnRefresh" type="button" class="btn btn-secondary">Refresh</button>
+        <!-- Default dropend button -->
+        <div class="btn-group dropend">
+            <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Applications</button>
+            <ul class="dropdown-menu">
 
-  
-  <!-- Menu Right Click-->
-  <div class="dropdown-menu dropdown-menu-sm" id="context-menu">
-
-   
-
-
-
-      
-        <div id="dropDownButtons" class="btn-group-vertical">
-
-          <div class="btn-group" role="group" aria-label="Basic example">
-            <button type="button" class="zoom-out btn btn-secondary"><i class="bi bi-zoom-out"></i></button>
-            <button type="button" class="zoom-init btn btn-secondary" >View</button>
-            <button type="button" class="zoom btn btn-secondary"><i class="bi bi-zoom-in"></i></button>
-          </div>
-          
-          <button id="btnRefresh" type="button" class="btn btn-secondary">Refresh</button>
-
-          <div class="btn-group dropright">
-            <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Application
-            </button>
-            <div id="dropRightClose" class="dropdown-menu" style="">
-              <div class="btn-group-vertical">
-              <button type="button" class="btn btn-secondary"><s>Test 01</s></button>
-              <button type="button" class="btn btn-secondary"><s>Test 02</s></button>
-              <button type="button" class="btn btn-secondary"><s>Test 03</s></button>
-              </div>
-              
-              <p class="divider">Open</p>
-              <div id="openApp"></div>
-              <p class="divider">Close</p>
-              <div id="closeApp"></div>
-            </div>
-          </div>
-          
-          <button type="button" class="btn btn-secondary"><s>Display Settings</s></button>
-          <button type="button" class="btn btn-secondary" onclick = "pickImage()">Handy Tips?</button>
+                <p class="divider">Open</p>
+                <div id="openApp"></div>
+                <p class="divider">Close</p>
+                <div id="closeApp"></div>
+            </ul>
         </div>
-
-   
-
-
-    
-    
-    <div class="collapse" id="collapseExample">
-      <div class="dropDownMenu2" id="dropDownMenu2">
-        <div class="btn-group-vertical">
-          <button type="button" class="btn-secondary btnSocial"><a href="https://www.facebook.com/torero.yato/" target="_blank" rel="noopener">Facebook</a></button>
-          <button type="button" class="btn-secondary btnSocial"><a href="https://codepen.io/timhow38" target="_blank" rel="noopener">CodePen</a></button>
-          <button type="button" class="btn-secondary btnSocial"><a href="http://www.linkedin.com/in/timhow20" target="_blank" rel="noopener">Linkedin</a></button>
-          </div>
-      </div>
+        <div id="win-toggle"></div>
     </div>
 
-    <button class="dropdown-item context-sep" style="text-align: center;" type="button" data-toggle="collapse"
-      data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-      <i class="bi bi-chevron-bar-contract"></i>
-    </button>
-  </div>
-  <!-- Body Wrapper-->
-  <div class="body-sub">
-    <!-- Animation Loader-->
-    <div id="loader-wrapper">
-      <div id="loader">
-        <iframe id="background"
-          style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;"
-          scrolling="no" src="img/loader.html"></iframe>
-      </div>
-    </div>
 
+    <!-- Body Wrapper-->
+    <div class="body-sub">
     <!-- Containment -->
     <div class="pages-stack">
+        <div class="page" id="page-home">
+            <div id="containment-wrapper">
+                <!-- Right Click Menu-->
+                <div class="content"></div>
+                <nav id="taskbar-nav" class="navbar navbar-expand navbar-dark bg-dark" aria-label="Second navbar example">
+                    <div class="container-fluid">
+                        <div class="btn-group dropup">
+                            <button type="button" class="taskbtn" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="img/icons/sm/temp-sm.png" width="30" height="30" class="d-inline-block align-top" alt="">
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                            </ul>
+                        </div>
 
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
 
+                        <div class="collapse navbar-collapse" id="navbarsExample02">
+                            <ul id="task-windows" class="navbar-nav me-auto"></ul>
+                        </div>
+                    </div>
+                </nav>
+                <div id="draggable-JS-temp01" class="win-prop box-lg-resize-term application-non-drag">
+                    <div class="header">
+                        <div class="sub-menu-title">
+                            <div class="icon"><img class="icon-img" src="/img/icons/sm/temp-sm.png" alt="Card image cap"></div>
+                            <div class="text">Terminal</div>
+                        </div>
+                        <div class="buttons">
+                            <div id="minimize" type="button" class="btn minimize"><i class="bi bi-dash-circle"></i></div>
+                            <div id="windowed" type="button" class="btn windowed"><i class="bi bi-fullscreen-exit"></i></div>
+                            <div id="maximise" type="button" class="btn maximise"><i class="bi bi-arrows-fullscreen"></i></div>
 
-     
+                            <div id="close" type="button" class="btn close"><i class="bi bi-x-square"></i></div>
+                        </div>
+                    </div>
 
-
-
-      <!-- Audio Player -->
-      <div class="page" id="page-home">
-        <div id="containment-wrapper">
-          <div id="icon-tip">
-
-            <div class="container noti-box">
-              <div class="row noti-head">
-                <div class="col-sm">
-                  <h4 id="noti-title">
-                  Hello World!
-                </h4>
+                    <div class="row">
+                        <div id="terminal">
+                            <div class="print"></div>
+                            <div id="cli" type="text" inputmode="search"><span class="label"></span><span class="prompt"></span></div>
+                        </div>
+                    </div>
                 </div>
-              </div>
-              <div class="row noti-mid">
-                <div class="col-sm">
-                  <p id="noti-text">
-                    I'm Tim welcome to my portfolio!
-                    Press the next button for <kbd>Tips and Tricks!</kbd>
-                    
-                  </p>
+                <div id="draggable-JS-temp02" class="win-prop box-sm-resize application-non-drag">
+                    <div class="header">
+                        <div class="sub-menu-title">
+                            <div class="icon"><img class="icon-img" src="/img/icons/sm/temp-sm.png" alt="Card image cap"></div>
+                            <div class="text">temp02</div>
+                        </div>
+                        <div class="buttons">
+                            <div id="minimize" type="button" class="btn minimize"><i class="bi bi-dash-circle"></i></div>
+                            <div id="windowed" type="button" class="btn windowed"><i class="bi bi-fullscreen-exit"></i></div>
+                            <div id="maximise" type="button" class="btn maximise"><i class="bi bi-arrows-fullscreen"></i></div>
+
+                            <div id="close" type="button" class="btn close"><i class="bi bi-x-square"></i></div>
+                        </div>
+                    </div>
+                    <div class="form sub-folder" id="sub-folder-0">
+
+                    </div>
                 </div>
-              </div>
-              <div class="row noti-btn">
-                <div class="col-sm">
-                  <button onclick = "pickImage()"><i class="bi bi-caret-right-square-fill"></i></button>
+                <div id="draggable-js-temp03" class="win-prop box-sm-resize application-non-drag">
+                    <div class="header">
+                        <div class="sub-menu-title">
+                            <div class="icon"><img class="icon-img" src="/img/icons/sm/temp-sm.png" alt="Card image cap"></div>
+                            <div class="text">temp03</div>
+                        </div>
+                        <div class="buttons">
+                            <div id="minimize" type="button" class="btn minimize"><i class="bi bi-dash-circle"></i></div>
+
+                            <div id="windowed" type="button" class="btn windowed"><i class="bi bi-fullscreen-exit"></i></div>
+                            <div id="maximise" type="button" class="btn maximise"><i class="bi bi-arrows-fullscreen"></i></div>
+
+                            <div id="close" type="button" class="btn close"><i class="bi bi-x-square"></i></div>
+                        </div>
+                    </div>
+                    <div class="form">
+             
+                    </div>
                 </div>
-              </div>
             </div>
-
-
-        
-            
-          <img id="image" src="/img/images/noti/noti-01.png"/>
-          
-          </div>
-          <!--<div id="chartdiv"></div>-->
-          <!-- Desktop Drag -Icons -->
-          <div id="desktop-icons"></div>
-
-          <!-- Windows Applications-->
-          <div id="draggable-JS-INTERN" class="win-prop box-lg-miro application-non-drag">
-            <div class="header">
-              <div class="sub-menu-title">
-                <div class="icon"><img class="icon-img" src="/img/images/vector-img/desktop/fontAwesome/folder.svg"
-                    alt="Card image cap"></div>
-                <div class="text">Design Factory -2020</div>
-              </div>
-              <div class="buttons">
-
-                <div id="close" type="button" class="btn close"><i class="bi bi-x-diamond-fill"></i></div>
-              </div>
-            </div>
-            <div class="form">
-              <iframe width="768" height="432"
-                src="https://miro.com/app/live-embed/o9J_koshvM8=/?moveToViewport=-69,-65551,180020,106812"
-                frameBorder="0" scrolling="no" allowFullScreen></iframe>
-            </div>
-          </div>
-          <div id="draggable-JS-ISAN" class="win-prop box-sm-resize application-non-drag isan-prop">
-            <div class="behind-isan"></div>
-            <div class="header">
-              <div class="sub-menu-title">
-                <div class="icon"><img class="icon-img" src="/img/images/vector-img/desktop/fontAwesome/folder.svg"
-                    alt="Card image cap"></div>
-                <div class="text">ISAN Starmap</div>
-              </div>
-              <div class="buttons">
-
-                <div id="close" type="button" class="btn close"><i class="bi bi-x-diamond-fill"></i></div>
-              </div>
-            </div>
-            <div class="form isan-form">
-
-              <div class="row isan-prop position-relative">
-                <div class="col p-4 d-flex flex-column position-static">
-                  <strong class="d-inline-block mb-2 text-primary">I.S.A.N.</strong>
-                  <h3 class="mb-0">ISAN Starmap</h3>
-                  <div class="mb-1 text-muted">Nov 12</div>
-                  <p class="card-text mb-auto">Under development by the Collective, ISAN uses in-game station transmitters as reference points, in order to calculate your relative position. This is the private home of that project.</p>
-                  <a href="https://isan.to" target="blank_"><img class="bd-placeholder-img lazyload isan-img" width="300" height="250"
-                    src="/img/images/applications/isan-starmap/isan.png" alt="..."></a>  
-
-                    <a href="https://www.frozenbyte.com/2021/07/starbase-early-access-out-now/" target="blank_"><img class="isan-img2" width="300" height="250"
-                      src="/img/images/applications/isan-starmap/isan-02.png" alt="..."></a>  
-                  
-                </div>
-              </div>
-
-            </div>
-          </div>
-          <div id="draggable-JS-CAREER" class="win-prop box-sm-resize application-non-drag">
-            <div class="header">
-              <div class="sub-menu-title">
-                <div class="icon"><img class="icon-img" src="/img/images/vector-img/desktop/fontAwesome/folder.svg"
-                    alt="Card image cap"></div>
-                <div class="text">Github</div>
-              </div>
-              <div class="buttons">
-
-                <div id="close" type="button" class="btn close"><i class="bi bi-x-diamond-fill"></i></div>
-              </div>
-            </div>
-            <div class="form">
-              <ul class="list-group">
-                <a rel="noopener" rel="noreferrer"
-                  class="list-group-item d-flex justify-content-between align-items-center list-group-item-success"
-                  href="https://github.com/timhow38" target="_blank">
-                  Github Profile
-                  <span class="badge badge-primary badge-pill">ACTIVE</span>
-                </a>
-                <a rel="noopener" rel="noreferrer"
-                  class="list-group-item d-flex justify-content-between align-items-center list-group-item-success"
-                  href="https://www.linkedin.com/in/timhow20/" target="_blank">
-                  LinkedIn Profile
-                  <span class="badge badge-primary badge-pill">ACTIVE</span>
-                </a>
-                <a rel="noopener" rel="noreferrer"
-                  class="list-group-item d-flex justify-content-between align-items-center list-group-item-success"
-                  href="/img/images/applications/CareerImage/Timothy Howard CV July 2021.pdf" target="_blank">
-                  Resume [.pdf]
-                  <span class="badge badge-primary badge-pill">29-08-21</span>
-                </a>
-                <a rel="noopener" rel="noreferrer"
-                  class="list-group-item d-flex justify-content-between align-items-center list-group-item-danger"
-                  href="https://codepen.io/timhow38" target="_blank">
-                  CodePen Profile
-                  <span class="badge badge-primary badge-pill">INACTIVE</span>
-                </a>
-
-              </ul>
-            </div>
-          </div>
-          <div id="draggable-JS-01" class="win-prop box-lg-resize-term application-non-drag">
-            <div class="header">
-              <div class="sub-menu-title">
-                <div class="icon"><img class="icon-img" src="/img/images/vector-img/desktop/fontAwesome/laptop-code.svg"
-                    alt="Card image cap"></div>
-                <div class="text">Terminal</div>
-              </div>
-              <div class="buttons">
-
-                <div id="close" type="button" class="btn close"><i class="bi bi-x-diamond-fill"></i></div>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="col-8 term-border">
-                <div id="terminal">
-                  <div class="print"><strong>[CoreCLI]</strong> - Exploring WebCli Possibilities.<br>Type
-                    <strong>"help"</strong> for more information.
-                  </div>
-                  <div id="cli" type="text" inputmode="search"><span class="label"></span><span class="prompt"></span>
-                  </div>
-                </div>
-              </div>
-              <div class="col-4 terminal-right">
-                <div class="container" style="text-align: center; margin-top: 8em;">
-                  <img class="icon-main-02" src="../img/images/vector-img/desktop/fontAwesome/construction.svg"
-                    width="30" height="30" class="" alt="">
-
-
-   
-
-                    
-                </div>
-
-                <!--
-                <div class="form-check form-check-inline">
-                  <div id="box">
-                    <label for="colorPicker">Border color:</label>
-                    <input type="color" value="#8888ff" id="colorPicker">
-                    <p id="output"></p>
-                  </div>
-                -->
-              </div>
-              <div class="form-check form-check-inline">
-                <input id="Switch-BG1" type="checkbox" class="form-check-input" data-onstyle="success"
-                  data-offstyle="danger" type="checkbox" data-toggle="toggle" data-style="mr-1 slow" checked>
-                <label for="inlineCheckbox1" class="form-check-label">Background 1</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input id="inlineCheckbox1" type="checkbox" class="form-check-input" data-onstyle="success"
-                  data-offstyle="danger" type="checkbox" data-toggle="toggle" data-style="mr-1 slow" checked>
-                <label for="inlineCheckbox1" class="form-check-label">Enabled</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input id="inlineCheckbox1" type="checkbox" class="form-check-input" data-onstyle="success"
-                  data-offstyle="danger" type="checkbox" data-toggle="toggle" data-style="mr-1 slow" checked>
-                <label for="inlineCheckbox1" class="form-check-label">Enabled</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input id="inlineCheckbox1" type="checkbox" class="form-check-input" data-onstyle="success"
-                  data-offstyle="danger" type="checkbox" data-toggle="toggle" data-style="mr-1 slow" checked>
-                <label for="inlineCheckbox1" class="form-check-label">Enabled</label>
-              </div>
-
-            </div>
-          </div>
-
-        </div>
-        <div id="draggable-JS-02" class="win-prop box-sm-resize application-non-drag">
-          <div class="header">
-            <div class="sub-menu-title">
-              <div class="icon"><img class="icon-img" src="/img/images/vector-img/desktop/fontAwesome/chart-network.svg"
-                  alt="Card image cap"></div>
-              <div class="text">Projects</div>
-            </div>
-            <div class="buttons">
-
-              <div id="close" type="button" class="btn close"><i class="bi bi-x-diamond-fill"></i></div>
-            </div>
-          </div>
-          <div class="form sub-folder" id="sub-folder-0">
-
-          </div>
-        </div>
-        <div id="draggable-JS-REPOS" class="win-prop box-lg-resize application-non-drag">
-          <div class="header">
-            <div class="sub-menu-title">
-              <div class="icon"></div>
-              <div class="text">Github - Public Repositories</div>
-            </div>
-            <div class="buttons">
-
-              <div id="close" type="button" class="btn close"><i class="bi bi-x-diamond-fill"></i></div>
-            </div>
-          </div>
-          <div class="form sub-folder" id="sub-folder-0">
-            <div class="win-prop-scroll col-12">
-              <ul class="projects-ul" target="_blank">
-              </ul>
-            </div>
-          </div>
         </div>
 
-      </div>
 
 
 
     </div>
+    <script src="js/vendor/jquery-1.12.4.js"></script>
+    <script src="js/vendor/jquery-ui.js"></script>
 
-    <script src="/js/assets-api/gitAPI-02.js"></script>
-    <script src="js/assets-win/console.js"></script>
+    <!-- Right Click -->
     <script src="js/assets-win/zoom.js"></script>
-    <script src="js/assets-noti/script-noti.js"></script>
-    <script src="js/assets-win/window-controller.js"></script>
+    <!--  -->
+    <script src="js/assets-win/console.js"></script>
+    <script src="js/assets-win/window-controller.js" defer></script>
     <script src="js/assets-win/console-commands.js"></script>
-    <script src="js/vendor/lazysizes.min.js" async></script>
+    <script src="js/assets-win/taskbar.js"></script>
+
+
+
     <script>
-      window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+        function toggleFullScreen() {
+            var doc = window.document;
+            var docEl = doc.documentElement;
+
+            var requestFullScreen =
+                docEl.requestFullscreen ||
+                docEl.mozRequestFullScreen ||
+                docEl.webkitRequestFullScreen ||
+                docEl.msRequestFullscreen;
+            var cancelFullScreen =
+                doc.exitFullscreen ||
+                doc.mozCancelFullScreen ||
+                doc.webkitExitFullscreen ||
+                doc.msExitFullscreen;
+
+            if (!doc.fullscreenElement &&
+                !doc.mozFullScreenElement &&
+                !doc.webkitFullscreenElement &&
+                !doc.msFullscreenElement
+            ) {
+                requestFullScreen.call(docEl);
+            } else {
+                cancelFullScreen.call(doc);
+            }
+        }
     </script>
-    <!-- Script Loader -->
-    <script>
-      $(document).ready(function () {
-        setTimeout(function () {
-          $('body').addClass('loaded');
-          $('h1').css('color', '#222222');
-        }, 3100);
-      }); 
-    </script>
-
-
-    <!-- Script -RightClickMenu-->
-  </div>
-  <!-- The core Firebase JS SDK is always required and must be listed first -->
-  <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
-
-  <!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-  <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-analytics.js"></script>
-
-  <script>
-    // Your web app's Firebase configuration
-    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-    var firebaseConfig = {
-      apiKey: "AIzaSyD1wyOZqy0Z57w4uu-ksARn0P71Hlbq9yc",
-      authDomain: "timothy-profile.firebaseapp.com",
-      databaseURL: "https://timothy-profile.firebaseio.com",
-      projectId: "timothy-profile",
-      storageBucket: "timothy-profile.appspot.com",
-      messagingSenderId: "347222714190",
-      appId: "1:347222714190:web:564cc02338b77993a5601f",
-      measurementId: "G-DPHNH6K2EY"
-    };
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-    firebase.analytics();
-
-    import firebase from "firebase/app";
-    import "firebase/performance";
-
-    // TODO: Replace the following with your app's Firebase project configuration
-    // See: https://firebase.google.com/docs/web/learn-more#config-object
-    const firebaseConfig = {
-      // ...
-    };
-
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-
-    // Initialize Performance Monitoring and get a reference to the service
-    const perf = firebase.performance();
-  </script>
-  <script src="/js/vendor/three.r119.min.js"></script>
-  <script src="/js/vendor/vanta.cells.min.js"></script>
-
-    <script>
-      VANTA.FOG({
-        el: ".pages-stack",
-        mouseControls: true,
-  touchControls: true,
-  gyroControls: false,
-  minHeight: 200.00,
-  minWidth: 200.00,
-  highlightColor: 0x0,
-  midtoneColor: 0xff001e,
-  lowlightColor: 0xfff,
-  baseColor: 0x0,
-  blurFactor: 0.39,
-  speed: 0.60,
-  zoom: 1.10
-})
-</script>
-
 </body>
 
 </html>
