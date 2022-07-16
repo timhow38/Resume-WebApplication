@@ -11,7 +11,6 @@ html.js,
     overflow: hidden;
     height: 100vh;
     font-size: 13px!important;
-    line-height: 2!important;
     background: #284b63;
     content: url(../../img/images/noti/noti-01.png) url(../../img/images/noti/noti-02.png) url(../../img/images/noti/noti-03.png) url(../../img/images/noti/noti-04.png) url(../../img/images/noti/noti-05.png) url(../../img/images/noti/noti-06.png);
 }
@@ -170,23 +169,18 @@ a:hover {}
     box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
-#taskbar-item button {
-    padding: 2px;
-    padding-left: 5px;
-    padding-right: 5px;
-}
-
 .btn-outline-primary {
-    color: #fff;
-    border: solid 2px #172c39;
-    background-color: #1f3b4e;
+    color: #000000;
+    border: solid 2px #fff;
+    background-color: #fff;
     padding: 0px;
     text-transform: capitalize;
 }
 
 .btn-outline-primary:hover {
-    border: solid 2px #1f3b4e;
-    background-color: #34698c;
+    border: solid 2px #fff;
+    background-color: #fff;
+    color: #000000;
 }
 
 .btn:focus {
@@ -273,18 +267,10 @@ body>div.body-sub>nav>a>img {
     background-color: #284b63!important;
     border-top: 2px rgb(126 126 126) groove;
     background-image: var(--svg-ui-background);
-    height: 40px;
+    height: 35px;
     color: rgb(255, 255, 255);
     padding: 0rem 0rem;
     border-radius: var(--border-radius-none);
-}
-
-#taskbar-nav .container-fluid {
-    padding: 0px;
-}
-
-#taskbar-item button img {
-    padding-right: 5px;
 }
 
 .btn-warning {

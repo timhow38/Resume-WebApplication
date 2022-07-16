@@ -48,7 +48,7 @@
     /*font-family: 'Poppins', sans-serif;*/
     --sub-font: 'Roboto Mono', monospace;
     /* Color */
-    --asset-color-5: #284b63;
+    --asset-color-5: #284b63; 
     --user-style-01: #284b63;
     --user-style-02: #284b63;
     --user-style-03: #fff;
@@ -165,7 +165,7 @@ iframe {
     margin: auto;
     display: block;
     width: 100%;
-    height: 80.9vh;
+    height: 79.2vh;
 }
 
 @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {

@@ -14,7 +14,7 @@
     height: -webkit-fill-available;
     padding: 10px 0px 10px 10px;
     text-align: left !important;
-    line-height: 1.5;
+    line-height: normal;
     -webkit-box-shadow: var(--webkit-boxshadow-red);
     -moz-box-shadow: var(--moz-boxshadow-red);
     box-shadow: var(--box-boxshadow-red);
