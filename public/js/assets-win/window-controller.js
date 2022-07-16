@@ -263,7 +263,7 @@ class AppController {
                 .removeClass("application")
                 .addClass("application-non-drag tempOpen"),
                 //change .minWindow-" + n.name css to display:block
-                $("#task-windows").find(".minWindow-" + n.name).css("background-color", "transparent"),
+                $("#task-windows").find(".minWindow-" + n.name).css("background-color", "#34698c"),
                 $("#task-windows").find(".minWindow-" + n.name).css("color", "#fff"),
 
 
@@ -321,6 +321,9 @@ class AppController {
                 .addClass("application-non-drag maxOff"),
                 AppStatus(),
                 $("#" + n.id).hide(),
+                $("#" + n.id).unload(console.log("Unloaded")),
+                //unload element
+
                 //remove "task-windows" button from taskbar if app id equals to the app name closed
                 //Bullcrap "." in the middle of the line - Why tho?
                 $("#task-windows").find(".minWindow." + n.name).remove(),
@@ -481,8 +484,8 @@ function initAppController() {
             appDesc: "Description: <strong> 3JS Starmap for the game Starbase. </strong>"
         }),
         appController.add({
-            id: "draggable-js-temp",
-            name: "temp",
+            id: "draggable-js-collective",
+            name: "collective",
             onOpen: () => {},
             onClose: () => {},
             onMin: () => {},
@@ -501,15 +504,10 @@ function saveIcons() {
 }
 $(document).ready(initAppController), setInterval(saveIcons, 1e3);
 
-//on right click alert user
-//$(document).ready(function() {
-//    $(document).on("contextmenu", function(e) {
-//        e.preventDefault();
-//        document.getElementById("win-close").removeChild(u);
-//    });
-//});
-
-
-
 console.log(appController.apps);
 console.log(appController.icons);
+//on page load open the terminal
+$(document).ready(function() {
+    appController.open("terminal");
+}   
+);
