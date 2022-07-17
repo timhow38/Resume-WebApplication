@@ -5,13 +5,11 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
+    <script src="https://kit.fontawesome.com/812bafb74d.js" crossorigin="anonymous"></script>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-
+    
     <link rel="stylesheet" type="text/css" href="css/root.css" />
+    <link rel="stylesheet" type="text/css" href="temp/non.css" />
     <link rel="stylesheet" type="text/css" href="css/assets-base/base-page.css" />
     <link rel="stylesheet" type="text/css" href="css/assets-win/console.css" />
 
@@ -22,11 +20,13 @@
 
 
     <!-- Menu Right Click-->
-    <div class="dropdown-menu dropdown-menu-sm " id="context-menu">
-        <button id="btnRefresh" type="button" class="btn btn-secondary">Refresh</button>
-        <!-- Default dropend button -->
+    <div class="contextMenu" id="context-menu">
+        <button id="btnRefresh" type="button">Refresh</button>
+
+
+        <!-- Create a dropdown list 
         <div class="btn-group dropend">
-            <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Applications</button>
+            <button type="button" class="" data-bs-toggle="dropdown" aria-expanded="false">Applications</button>
             <ul class="dropdown-menu">
 
                 <p class="divider">Open</p>
@@ -34,7 +34,7 @@
                 <p class="divider">Close</p>
                 <div id="closeApp"></div>
             </ul>
-        </div>
+        </div>-->
         <div id="win-toggle"></div>
     </div>
 
@@ -44,28 +44,11 @@
     <!-- Containment -->
     <div class="pages-stack">
         <div class="page" id="page-home">
-            <div id="containment-wrapper">
+            <div id="containment-wrap">
                 <!-- Right Click Menu-->
                 <div class="content"></div>
-                <nav id="taskbar-nav" class="navbar navbar-expand navbar-dark bg-dark" aria-label="Second navbar example">
+                <nav id="taskbar-nav" class="navbar navbar-expand" aria-label="Second navbar example">
                     <div class="container-fluid">
-                        <div class="btn-group dropup">
-                            <button type="button" class="taskbtn" data-bs-toggle="dropdown" aria-expanded="false">
-                                <img src="img/icons/sm/temp-sm.png" width="30" height="30" class="d-inline-block align-top" alt="">
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                            </ul>
-                        </div>
-
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-
                         <div class="collapse navbar-collapse" id="navbarsExample02">
                             <ul id="task-windows" class="navbar-nav me-auto"></ul>
                         </div>
@@ -78,11 +61,11 @@
                             <div class="text">Terminal</div>
                         </div>
                         <div class="buttons">
-                            <div id="minimize" type="button" class="btn minimize"><i class="bi bi-dash-circle"></i></div>
-                            <div id="windowed" type="button" class="btn windowed"><i class="bi bi-fullscreen-exit"></i></div>
-                            <div id="maximise" type="button" class="btn maximise"><i class="bi bi-arrows-fullscreen"></i></div>
+                            <div id="minimize" type="button" class="btn minimize"><i class="fa-regular fa-square-minus"></i></div>
+                            <div id="windowed" type="button" class="btn windowed"><i class="fa-solid fa-minimize"></i></div>
+                            <div id="maximise" type="button" class="btn maximise"><i class="fa-solid fa-maximize"></i></div>
 
-                            <div id="close" type="button" class="btn close"><i class="bi bi-x-square"></i></div>
+                            <div id="close" type="button" class="btn close"><i class="fa-regular fa-rectangle-xmark"></i></div>
                         </div>
                     </div>
 
@@ -100,11 +83,11 @@
                             <div class="text">temp02</div>
                         </div>
                         <div class="buttons">
-                            <div id="minimize" type="button" class="btn minimize"><i class="bi bi-dash-circle"></i></div>
-                            <div id="windowed" type="button" class="btn windowed"><i class="bi bi-fullscreen-exit"></i></div>
-                            <div id="maximise" type="button" class="btn maximise"><i class="bi bi-arrows-fullscreen"></i></div>
+                            <div id="minimize" type="button" class="btn minimize"><i class="fa-regular fa-square-minus"></i></div>
+                            <div id="windowed" type="button" class="btn windowed"><i class="fa-solid fa-minimize"></i></div>
+                            <div id="maximise" type="button" class="btn maximise"><i class="fa-solid fa-maximize"></i></div>
 
-                            <div id="close" type="button" class="btn close"><i class="bi bi-x-square"></i></div>
+                            <div id="close" type="button" class="btn close"><i class="fa-regular fa-rectangle-xmark"></i></div>
                         </div>
                     </div>
                     <div class="form sub-folder" id="sub-folder-0">
@@ -118,12 +101,12 @@
                             <div class="text">temp03</div>
                         </div>
                         <div class="buttons">
-                            <div id="minimize" type="button" class="btn minimize"><i class="bi bi-dash-circle"></i></div>
+                            <div id="minimize" type="button" class="btn minimize"><i class="fa-regular fa-square-minus"></i></div>
 
-                            <div id="windowed" type="button" class="btn windowed"><i class="bi bi-fullscreen-exit"></i></div>
-                            <div id="maximise" type="button" class="btn maximise"><i class="bi bi-arrows-fullscreen"></i></div>
+                            <div id="windowed" type="button" class="btn windowed"><i class="fa-solid fa-minimize"></i></div>
+                            <div id="maximise" type="button" class="btn maximise"><i class="fa-solid fa-maximize"></i></div>
 
-                            <div id="close" type="button" class="btn close"><i class="bi bi-x-square"></i></div>
+                            <div id="close" type="button" class="btn close"><i class="fa-regular fa-rectangle-xmark"></i></div>
                         </div>
                     </div>
                     <div class="form">

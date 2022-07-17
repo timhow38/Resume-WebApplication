@@ -4,7 +4,6 @@ $(".body-sub")
         var n = e.pageY - 0,
             o = e.pageX - 0;
         return $("#context-menu").css({ display: "block", top: n, left: o }).addClass("show1"), !1;
-
     })
     .on("click", function() {
         $("#context-menu").removeClass("show1").hide(), console.log();
@@ -209,7 +208,7 @@ class AppController {
         }
 
 
-
+/*
         const g = document.createElement("button");
         (g.innerText = o.name),
         g.classList.add("btn-secondary"),
@@ -236,6 +235,8 @@ class AppController {
 
             document.getElementById("closeApp").appendChild(h),
             this.close(o.name);
+
+            */
 
 
 
@@ -391,7 +392,7 @@ function initAppController() {
             iconPathBG: "img/icons/bg/temp-lg.png",
             iconPathSM: "img/icons/sm/temp-sm.png",
             iconName: "Terminal",
-            iconParent: "containment-wrapper",
+            iconParent: "containment-wrap",
             iconYDelta: 100,
             appDesc: "Test 01 App Description",
         }),
@@ -406,7 +407,7 @@ function initAppController() {
             iconPathBG: "img/icons/bg/temp-lg.png",
             iconPathSM: "img/icons/sm/temp-sm.png",
             iconName: "Temp02",
-            iconParent: "containment-wrapper",
+            iconParent: "containment-wrap",
             iconYDelta: 200,
             appDesc: "Test 02 App Description",
         }),
@@ -421,7 +422,7 @@ function initAppController() {
             iconPathBG: "img/icons/bg/temp-lg.png",
             iconPathSM: "img/icons/sm/temp-sm.png",
             iconName: "Temp03",
-            iconParent: "containment-wrapper",
+            iconParent: "containment-wrap",
             iconYDelta: 300,
             appDesc: "Test 03 App Description",
         }),

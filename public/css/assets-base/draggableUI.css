@@ -5,7 +5,7 @@
 |*************************************************************************;
 */
 
-#containment-wrapper {
+#containment-wrap {
   width: 100%;
   height: 100%;
 }
@@ -134,16 +134,10 @@
 /* Win -AppHeader */
 
 .win-prop .header {
-  cursor: var(--main-cursor-grab);
-  font-family: var(--main-font);
   display: flex;
   font-weight: 100;
   color: #fff;
-  background-color: var(--main-box-color);
-  -webkit-box-shadow: var(--webkit-boxshadow);
-  -moz-box-shadow: var(--moz-boxshadow);
-  box-shadow: var(--box-boxshadow);
-  background-image: var(--svg-ui-background);
+  border-bottom: #fff solid 1px;
 }
 
 /* Win -Cursor = Grabbing on Active */
@@ -283,12 +277,26 @@
 
 /* Window Settings */
 .navbar {
-    bottom: 0;
-    width: 100%;
-    position: fixed;
-    color: rgb(255, 255, 255);
+  bottom: 0;
+  width: 100%;
+  position: fixed;
+  color: rgb(255, 255, 255);
+  background: #fff;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 /* Right Click Menu */
 .content {
     height: 100vh;
+}
+
+
+.navbar-expand {
+  flex-wrap: nowrap;
+  justify-content: flex-start;
 }
