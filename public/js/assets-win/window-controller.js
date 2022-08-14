@@ -1,4 +1,4 @@
-$(".body-sub")
+$(".pages-stack")
     .on("contextmenu", function(e) {
         console.log("right click");
         var n = e.pageY - 0,
