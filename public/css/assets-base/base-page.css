@@ -803,6 +803,6 @@ a.float:hover + div.label-container {
   text-align: left;
   font-weight: 200;
   text-transform: uppercase;
-  font-size: 3vw;
+  font-size: 20vw;
   animation: shiver 1s linear .5s infinite;
 }
