@@ -101,3 +101,52 @@ function myFunction() {
     x.style.display = "none";
   }
 }*/
+
+
+
+
+                var goFS = document.getElementById("goFS");
+                goFS.addEventListener(
+                    'click',
+                    function toggleFullScreen() {
+                        if (!document.fullscreenElement) {
+                            document.documentElement.requestFullscreen();
+                            //replace <a> text with "enter fullscreen"
+
+                            goFS.innerHTML = 'Fullscreen [ON]';
+
+
+                        } else {
+                            if (document.exitFullscreen) {
+                                document.exitFullscreen();
+                                goFS.innerHTML = 'Fullscreen [OFF]';
+                            }
+                        }
+                    }
+                );
+                function toggleFullScreen() {
+                    var doc = window.document;
+                    var docEl = doc.documentElement;
+
+                    var requestFullScreen =
+                        docEl.requestFullscreen ||
+                        docEl.mozRequestFullScreen ||
+                        docEl.webkitRequestFullScreen ||
+                        docEl.msRequestFullscreen;
+                    var cancelFullScreen =
+                        doc.exitFullscreen ||
+                        doc.mozCancelFullScreen ||
+                        doc.webkitExitFullscreen ||
+                        doc.msExitFullscreen;
+
+                    if (!doc.fullscreenElement &&
+                        !doc.mozFullScreenElement &&
+                        !doc.webkitFullscreenElement &&
+                        !doc.msFullscreenElement
+                    ) {
+                        requestFullScreen.call(docEl);
+                    } else {
+                        cancelFullScreen.call(doc);
+                    }
+                }
+

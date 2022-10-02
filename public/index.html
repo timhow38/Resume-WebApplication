@@ -46,11 +46,6 @@
     <!--Draggable-->
     <link rel="stylesheet" type="text/css" href="css/lib-css/draggableUI.css" />
 
-
-
-    <!-- PreLoader -->
-
-
     <script>
         document.documentElement.className = 'js';
     </script>
@@ -77,13 +72,12 @@
 
             <!-- Default dropend button -->
             <div class="btn-group dropend">
-                <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Applications</button>
+                <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Toggle Apps</button>
                 <ul class="dropdown-menu">
+                    <p class="divider">Toggle App</p>
+                    <div id="togApp"></div>
 
-                    <p class="divider">Open</p>
-                    <div id="openApp"></div>
-                    <p class="divider">Close</p>
-                    <div id="closeApp"></div>
+
                 </ul>
             </div>
 
@@ -91,7 +85,7 @@
                 <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Settings</button>
                 <ul class="dropdown-menu">
                     <div id="win-toggle"></div>
-                    <button id="goFS" type="button" class="btn btn-secondary">Fullscreen [OFF]</button>
+                    <button id="" type="button" class="btn btn-secondary"><s>InProgress</s></button>
                 </ul>
             </div>
 
@@ -149,17 +143,42 @@
                                 <button type="button" class="taskbtn" data-bs-toggle="dropdown" aria-expanded="false">
                                     <img src="img/icons/desktop/sm/Desktop_Folder_2.png" width="30" height="30" class="d-inline-block align-top" alt="">
                                 </button>
-                                <ul class="dropdown-menu" style="">
+                                <ul class="dropdown-menu nav-menu-drop" style="">
                                     <li>
-                                        <a id="goFS" class="dropdown-item" href="#">Fullscreen [OFF]</a>
+                                        <div class="nav-menu-title">
+                                            <div class="text"><button id="goFS" type="button" class="btn btn-secondary">Fullscreen [OFF]</button></div>
+                                        </div>
                                     </li>
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
                                     <li>
                                         <hr class="dropdown-divider">
                                     </li>
-                                    <li><a class="dropdown-item" href="#">Separated link</a></li>
+                                    <li>
+                                        <div class="nav-menu-title">
+                                            <div class="icon"><img class="icon-img" src="/img/icons/desktop/sm/Desktop_Folder_2.png" alt="Card image cap"></div>
+                                            <div class="text"><a href="#"><s>InProgress</s></a></div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="nav-menu-title">
+                                            <div class="icon"><img class="icon-img" src="/img/icons/desktop/sm/Desktop_Folder_2.png" alt="Card image cap"></div>
+                                            <div class="text"><a href="#"><s>InProgress</s></a></div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="nav-menu-title">
+                                            <div class="icon"><img class="icon-img" src="/img/icons/desktop/sm/Desktop_Folder_2.png" alt="Card image cap"></div>
+                                            <div class="text"><a href="#"><s>InProgress</s></a></div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li>
+                                        <div class="nav-menu-title">
+                                            <div class="icon"><img class="icon-img" src="/img/icons/desktop/sm/Desktop_Folder_2.png" alt="Card image cap"></div>
+                                            <div class="text"><a href="#"><s>InProgress</s></a></div>
+                                        </div>
+                                    </li>
                                 </ul>
 
 
@@ -504,7 +523,7 @@
 
 
 
-            <script src="js/assets-win/zoom.js"></script>
+            <script src="js/assets-win/functions.js"></script>
             <script src="/js/assets-api/gitAPI-02.js"></script>
             <script src="js/assets-win/console.js"></script>
             <script src="js/assets-noti/script-noti.js"></script>
@@ -533,54 +552,7 @@
                 //fullscreen page
             </script>
 
-            <script>
-                var goFS = document.getElementById('goFS');
-                goFS.addEventListener(
-                    'click',
-                    function toggleFullScreen() {
-                        if (!document.fullscreenElement) {
-                            document.documentElement.requestFullscreen();
-                            //replace <a> text with "enter fullscreen"
-
-                            goFS.innerHTML = 'Fullscreen [ON]';
-
-
-                        } else {
-                            if (document.exitFullscreen) {
-                                document.exitFullscreen();
-                                goFS.innerHTML = 'Fullscreen [OFF]';
-                            }
-                        }
-                    }
-                );
-            </script>
-            <script>
-                function toggleFullScreen() {
-                    var doc = window.document;
-                    var docEl = doc.documentElement;
-
-                    var requestFullScreen =
-                        docEl.requestFullscreen ||
-                        docEl.mozRequestFullScreen ||
-                        docEl.webkitRequestFullScreen ||
-                        docEl.msRequestFullscreen;
-                    var cancelFullScreen =
-                        doc.exitFullscreen ||
-                        doc.mozCancelFullScreen ||
-                        doc.webkitExitFullscreen ||
-                        doc.msExitFullscreen;
-
-                    if (!doc.fullscreenElement &&
-                        !doc.mozFullScreenElement &&
-                        !doc.webkitFullscreenElement &&
-                        !doc.msFullscreenElement
-                    ) {
-                        requestFullScreen.call(docEl);
-                    } else {
-                        cancelFullScreen.call(doc);
-                    }
-                }
-            </script>
+            
 
             <script>
                 // progressbar.js@1.0.0 version is used

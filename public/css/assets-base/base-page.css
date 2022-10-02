@@ -211,10 +211,10 @@ a:hover {}
 }
 
 .dropdown-menu {
-    border-top: 2px rgb(61 61 61) groove;
-    border-left: 2px rgb(61 61 61) groove;
-    border-bottom: 2px rgb(61 61 61) ridge;
-    border-right: 2px rgb(61 61 61) ridge;
+    border-top: 2px rgb(126, 126, 126) groove;
+    border-left: 2px rgb(126, 126, 126) groove;
+    border-bottom: 3.5px rgb(126, 126, 126) ridge;
+    border-right: 2px rgb(126, 126, 126) ridge;
     background-color: #3d3d3d;
     background-image: var(--svg-ui-background);
     background-color: #284b63;
@@ -355,7 +355,7 @@ body>div.body-sub>nav>a>img {
 }
 
 .icon {
-    top: 2px;
+    top: -2px;
     float: right;
     color: #ffffff;
     font-weight: 700;

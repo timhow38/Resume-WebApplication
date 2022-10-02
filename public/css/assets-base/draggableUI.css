@@ -286,7 +286,15 @@
     line-height: 25px;
     border-left: 1px solid rgba(0, 0, 0, 0.2);
 }
-
+.nav-menu-title {
+    padding-left: 10px;
+    padding: 5px;
+}
+.nav-menu-drop {
+    width: max-content;
+    left: 10px!important;
+    margin-bottom: 15px!important;
+}
 
 /* Win -AppHeader BTN */
 
@@ -388,12 +396,6 @@
     top: 29rem;
 }
 
-
-/* Default Icon Positions - SubFolders*/
-
-.app-bran-rd {}
-
-.app-bran-tact {}
 
 
 /* Icon Image Properties*/

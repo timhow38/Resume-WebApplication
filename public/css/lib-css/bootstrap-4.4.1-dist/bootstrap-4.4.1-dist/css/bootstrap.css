@@ -3294,6 +3294,15 @@ input[type="button"].btn-block {
   bottom: 100%;
   margin-top: 0;
   margin-bottom: 0.125rem;
+  
+}
+
+.dropup .dropdown-menu[data-bs-popper] {
+  top: auto;
+  bottom: 100%;
+  margin-top: 0;
+  margin-bottom: 0.125rem;
+  left: 10px;
 }
 
 .dropup .dropdown-toggle::after {

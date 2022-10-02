@@ -62,6 +62,7 @@ class AppController {
             (o.elm.getElementsByClassName("btn minimize")[0].onclick = () => {
                 a.min(o.name);
 
+
             }),
             (o.elm.getElementsByClassName("btn maximise")[0].onclick = () => {
                 a.max(o.name);
@@ -209,32 +210,24 @@ class AppController {
         }
 
 
-
+        
         const g = document.createElement("button");
-        (g.innerText = o.name),
+        (g.innerText = o.name + " [OFF]"),
         g.classList.add("btn-secondary"),
             (g.onclick = () => {
-                a.open(o.name);
+                //if app is open, else 
+                if (o.elm.style.display == "block") {
+                    this.close(o.name);
+                    g.innerText = o.name + " [OFF]";
+                } else {
+                    this.open(o.name);
+                    g.innerText = o.name + " [ON]";
+                }
             }),
             (g.onmouseup = () => {
                 $("#context-menu").removeClass("show1").hide();
             }),
-            document.getElementById("openApp").appendChild(g),
-            this.close(o.name);
-
-        const h = document.createElement("button");
-        (h.innerText = o.name),
-        h.classList.add("btn-secondary"),
-            (h.onclick = () => {
-                a.close(o.name);
-            }),
-
-            (h.onmouseup = () => {
-                $("#context-menu").removeClass("show1").hide();
-            }),
-
-
-            document.getElementById("closeApp").appendChild(h),
+            document.getElementById("togApp").appendChild(g),
             this.close(o.name);
 
 
@@ -265,9 +258,7 @@ class AppController {
                 //change .minWindow-" + n.name css to display:block
                 $("#task-windows").find(".minWindow-" + n.name).css("background-color", "transparent"),
                 $("#task-windows").find(".minWindow-" + n.name).css("color", "#fff"),
-
-
-
+                //$("#" + n.id).css("-webkit-animation", "scale-down-bl 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both"),
                 $("#" + n.id).hide(),
                 n.onMin()) :
             console.log("");

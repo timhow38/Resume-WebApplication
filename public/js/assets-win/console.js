@@ -227,3 +227,15 @@ let cliView;
     };
     r.init(), t.init();
 })();
+
+//
+
+//if ctrl+c is pressed then clear the terminal
+$(document).keydown(function(e) {
+    if (e.keyCode == 67 && e.ctrlKey) {
+        document.querySelector("#cli > span.prompt").innerHTML = "";
+        document.querySelector("#cli > span.prompt").innerHTML += '<span class="cursor">&nbsp;</span>';
+    }
+});
+
+

@@ -85,14 +85,30 @@ commandHandler.add({
         },
         aliases: ["end", "cd.."]
     }),
-    commandHandler.add({ name: "app-list", helpMsg: "Lists all applications", extendedHelp: "Lists all applications. <br> Usage: app-list-all ", run: () => appController.listApps() }),
-    commandHandler.add({ name: "app-desc", helpMsg: "Get the description of an application", extendedHelp: "Gets the description of an application. <br> Usage: app-desc [app name]", run: (e) => appController.getAppDesc(e) }),
+    commandHandler.add({ 
+        name: "app-list", 
+        helpMsg: "Lists all applications", 
+        extendedHelp: "Lists all applications. <br> Usage: app-list-all ", 
+        run: () => appController.listApps() }),
+    commandHandler.add({ 
+        name: "app-desc", 
+        helpMsg: "Get the description of an application", 
+        extendedHelp: "Gets the description of an application. <br> Usage: app-desc [app name]", 
+        run: (e) => {
+            if (e) {
+                appController.getAppDesc(e)
+            } else {
+                return 'Please specify an app to get the description of. <br> Type <strong>"app-list"</strong> for help';
+            }
+        },
+        aliases: ["app-description"] 
+    }),
     commandHandler.add({
         name: "about",
         helpMsg: "Gives some info on the devs",
         extendedHelp: "Gives some info on the dev. <br> Usage: about",
         run: () =>
-            'Lead Developer: <a href="https://github.com/timhow38" target="_blank">Timothy Howard</a><br>JS Scriptor: <a href="https://github.com/Strikeeaglechase" target="_blank">Strikeeaglechase</a><br><br><strong>Copyright &copy; 2018 Timothy Howard</strong>',
+            'Lead Developer: <a href="https://github.com/timhow38" target="_blank">Timothy Howard</a><br><strong>Copyright &copy; 2018 Timothy Howard</strong>',
     }),
     commandHandler.add({ name: "calc", helpMsg: "Preforms some arithmatic", extendedHelp: "Takes in any valid regular arithmatic and returns the result. <br> Usage: calc [expr]", run: () => eval([...arguments].join("")) }),
 
@@ -100,6 +116,7 @@ commandHandler.add({
     commandHandler.add({ name: "goto", helpMsg: "Go to another webpage", extendedHelp: "Loads a different webpage. <br> Usage: goto [url]", run: (e) => ((window.location.href = encodeURI("" + e)), "Redirecting..."), aliases: ["web"] }),
     commandHandler.add({ name: "honk", helpMsg: "", extendedHelp: "", run: () => '<img style="width:6em;" src="../../img/images/commands/honk.png"></img>' });
 commandHandler.add({ name: "deez", helpMsg: "", extendedHelp: "", run: () => '<img style="width:6em;" src="../../img/images/commands/deez.png"></img>' });
+
 
 
 // create command to search stackoverflow opening in a new tab
