@@ -213,11 +213,11 @@ a:hover {}
 .dropdown-menu {
     border-top: 2px rgb(126, 126, 126) groove;
     border-left: 2px rgb(126, 126, 126) groove;
-    border-bottom: 3.5px rgb(126, 126, 126) ridge;
+    border-bottom: 2px rgb(126, 126, 126) ridge;
     border-right: 2px rgb(126, 126, 126) ridge;
-    background-color: #3d3d3d;
-    background-image: var(--svg-ui-background);
-    background-color: #284b63;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.5);
     color: #fff;
     padding: 0rem 0;
 }
@@ -277,6 +277,7 @@ body>div.body-sub>nav>a>img {
     color: rgb(255, 255, 255);
     padding: 0rem 0rem;
     border-radius: var(--border-radius-none);
+    z-index: 1;
 }
 
 #taskbar-nav .container-fluid {
@@ -612,6 +613,7 @@ strong {
     position: fixed;
     right: -1em;
     bottom: -1em;
+    z-index: 1;
 }
 
 #icon-images img {
