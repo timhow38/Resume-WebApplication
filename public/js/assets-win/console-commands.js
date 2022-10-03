@@ -199,7 +199,7 @@ $(function() {
         myArray.push(oneArray);
     });
 
-    console.log(myArray);
+    //console.log(myArray);
 });
 
 

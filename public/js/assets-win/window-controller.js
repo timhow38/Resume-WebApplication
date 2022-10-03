@@ -504,3 +504,4 @@ $(document).ready(initAppController), setInterval(saveIcons, 1e3);
 
 console.log(appController.apps);
 console.log(appController.icons);
+
