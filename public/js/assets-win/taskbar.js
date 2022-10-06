@@ -1,3 +1,11 @@
+//onload create a div with id of dbgHideTitle
+window.onload = function () {
+    var dbgHideTitle = document.createElement('div');
+    dbgHideTitle.className = 'dbgHideTitle';
+    //append the div to the #header element
+    document.getElementById('header').appendChild(dbgHideTitle);
+}
+
 //appController.apps[0].elm.className
 const appClassString = appController.apps[0].elm.className;
 const appClassSplit = appClassString.split(' ');

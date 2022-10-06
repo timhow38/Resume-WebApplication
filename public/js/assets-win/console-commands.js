@@ -236,6 +236,10 @@ commandHandler.add({
                 $("#dbgHide").css("display", "none");
                 //add css property "padding-left: 10px;" to id "debugDiv"
                 $("#debugDiv").css("padding-left", "10px");
+                //append app name to the div with id "dbgHideTitle"
+                $(".dbgHideTitle").css("display", "block");
+                //append the window name to the div with id "dbgHideTitle"
+                $(".dbgHideTitle").append(" - " + window.name);
 
 
 

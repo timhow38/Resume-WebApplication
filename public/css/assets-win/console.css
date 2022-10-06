@@ -52,7 +52,7 @@
     border: rgb(247, 107, 28) 1px solid;
 }
 
-#terminal .label::before {
+#terminal .conlabel::before {
     content: ">";
     display: inline-block;
     position: relative;
@@ -81,7 +81,7 @@
 }
 
 
-/*.label {
+/*.conlabel {
   color: rgb(0, 0, 0);
     background: rgb(255, 255, 255);
     display: inline;

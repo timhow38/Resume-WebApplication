@@ -403,7 +403,7 @@ function initAppController() {
         }),
         appController.add({
             id: "draggable-js-adobexd",
-            name: "Adobe XD Prototypes",
+            name: "UI UX Design",
             onOpen: () => {},
             onClose: () => {},
             onMax: () => {},
@@ -411,7 +411,7 @@ function initAppController() {
             onWind: () => {},
             iconPathBG: "/img/icons/desktop/bg/Desktop_Folder_2.png",
             iconPathSM: "/img/icons/desktop/sm/Desktop_Folder_2.png",
-            iconName: "Adobe XD",
+            iconName: "UI UX Design",
             iconParent: "sub-folder-0",
             iconXDelta: 95,
             appDesc: "Description: <strong> UI Prototypes </strong>"

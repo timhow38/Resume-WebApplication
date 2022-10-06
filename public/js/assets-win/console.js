@@ -136,7 +136,7 @@ let cliView;
             },
             enterCommandLine: function() {
                 var t = $.trim(this.$prompt.text());
-                this.printTerminal(t, "command label"), i.triggerCommand(t), this.initCursor();
+                this.printTerminal(t, "command conlabel"), i.triggerCommand(t), this.initCursor();
             },
             outputCommandResult: function(t) {
                 this.printTerminal(t, "command output");
