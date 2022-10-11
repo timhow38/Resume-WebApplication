@@ -264,3 +264,5 @@ commandHandler.add({
         },
         aliases: ["dbg"]
     });
+
+    //create a new command 
