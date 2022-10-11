@@ -84,7 +84,7 @@ let cliView;
                 (this.$cli = $("#cli")), 0 === this.$cli.length && this.clearTerminal(), (this.$prompt = $("#cli .prompt")), (this.$history = !1), (this.curPos = 0), (this.isScrolling = !1), (this.scrollSpeed = 1e3);
             },
             clearTerminal: function() {
-                this.$terminal.html('<div class="print"></div><div id="cli"><span class="label"></span><span class="prompt"></span></div>'), this.initTerminal(), t.initPrompt();
+                this.$terminal.html('<div class="print"></div><div id="cli"><span class="label"></span><span class="prompt"></span></div><py-script id="pyID"></py-script>'), this.initTerminal(), t.initPrompt();
             },
             typeChar: function(t) {
                 var r = i.triggerCtrlCodes(t);
