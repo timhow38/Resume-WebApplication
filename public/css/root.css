@@ -26,6 +26,9 @@
 
 @import url("./assets-base/base-page.css");
 
+
+@import url('https://fonts.googleapis.com/css2?family=Macondo&display=swap');
+
 /*
 |*************************************************************************;
 * Stylesheets Global Var
@@ -34,6 +37,7 @@
 
 :root {
     /* Fonts */
+    --main-font: 'Macondo', cursive;
     /* Color */
     /* Base Properties */
     /* Cursor Setting */
@@ -130,7 +134,7 @@ iframe {
     .win-prop {
         -webkit-backdrop-filter: blur(10px);
         backdrop-filter: blur(10px);
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color: #DCCAB7;
     }
     .warning {
         display: none;
@@ -199,7 +203,7 @@ iframe {
 
       /* CSS styles go here */
   .navbar {
-    background-color: #343a40;
+    background-color: rgb(158, 0, 158);
     color: #fff;
     display: flex;
     justify-content: space-between;
