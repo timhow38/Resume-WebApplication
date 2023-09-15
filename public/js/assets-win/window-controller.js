@@ -1,16 +1,3 @@
-$(".body-sub")
-    .on("contextmenu", function(e) {
-        console.log("right click");
-        var n = e.pageY - 0,
-            o = e.pageX - 0;
-        return $("#context-menu").css({ display: "block", top: n, left: o }).addClass("show1"), !1;
-
-    })
-    .on("click", function() {
-        $("#context-menu").removeClass("show1").hide(), console.log();
-    });
-
-
 const DEFAULT_X_POS = 35,
     DEFAULT_Y_POS = 35,
     DEFAULT_WRAP_PT_X = 1e3,
@@ -42,11 +29,11 @@ class AppController {
             a.apps.forEach((e) => {
                     e.elm.style.zIndex = 1;
                 }),
-                (o.elm.style.zIndex = 2),
-                $("#context-menu").removeClass("show1").hide();
+                (o.elm.style.zIndex = 2);
         }),
         $("#" + o.id).draggable({
                 snap: ".application",
+                grid: [ 10, 10 ],
                 containment: ".pages-stack",
                 scroll: !1
             }),
@@ -123,72 +110,9 @@ class AppController {
             $("#app-icon-" + o.name).draggable({
                 containment: "#" + e.iconParent,
                 scroll: !1,
-                grid: [20, 20]
+                grid: [10, 10]
             }),
             this.apps.push(o);
-
-
-        //If app has class tempOpen
-        i.oncontextmenu = (e) => {
-            e.preventDefault();
-            console.log(i.id);
-            console.log(o.id);
-
-            //if app is open
-            if (o.elm.style.display == "block") {
-                const u = document.createElement("button");
-                u.classList.add("btn", "btn-secondary"),
-                    (u.innerText = "Close"),
-                    (u.onclick = () => {
-                        this.close(o.name);
-                        document.getElementById("win-toggle").removeChild(u);
-                        $("#context-menu").removeClass("show1").hide(), console.log();
-                    }),
-                    //add constuctor to context menu
-                    document.getElementById("win-toggle").appendChild(u);
-            } else if (o.elm.classList.contains("tempOpen")) {
-                const u = document.createElement("button");
-                u.classList.add("btn", "btn-secondary"),
-                    (u.innerText = "Open - Minimized"),
-                    (u.onclick = () => {
-                        this.open(o.name);
-                        document.getElementById("win-toggle").removeChild(u);
-                        $("#context-menu").removeClass("show1").hide(), console.log();
-                    }),
-                    //add constuctor to context menu
-                    document.getElementById("win-toggle").appendChild(u);
-            } else {
-                const u = document.createElement("button");
-                u.classList.add("btn", "btn-secondary"),
-                    (u.innerText = "Open"),
-                    (u.onclick = () => {
-                        this.open(o.name);
-                        document.getElementById("win-toggle").removeChild(u);
-                        $("#context-menu").removeClass("show1").hide(), console.log();
-                    }),
-                    //add constuctor to context menu
-                    document.getElementById("win-toggle").appendChild(u);
-            }
-        };
-
-        //right click on app window and log the name of the app
-        //Fuck this code snipit inparticular :/ - Like you dont even know :'(
-        o.elm.oncontextmenu = (e) => {
-            e.preventDefault();
-            const u = document.createElement("button");
-            u.classList.add("btn", "btn-secondary"),
-                (u.innerText = "Close"),
-                (u.onclick = () => {
-                    this.close(o.name);
-                    document.getElementById("win-toggle").removeChild(u);
-                    $("#context-menu").removeClass("show1").hide(), console.log();
-                }),
-                //add constuctor to context menu
-                document.getElementById("win-toggle").appendChild(u);
-
-        };
-        //left click on app window and icon and log the name of the app
-
 
         o.elm.onclick = (e) => {
             console.group(
@@ -225,7 +149,6 @@ class AppController {
                 }
             }),
             (g.onmouseup = () => {
-                $("#context-menu").removeClass("show1").hide();
             }),
             document.getElementById("togApp").appendChild(g),
             this.close(o.name);
@@ -247,10 +170,6 @@ class AppController {
                     e.elm.style.zIndex = 1;
                 }),
                 (n.elm.style.zIndex = 2),
-
-
-
-                //
                 //close app
                 $("#" + n.id)
                 .removeClass("application")
@@ -302,6 +221,7 @@ class AppController {
                 }),
                 n.onOpen()) :
             console.log("Unknown app %s", e);
+
     }
     close(e) {
         const n = this.apps.find((n) => n.name == e);
@@ -346,7 +266,6 @@ class AppController {
                 n.onWind()) :
             console.log("");
     }
-
     saveIcons() {
         var e = {};
         this.icons.forEach((n) => {
@@ -362,6 +281,9 @@ class AppController {
     listApps() {
         return this.apps.map((e) => e.name).join(", ");
     }
+
+    //Create minimize max and close buttons and append them to each app window
+    
 }
 
 
@@ -379,97 +301,12 @@ function initAppController() {
             onMax: () => {},
             onMin: () => {},
             onWind: () => {},
-            iconPathBG: "/img/icons/desktop/bg/Chip_Green.png",
-            iconPathSM: "img/icons/desktop/sm/Chip_Green.png",
+            iconPathBG: "",
+            iconPathSM: "",
             iconName: "Terminal",
             iconParent: "containment-wrapper",
             iconYDelta: 100,
             appDesc: "Description: <strong> Interactable Command Line Interface. </strong>"
-        }),
-        appController.add({
-            id: "draggable-js-projects",
-            name: "projects",
-            onOpen: () => {},
-            onClose: () => {},
-            onMax: () => {},
-            onMin: () => {},
-            onWind: () => {},
-            iconPathBG: "/img/icons/desktop/bg/Notes_Purple.png",
-            iconPathSM: "/img/icons/desktop/sm/Notes_Purple.png",
-            iconName: "Projects",
-            iconParent: "containment-wrapper",
-            iconYDelta: 100,
-            appDesc: "Description: <strong> Current Projects. </strong>"
-        }),
-        appController.add({
-            id: "draggable-js-adobexd",
-            name: "UI UX Design",
-            onOpen: () => {},
-            onClose: () => {},
-            onMax: () => {},
-            onMin: () => {},
-            onWind: () => {},
-            iconPathBG: "/img/icons/desktop/bg/Desktop_Folder_2.png",
-            iconPathSM: "/img/icons/desktop/sm/Desktop_Folder_2.png",
-            iconName: "UI UX Design",
-            iconParent: "sub-folder-0",
-            iconXDelta: 95,
-            appDesc: "Description: <strong> UI Prototypes </strong>"
-        }),
-        appController.add({
-            id: "draggable-js-career",
-            name: "career",
-            onOpen: () => {},
-            onClose: () => {},
-            onMax: () => {},
-            onMin: () => {},
-            onWind: () => {},
-            iconPathBG: "/img/icons/desktop/bg/Handbag_LightBlue.png",
-            iconPathSM: "/img/icons/desktop/sm/Handbag_LightBlue.png",
-            iconName: "Career",
-            iconParent: "containment-wrapper",
-            iconYDelta: 100,
-            appDesc: "Description: <strong> Career Links. </strong>"
-        }),
-        appController.add({
-            id: "draggable-js-repos",
-            name: "repos",
-            onOpen: () => {},
-            onClose: () => {},
-            onMax: () => {},
-            onWind: () => {},
-            iconPathBG: "/img/icons/desktop/bg/Hammer_Yellow.png",
-            iconPathSM: "/img/icons/desktop/sm/Hammer_Yellow.png",
-            iconName: "Repos",
-            iconParent: "containment-wrapper",
-            iconYDelta: 100,
-            appDesc: "Description: <strong> Github Repositories. </strong>"
-        }),
-        appController.add({
-            id: "draggable-js-intern",
-            name: "intern",
-            onOpen: () => {},
-            onClose: () => {},
-            onMin: () => {},
-            iconPathBG: "/img/icons/desktop/bg/Desktop_Folder_2.png",
-            iconPathSM: "/img/icons/desktop/sm/Desktop_Folder_2.png",
-            iconName: "Design Factory",
-            iconParent: "sub-folder-0",
-            iconXDelta: 95,
-            appDesc: "Description: <strong> Design Factory Internship. </strong>"
-        }),
-        appController.add({
-            id: "draggable-js-isan",
-            name: "isan",
-            onOpen: () => {},
-            onClose: () => {},
-            onMin: () => {},
-            iconPathBG: "/img/icons/desktop/bg/Desktop_Folder_2.png",
-            iconPathSM: "/img/icons/desktop/sm/Desktop_Folder_2.png",
-            iconName: "ISAN Starmap",
-            iconXDelta: 95,
-            iconParent: "sub-folder-0",
-            appDesc: "Description: <strong> 3JS Starmap for the game Starbase. </strong>"
         }),
         appController.add({
             id: "draggable-js-temp",
@@ -477,12 +314,12 @@ function initAppController() {
             onOpen: () => {},
             onClose: () => {},
             onMin: () => {},
-            iconPathBG: "/img/icons/desktop/bg/Desktop_Folder_2.png",
-            iconPathSM: "/img/icons/desktop/sm/Desktop_Folder_2.png",
-            iconName: "C-SB Inactive",
-            iconXDelta: 95,
-            iconParent: "sub-folder-0",
-            appDesc: "Description: <strong> Collective Starbase Community Website. </strong> -Inactive"
+            iconPathBG: "",
+            iconPathSM: "",
+            iconName: "Example",
+            iconXDelta: 100,
+            iconParent: "containment-wrapper",
+            appDesc: "Description: "
         }),
         appController.open("corecli");
 }

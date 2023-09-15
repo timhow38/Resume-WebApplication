@@ -8,48 +8,18 @@
 
 #terminal {
     overflow-x: hidden;
-    color: rgb(255, 255, 255);
-    font-family: var(--sub-font);
-    width: 100%;
     height: -webkit-fill-available;
-    padding: 10px 0px 10px 10px;
-    text-align: left !important;
-    line-height: normal;
-    -webkit-box-shadow: var(--webkit-boxshadow-red);
-    -moz-box-shadow: var(--moz-boxshadow-red);
-    box-shadow: var(--box-boxshadow-red);
 }
-
-.term-border {
-    border-right: 2px groove rgb(94, 94, 94);
-    border-bottom: solid 1px #000;
-    border-left: solid 1px #000;
-}
-
 #terminal::-webkit-scrollbar {
     width: 7px;
 }
 
 #terminal::-webkit-scrollbar-thumb {
-    background-color: rgba(247, 107, 28, 0.425);
+    background-color: rgba(255, 255, 255, 0.425);
 }
 
 #terminal::-webkit-scrollbar-track {
     background-color: transparent;
-}
-
-#terminal a {
-    color: rgb(255, 255, 255);
-    text-decoration: underline;
-}
-
-#terminal strong {
-    color: rgb(247, 107, 28);
-    background: rgb(40, 75, 99);
-    display: inline;
-    font-weight: bolder;
-    padding: 0.1rem;
-    border: rgb(247, 107, 28) 1px solid;
 }
 
 #terminal .conlabel::before {
@@ -60,14 +30,6 @@
     height: 1em;
 }
 
-#terminal .output {
-    color: rgb(255, 255, 255);
-}
-
-.print {
-    cursor: var(--main-cursor-default);
-}
-
 #cli {
     text-transform: lowercase;
     position: relative;
@@ -76,24 +38,17 @@
 }
 
 #cli span.cursor {
-    background-color: rgba(247, 107, 28, 0.425);
+    background-color: rgba(255, 255, 255, 0.425);
     animation: blinker 1s linear infinite;
 }
 
 
-/*.conlabel {
-  color: rgb(0, 0, 0);
-    background: rgb(255, 255, 255);
-    display: inline;
-}
-*/
-
 @keyframes blinker {
     0% {
-        background-color: rgba(247, 107, 28, 0.425);
+        background-color: rgba(255, 255, 255, 0.425);
     }
     49% {
-        background-color: rgba(247, 107, 28, 0.425);
+        background-color: rgba(255, 255, 255, 0.425);
     }
     60% {
         background-color: transparent;
@@ -102,61 +57,6 @@
         background-color: transparent;
     }
     100% {
-        background-color: rgba(247, 107, 28, 0.425);
+        background-color: rgba(255, 255, 255, 0.425);
     }
-}
-
-
-/* Shell Tables */
-
-th {
-    text-align: left;
-    width: auto;
-}
-
-.table {
-    color: rgb(255, 255, 255);
-}
-
-.table-hover tbody tr:hover>td {
-    color: #fff;
-    background: rgb(40, 75, 99);
-    font-weight: bold;
-}
-
-.table thead th {
-    border-bottom: 2px solid #ffffff;
-}
-
-.table td,
-.table th {
-    border-bottom: 2px solid #ffffff00;
-    border-top: 1px solid #dee2e600;
-}
-
-.slow .toggle-group {
-    transition: left 0.7s;
-    -webkit-transition: left 0.7s;
-}
-
-.alert {
-    position: relative;
-    padding: 0.22rem 1rem;
-    margin-bottom: 0rem;
-    border: 1px solid transparent;
-    /* FONT-FAMILY: poppins; */
-    font-weight: bold;
-}
-
-.alert-warning {
-    top: -5px;
-    color: #000000;
-    background: linear-gradient(270deg, rgba(26, 42, 108, 0.6) 0%, rgba(178, 31, 31, 0.6) 50%, rgba(242, 113, 33, 0.6) 100%);
-    border-color: #1f1f1f;
-    border: #1f1f1f solid 2px;
-    text-align: center;
-    width: 11em;
-    /* align-content: center; */
-    /* align-items: center; */
-    margin: auto;
 }
